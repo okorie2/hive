@@ -1,0 +1,11 @@
+.smallRec {
+  background-color: #e4e4e4;
+  width: 50%;
+  height: 30%;
+  margin: auto;
+}
+.smallRec .txt {
+  margin-top: 5%;
+  margin: auto;
+  width: 45%;
+}
