@@ -22,7 +22,7 @@ export default function Home() {
           <div className={styles.navlist}>Contact</div>
           <div className={styles.navlist}>
             <button>
-              <Link href="/Auth/Signin">
+              <Link href="/auth/Signin">
                 <a>Log in</a>
               </Link>
             </button>
@@ -38,7 +38,7 @@ export default function Home() {
               the people you love and care about.
             </p>
             <button>
-              <Link href="/Auth/Signup">
+              <Link href="/auth/Signup">
                 <a>Create an account</a>
               </Link>
             </button>
@@ -50,7 +50,7 @@ export default function Home() {
       </section>
       <section className={styles.mid}>
         <div>
-          <h2>Why People Love PsamTalk</h2>
+          <h2>Why People Love Hive</h2>
         </div>
         <div className={styles.triGrid}>
           <div>
@@ -153,7 +153,7 @@ export default function Home() {
           <div>
             <h3>The new way to connect with the people you care about</h3>
             <button className={styles.btn}>
-              <Link href="/Auth/Signup">
+              <Link href="/auth/Signup">
                 <a>Create an account</a>
               </Link>
             </button>{" "}
