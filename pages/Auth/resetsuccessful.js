@@ -17,6 +17,7 @@ export default function ResetSuccessful() {
             <button className={styles.successbut}>Login</button>
             
         </div>
+        <div className={styles.push}></div>
         <Footerr />
       </div>
     </>

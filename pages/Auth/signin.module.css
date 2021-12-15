@@ -116,7 +116,7 @@
   width: 25%;
 }
 .ft {
-  position: absolute;
+  
   bottom: -5%;
   width: 100%;
   box-shadow: 9px 5px 4px 4px rgb(148, 144, 144);
@@ -246,4 +246,13 @@
 .successbut{
   margin-top: 8%;
   margin-bottom: 17%;
+}
+
+.push {
+  margin-bottom: 10%;
+}
+
+.arrowback{
+  vertical-align: middle;
+  font-size: 1rem;
 }

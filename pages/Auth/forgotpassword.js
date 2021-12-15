@@ -18,6 +18,7 @@ export default function ForgotPass() {
             <button className={styles.forgotbutton}>Send</button>
             </form>
         </div>
+        <div className={styles.push}></div>
         <Footerr />
       </div>
     </>

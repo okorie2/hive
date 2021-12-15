@@ -24,7 +24,8 @@ export default function Signup() {
             <div>
               <button>
                 <span>
-                  <FacebookIcon fontSize="small" id={styles.fbIcon} />
+                <img src="https://img.icons8.com/color/50/000000/google-logo.png" fontSize="small" id={styles.gIcon} alt="gimage"/>
+                  
                 </span>
                 Sign up with Google
               </button>
@@ -33,7 +34,7 @@ export default function Signup() {
             <div>
               <button>
                 <span>
-                  <GoogleIcon fontSize="small" id={styles.gIcon} />
+                <FacebookIcon fontSize="small" id={styles.fbIcon} />
                 </span>
                 Sign up with Facebook
               </button>
@@ -82,6 +83,7 @@ export default function Signup() {
           </div>
         </div>
       </div>
+      <div className={styles.push}></div>
       <Footerr />
     </>
   );
