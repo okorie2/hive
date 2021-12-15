@@ -17,7 +17,7 @@ export default function CheckMail() {
             <br />
             <div className={styles.checkspan}><span >Didn’t receive the email? <b>Resend</b></span></div>
             <br/>
-            <div className={styles.checkam}><Link href="/auth/Signin"><a><ArrowBackIcon/> <span>Back to log in</span></a></Link></div>
+            <div className={styles.checkam}><Link href="/Auth/Signin"><a><ArrowBackIcon/> <span>Back to log in</span></a></Link></div>
         </div>
         <Footerr />
       </div>

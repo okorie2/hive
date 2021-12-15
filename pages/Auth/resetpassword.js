@@ -21,7 +21,7 @@ export default function ResetPassword() {
             <br/>
             <button className={styles.resetbutton}>Reset Password</button>
             </form>
-            <div className={styles.resetam}><Link href="/auth/Signin"><a><ArrowBackIcon/> <span>Back to log in</span></a></Link></div>
+            <div className={styles.resetam}><Link href="/Auth/Signin"><a><ArrowBackIcon/> <span>Back to log in</span></a></Link></div>
             
         </div>
         
