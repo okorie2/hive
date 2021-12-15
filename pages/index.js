@@ -14,7 +14,7 @@ export default function Home() {
         <div className={styles.nav}>
           <div className={styles.active}>
             <div className={styles.spot}></div>
-            <div>Hive</div>
+            <div className={styles.hiveright}>Hive</div>
           </div>
           <div className={styles.navlist}>About</div>
           <div className={styles.navlist}>Business</div>
