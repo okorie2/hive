@@ -3,6 +3,7 @@ import GoogleIcon from "@mui/icons-material/Google";
 import React from "react";
 import Footerr from "./Footer";
 import styles from "./signin.module.css";
+import Image from "next/image";
 
 export default function Signin() {
   return (
@@ -17,9 +18,11 @@ export default function Signin() {
             <div>
               <button>
                 <span>
-                <img src="https://img.icons8.com/color/50/000000/google-logo.png" fontSize="small" id={styles.gIcon}/>
+                  <img src="https://img.icons8.com/color/50/000000/google-logo.png" fontSize="small" id={styles.gIcon} alt="gimage"/>
+                
                 {/* <GoogleIcon  /> */}
                 </span>
+                
                 Log in with Google
               </button>
             </div>
