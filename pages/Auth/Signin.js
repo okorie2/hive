@@ -17,18 +17,20 @@ export default function Signin() {
             <div>
               <button>
                 <span>
-                  <FacebookIcon fontSize="small" id={styles.fbIcon} />
+                <img src="https://img.icons8.com/color/50/000000/google-logo.png" fontSize="small" id={styles.gIcon}/>
+                {/* <GoogleIcon  /> */}
                 </span>
-                Sign up with Google
+                Log in with Google
               </button>
             </div>
 
             <div>
               <button>
                 <span>
-                  <GoogleIcon fontSize="small" id={styles.gIcon} />
+                  
+                  <FacebookIcon fontSize="small" id={styles.fbIcon} />
                 </span>
-                Sign up with Facebook
+                Log in with Facebook
               </button>
             </div>
           </div>
