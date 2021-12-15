@@ -4,6 +4,7 @@ import React from "react";
 import Footerr from "./Footer";
 import styles from "./signin.module.css";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Signin() {
   return (
@@ -60,7 +61,7 @@ export default function Signin() {
                   className={styles.authInput}
                 />
                 <label>
-                  <b>Forgot Password?</b>
+                  <Link href="/Auth/forgotpassword"><b>Forgot Password?</b></Link>
                 </label>
               </div>
               <div>

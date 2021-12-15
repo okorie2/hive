@@ -22,7 +22,7 @@ export default function Home() {
           <div className={styles.navlist}>Contact</div>
           <div className={styles.navlist}>
             <button>
-              <Link href="/auth/Signin">
+              <Link href="/Auth/Signin">
                 <a>Log in</a>
               </Link>
             </button>
@@ -38,7 +38,7 @@ export default function Home() {
               the people you love and care about.
             </p>
             <button>
-              <Link href="/auth/Signup">
+              <Link href="/Auth/Signup">
                 <a>Create an account</a>
               </Link>
             </button>
