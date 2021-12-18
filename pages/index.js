@@ -14,7 +14,7 @@ export default function Home() {
         <div className={styles.nav}>
           <div className={styles.active}>
             <div className={styles.spot}></div>
-            <div>Hive</div>
+            <div className={styles.hiveright}>Hive</div>
           </div>
           <div className={styles.navlist}>About</div>
           <div className={styles.navlist}>Business</div>
@@ -44,18 +44,30 @@ export default function Home() {
             </button>
           </div>
           <div className={styles.right}>
-            <div className={styles.txt}>Laptop Mockup</div>
+            <Image
+              src="/Mac.svg"
+              height={430} // Desired size with correct aspect ratio
+              width={430}
+              alt="imag"
+            />
           </div>
         </div>
       </section>
       <section className={styles.mid}>
         <div>
-          <h2>Why People Love PsamTalk</h2>
+          <h2>Why People Love Hive</h2>
         </div>
         <div className={styles.triGrid}>
           <div>
             <div className={styles.box}>
-              <div className={styles.smc}></div>
+              <div className={styles.smc}>
+                <Image
+                  src="/Vector1.svg"
+                  height={23} // Desired size with correct aspect ratio
+                  width={34}
+                  alt="imag"
+                />
+              </div>
             </div>
             <h4>instant</h4>
             <p>
@@ -65,7 +77,14 @@ export default function Home() {
           </div>
           <div>
             <div className={styles.box}>
-              <div className={styles.smc}></div>
+              <div className={styles.smc}>
+                <Image
+                  src="/Vector2.svg"
+                  height={23} // Desired size with correct aspect ratio
+                  width={34}
+                  alt="imag"
+                />
+              </div>
             </div>
             <h4>Secure</h4>
             <p>
@@ -75,7 +94,14 @@ export default function Home() {
           </div>
           <div>
             <div className={styles.box}>
-              <div className={styles.smc}></div>
+              <div className={styles.smc}>
+                <Image
+                  src="/Vector3.svg"
+                  height={23} // Desired size with correct aspect ratio
+                  width={34}
+                  alt="imag"
+                />
+              </div>
             </div>
             <h4>fun</h4>
             <p>
@@ -88,8 +114,15 @@ export default function Home() {
 
       <section className={styles.tod}>
         <div className={styles.todGrid}>
-          <div className={styles.mock}>
-            <div>Laptop mockup</div>
+          <div>
+            <div>
+              <Image
+                src="/Man.svg"
+                height={414} // Desired size with correct aspect ratio
+                width={414}
+                alt="imag"
+              />
+            </div>
           </div>
           <div className={styles.rii}>
             <h4>Enjoy Amazing Features</h4>
@@ -151,9 +184,9 @@ export default function Home() {
             <div>Hive</div>
           </div>
           <div>
-            <h3>The new way to connect with the people you care about</h3>
+            <p>The new way to connect with the people you care about</p>
             <button className={styles.btn}>
-              <Link href="/Auth/Signup">
+              <Link href="/auth/Signup">
                 <a>Create an account</a>
               </Link>
             </button>{" "}

@@ -3,6 +3,8 @@ import GoogleIcon from "@mui/icons-material/Google";
 import React from "react";
 import Footerr from "./Footer";
 import styles from "./signin.module.css";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Signin() {
   return (
@@ -17,18 +19,22 @@ export default function Signin() {
             <div>
               <button>
                 <span>
-                  <FacebookIcon fontSize="small" id={styles.fbIcon} />
+                  <img src="https://img.icons8.com/color/50/000000/google-logo.png" fontSize="small" id={styles.gIcon} alt="gimage"/>
+                
+                {/* <GoogleIcon  /> */}
                 </span>
-                Sign up with Google
+                
+                Log in with Google
               </button>
             </div>
 
             <div>
               <button>
                 <span>
-                  <GoogleIcon fontSize="small" id={styles.gIcon} />
+                  
+                  <FacebookIcon fontSize="small" id={styles.fbIcon} />
                 </span>
-                Sign up with Facebook
+                Log in with Facebook
               </button>
             </div>
           </div>
@@ -55,7 +61,7 @@ export default function Signin() {
                   className={styles.authInput}
                 />
                 <label>
-                  <b>Forgot Password?</b>
+                  <Link href="/Auth/forgotpassword"><b>Forgot Password?</b></Link>
                 </label>
               </div>
               <div>
@@ -70,6 +76,7 @@ export default function Signin() {
             </form>
           </div>
         </div>
+        <div className={styles.push}></div>
         <Footerr />
       </div>
     </>
