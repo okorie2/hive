@@ -14,7 +14,7 @@
   height: 87vh;
   border-radius: 10px;
   background-color: #e4e4e4;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 #signin {
   padding-top: 1%;
@@ -32,7 +32,7 @@
 }
 .mainRec .txt h2 {
   font-weight: 400;
-  font-family: 'Fertigo', sans-serif;
+  font-family: "Fertigo", sans-serif;
   font-size: 1.2rem;
 }
 .mainRec .txt {
@@ -52,7 +52,7 @@
   background-color: #e5e5e5;
   border: 1px solid rgba(0, 0, 0, 0.12);
   border-radius: 5px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 .btnRw button:hover {
   background-color: rgb(236, 234, 234);
@@ -67,7 +67,6 @@
   margin-right: 4%;
   width: 1.5em;
   padding-bottom: 1.5%;
-
 }
 .dRow {
   margin-top: 5%;
@@ -116,20 +115,20 @@
   width: 25%;
 }
 .ft {
-  
   bottom: -5%;
   width: 100%;
   box-shadow: 9px 5px 4px 4px rgb(148, 144, 144);
   display: grid;
   padding: 1%;
   font-size: small;
+
   /* margin-top: 10%; */
 
   grid-template-columns: auto auto auto auto auto auto auto auto auto;
 }
 
 .hiveright {
-  font-family: 'Fertigo', sans-serif;
+  font-family: "Fertigo", sans-serif;
 }
 
 .hivetopleft {
@@ -138,7 +137,7 @@
 }
 
 .forgotcard {
-  background-color: #E4E4E4;
+  background-color: #e4e4e4;
   width: 35%;
   text-align: center;
   margin: auto;
@@ -150,7 +149,7 @@
   border-radius: 50%;
   width: 52px;
   height: 52px;
-  background-color: #C4C4C4;
+  background-color: #c4c4c4;
   margin-top: 15%;
 }
 
@@ -163,17 +162,14 @@
   font-size: 14px;
   color: #000000;
   font-weight: 300;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
-
-
 
 .forgotcard form {
   width: 85%;
   margin: auto;
   margin-top: 10%;
   text-align: left;
-  
 }
 .forgotcard label {
   font-weight: 300;
@@ -194,19 +190,18 @@
 .forgotcard button {
   border: none;
   color: #fff;
-  background-color: #2E2E2E;
+  background-color: #2e2e2e;
   font-size: 14px;
   font-weight: 100;
   padding: 2.5% 9%;
   border-radius: 7px;
-  font-family: 'Open Sans', sans-serif;
-  
+  font-family: "Open Sans", sans-serif;
 }
 
 .forgotbutton {
   margin-top: 5%;
   margin-bottom: 20%;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .checkembutton {
@@ -226,7 +221,8 @@
   padding-bottom: 5%;
 }
 
-.checkam span , .checkam a{
+.checkam span,
+.checkam a {
   font-weight: 400;
 }
 
@@ -236,14 +232,13 @@
 
 .resetam {
   padding-bottom: 3%;
-  
 }
 
 .resetam span {
   font-weight: 400;
 }
 
-.successbut{
+.successbut {
   margin-top: 8%;
   margin-bottom: 17%;
 }
@@ -252,7 +247,7 @@
   margin-bottom: 10%;
 }
 
-.arrowback{
+.arrowback {
   vertical-align: middle;
   font-size: 1rem;
 }

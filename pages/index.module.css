@@ -20,43 +20,49 @@
   margin-right: 2%;
 }
 .navlist button {
-  width: 85%;
-  padding: 6%;
-  border: none;
-  background-color: #f5f5f5;
+  width: 70%;
+  padding: 8%;
+  border: 1.5px solid #45b4e0;
+  background-color: #fff;
+  color: #45b4e0;
+  border-radius: 5px;
 }
 .tuGrid {
   display: grid;
-  width: 65%;
+  width: 76%;
   margin: auto;
   grid-template-columns: 65% 35%;
-  margin-top: 10%;
+  margin-top: 5%;
 }
 .left {
   width: 65%;
 }
 .left h1 {
   font-weight: 520;
-  font-family: 'Fertigo', sans-serif;                                              
+  font-family: "Fertigo", sans-serif;
+  font-size: 32px;
 }
 .left p {
   font-size: small;
-  font-weight: 500;
+  font-weight: 400;
+  font-size: 16px;
 }
 .left button {
   border: none;
-  background-color: #2e2e2e;
+  background-color: #45b4e0;
   color: white;
-  padding: 2% 4%;
+  padding: 3% 4%;
+  /* height: 90px; */
   border-radius: 5px;
 }
 .right {
-  background-color: #f5f5f5;
-  width: 85%;
-  height: 85%;
+  /* background-color: #f5f5f5; */
+  /* width: 95%;
+  height: 85%; */
   /* padding: 10% 0; */
   /* height: 100%; */
-  margin: auto;
+  margin-top: -13%;
+  /* margin: auto; */
 }
 .right .txt {
   width: 50%;
@@ -64,7 +70,7 @@
   margin-top: 20%;
 }
 .mid {
-  background-color: #f5f5f5;
+  background-color: #e3f3fa;
   height: 60%;
   margin-top: 5%;
   padding-bottom: 4%;
@@ -74,7 +80,7 @@
   padding: 3%;
   font-weight: 400;
   font-size: 1.4rem;
-  font-family: 'Fertigo', sans-serif;
+  font-family: "Fertigo", sans-serif;
 }
 .triGrid {
   display: grid;
@@ -96,12 +102,12 @@
   margin: auto;
 }
 .smc {
-  width: 30px;
+  /* width: 30px;s
   height: 30px;
-  border-radius: 50%;
-  /* margin-top: 14%; */
-  background-color: #f0f0f0;
-  margin: auto;
+  border-radius: 50%; */
+  margin-top: 12%;
+  /* background-color: #f0f0f0; */
+  /* margin: auto; */
 }
 .tod {
   /* background-color: black; */
@@ -132,7 +138,7 @@
 }
 .rii h4 {
   font-weight: 400;
-  font-family: 'Fertigo', sans-serif;
+  font-family: "Fertigo", sans-serif;
   font-size: 1rem;
 }
 .rii b {
@@ -157,7 +163,7 @@
   margin: auto;
   border-top-left-radius: 70px;
   border-top-right-radius: 70px;
-  background-color: #f5f5f5;
+  background-color: #e3f3fa;
   padding: 3%;
   margin-bottom: 5%;
 }
@@ -171,18 +177,28 @@
   font-size: 1.5rem;
   width: 55%;
   text-align: center;
-  font-family: 'Fertigo', sans-serif;
+  font-family: "Fertigo", sans-serif;
+}
+.cent p {
+  font-weight: 400;
+  margin-left: 25%;
+  /* margin: auto; */
+  font-size: 20px;
+  color: #534c4c;
+  width: 55%;
+  text-align: center;
+  font-family: "Fertigo", sans-serif;
 }
 .cent button {
   margin-left: 40%;
   border: none;
-  background-color: #2e2e2e;
+  background-color: #45b4e0;
   color: white;
-  padding: 1.5% 4%;
+  padding: 2% 4%;
   border-radius: 5px;
 }
 .ft {
-  background-color: #5c5c5c;
+  background-color: #1d1d1d;
   /* padding: 1%; */
   color: #fff;
   font-size: small;
@@ -210,6 +226,6 @@
   margin-left: -10%;
 }
 
-.hiveright{
-  font-family: 'Fertigo', sans-serif;
+.hiveright {
+  font-family: "Fertigo", sans-serif;
 }
