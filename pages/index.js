@@ -22,7 +22,7 @@ export default function Home() {
           <div className={styles.navlist}>Contact</div>
           <div className={styles.navlist}>
             <button>
-              <Link href="/Auth/Signin">
+              <Link href="/chat/index">
                 <a>Log in</a>
               </Link>
             </button>
@@ -38,7 +38,7 @@ export default function Home() {
               the people you love and care about.
             </p>
             <button>
-              <Link href="/Auth/Signup">
+              <Link href="/auth/signup">
                 <a>Create an account</a>
               </Link>
             </button>
@@ -184,10 +184,12 @@ export default function Home() {
             <div>Hive</div>
           </div>
           <div>
-            <p>The new way to connect with the people you care about</p>
+            <p>
+              The new way to connect with the people you care about at al ltimes
+            </p>
             <button className={styles.btn}>
-              <Link href="/auth/Signup">
-                <a>Create an account</a>
+              <Link href="/auth/signup">
+                <a>Create an accountt</a>
               </Link>
             </button>{" "}
           </div>

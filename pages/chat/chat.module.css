@@ -1,0 +1,182 @@
+.layout {
+  height: 100vh;
+  background-color: #e5e5e5;
+  overflow: auto;
+}
+.nav {
+  width: 100%;
+  margin: auto;
+  /* margin-top: 1%; */
+  /* height: 80px; */
+  padding: 1.5% 0;
+  background-color: #fefefe;
+  border: 10px;
+  display: grid;
+
+  grid-template-columns: 70% auto auto auto auto;
+}
+.spot {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: black;
+  margin: 0% 2%;
+}
+.hive {
+  /* margin-top: 0.5%; */
+  font-size: 24px;
+}
+.active {
+  /* background-color: blue; */
+}
+.active div {
+  float: left;
+}
+.navlist {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #f2f2f2;
+}
+.holder {
+  margin-top: 21%;
+  margin-left: 20%;
+}
+#profile {
+  margin-top: 21%;
+
+  margin-left: 27%;
+}
+.sec {
+  display: grid;
+  grid-template-columns: 24% 57% 20%;
+}
+.leftPane {
+  /* width: 24%; */
+  height: 87vh;
+  background-color: #fefefe;
+  /* margin-left: 4%; */
+  margin-top: 1%;
+  border-radius: 10px;
+}
+.spans {
+  display: grid;
+  grid-template-columns: 85% auto;
+}
+.spans h4 {
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 5%;
+  margin-left: 4%;
+}
+.menuspot {
+  width: 30px;
+  height: 30px;
+  background-color: #f2f2f2;
+  border-radius: 50%;
+  margin-top: 23%;
+}
+.menu {
+  margin-top: 17%;
+  margin-left: 43%;
+}
+.search input {
+  padding: 2.5%;
+  outline: none;
+  background-color: rgba(130, 131, 130, 0.1);
+  border-radius: 10px;
+  border: none;
+  width: 93%;
+  margin-left: 3%;
+}
+.deet {
+  width: 37%;
+  margin: auto;
+  margin-top: 30%;
+}
+.deet p {
+  margin-left: 6%;
+}
+.deet a {
+  color: blue;
+  text-decoration: underline blue;
+}
+
+.midpane .navi {
+  /* width: 58%; */
+  width: 99%;
+  margin: auto;
+  margin-top: 0.4%;
+  /* height: 80px; */
+  padding: 1% 0;
+  background-color: #fefefe;
+  border: 10px;
+  display: grid;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  grid-template-columns: 70% auto auto auto auto;
+}
+.dot {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #d6d6d6;
+  margin-left: 4%;
+  margin-top: 3%;
+}
+.dot .pers {
+  margin-top: 21%;
+  margin-left: 27%;
+}
+.icons {
+  margin-top: 35%;
+}
+#menu2 {
+  margin-top: 46%;
+}
+
+.section {
+  background-color: #fefefe;
+  width: 99%;
+  height: 67%;
+  margin: auto;
+  overflow: auto;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-top: 0.2%;
+}
+
+.bear {
+  width: 20%;
+  margin: auto;
+  margin-top: 15%;
+}
+.teddy p {
+  width: 37%;
+  margin: auto;
+  margin-top: 2%;
+}
+.msgInput {
+  height: 20%;
+  background-color: #fefefe;
+}
+.rightpane {
+  background-color: #fefefe;
+  margin-top: 1.2%;
+  width: 95%;
+  border-radius: 10px;
+}
+.close {
+  float: right;
+  margin: 6%;
+}
+.txt {
+  margin: auto;
+  width: 60%;
+  margin-top: 100%;
+  font-size: 16px;
+}
+#up {
+  margin-left: 18%;
+  margin-top: -7%;
+}
