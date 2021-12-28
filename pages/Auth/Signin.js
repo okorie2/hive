@@ -19,11 +19,15 @@ export default function Signin() {
             <div>
               <button>
                 <span>
-                  <img src="https://img.icons8.com/color/50/000000/google-logo.png" fontSize="small" id={styles.gIcon} alt="gimage"/>
-                
-                {/* <GoogleIcon  /> */}
+                  <img
+                    src="https://img.icons8.com/color/50/000000/google-logo.png"
+                    fontSize="small"
+                    id={styles.gIcon}
+                    alt="gimage"
+                  />
+
+                  {/* <GoogleIcon  /> */}
                 </span>
-                
                 Log in with Google
               </button>
             </div>
@@ -31,7 +35,6 @@ export default function Signin() {
             <div>
               <button>
                 <span>
-                  
                   <FacebookIcon fontSize="small" id={styles.fbIcon} />
                 </span>
                 Log in with Facebook
@@ -61,7 +64,9 @@ export default function Signin() {
                   className={styles.authInput}
                 />
                 <label>
-                  <Link href="/Auth/forgotpassword"><b>Forgot Password?</b></Link>
+                  <Link href="/Auth/forgotpassword">
+                    <b>Forgot Password?</b>
+                  </Link>
                 </label>
               </div>
               <div>

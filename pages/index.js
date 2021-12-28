@@ -22,7 +22,7 @@ export default function Home() {
           <div className={styles.navlist}>Contact</div>
           <div className={styles.navlist}>
             <button>
-              <Link href="/chat/index">
+              <Link href="/auth/signin">
                 <a>Log in</a>
               </Link>
             </button>
