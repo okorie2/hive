@@ -133,7 +133,7 @@ export default function index() {
               <Image src="/close.svg" alt="close" width={14} height={14} />
             </div>
             <div className={styles.txt}>
-              <p>Your contact's profile </p>
+              <p>Your contact&apos;s profile </p>
               <p id={styles.up}>appears here</p>
             </div>
           </div>
