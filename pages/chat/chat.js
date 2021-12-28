@@ -58,7 +58,7 @@ export default function index() {
               <div className={styles.deet}>
                 <p>No chats here</p>
                 <Link href="#">
-                  <a>Start a new chat</a>
+                  <a>Start a new chat </a>
                 </Link>
               </div>
             </div>
@@ -98,16 +98,34 @@ export default function index() {
             <div className={styles.section}>
               <div className={styles.teddy}>
                 <div className={styles.bear}>
-                  <Image src="/bear.svg" alt="profile" width={88} height={88} />
+                  <Image src="/bear.svg" alt="bear" width={88} height={88} />
                 </div>
                 <p>Send and receive messages here</p>
               </div>
             </div>
             <div className={styles.msgInput}>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
+              <div className={styles.add}>
+                <div className={styles.imj}>
+                  <Image src="/add.svg" alt="add" width={14} height={14} />
+                </div>
+              </div>
+              <div className={styles.fol}>
+                <Image src="/folder.svg" alt="folder" width={22} height={19} />
+              </div>
+              <div>
+                {/* <Image src="/emoji.svg" alt="emoji" width={20} height={10} /> */}
+                <input type="text" placeholder="Send a message" />{" "}
+              </div>
+              <div className={styles.send}>
+                <div className={styles.imj}>
+                  <Image
+                    src="/send.svg"
+                    alt="send"
+                    width={17.84}
+                    height={15.56}
+                  />
+                </div>
+              </div>
             </div>
           </div>
           <div className={styles.rightpane}>

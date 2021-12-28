@@ -114,7 +114,7 @@
   display: grid;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  grid-template-columns: 70% auto auto auto auto;
+  grid-template-columns: 76% auto auto auto auto;
 }
 .dot {
   width: 36px;
@@ -129,20 +129,21 @@
   margin-left: 27%;
 }
 .icons {
-  margin-top: 35%;
+  margin-top: 42%;
+  margin-left: 60%;
 }
 #menu2 {
-  margin-top: 46%;
+  margin-top: 58%;
+  margin-left: 80%;
 }
 
 .section {
   background-color: #fefefe;
   width: 99%;
-  height: 67%;
+  height: 75%;
   margin: auto;
   overflow: auto;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+
   margin-top: 0.2%;
 }
 
@@ -157,8 +158,54 @@
   margin-top: 2%;
 }
 .msgInput {
-  height: 20%;
+  height: 11.4%;
+  width: 99%;
+  margin: auto;
+  margin-top: 0.2%;
   background-color: #fefefe;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: grid;
+  grid-template-columns: 10% 8% 70% 20%;
+}
+.msgInput input {
+  width: 100%;
+  outline: none;
+  background-color: #f2f2f2;
+  border: none;
+  padding: 1.5%;
+  margin-top: 3.5%;
+  border-radius: 10px;
+}
+.fol {
+  margin-top: 41%;
+  margin-left: 16%;
+
+  /* background-color: brown; */
+}
+.send {
+  margin-top: 13%;
+  margin-left: 20%;
+  background-color: #f2f2f2;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.send .imj {
+  margin-left: 27%;
+  margin-top: 19%;
+}
+.add {
+  width: 36px;
+  height: 36px;
+  background-color: #f2f2f2;
+  border-radius: 50%;
+  margin-top: 20%;
+  margin-left: 26%;
+}
+.add .imj {
+  margin-left: 30%;
+  margin-top: 20%;
 }
 .rightpane {
   background-color: #fefefe;
