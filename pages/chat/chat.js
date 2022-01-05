@@ -3,7 +3,7 @@ import styles from "./chat.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function index() {
+export default function Chat() {
   const [expanded, setExpanded] = useState(false);
   return (
     <>
