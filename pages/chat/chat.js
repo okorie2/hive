@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./chat.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function index() {
+  const [expanded, setExpanded] = useState(false);
   return (
     <>
       <div className={styles.layout}>
@@ -38,6 +39,7 @@ export default function index() {
               <Image src="/avi.svg" alt="profile" width={36} height={36} />
             </div>
           </div>
+          <div className={styles.user}>John1234</div>
         </div>
         <div className={styles.sec}>
           <div className={styles.leftPane}>
@@ -64,7 +66,10 @@ export default function index() {
             </div>
           </div>
           <div className={styles.midpane}>
-            <div className={styles.navi}>
+            <div
+              className={styles["navi"]}
+              id={expanded ? styles["xpanded"] : ""}
+            >
               <div className={styles.dot}>
                 <div className={styles.pers}>
                   <Image
@@ -91,11 +96,14 @@ export default function index() {
                   height={12}
                 />
               </div>
-              <div id={styles.menu2}>
+              <div id={styles.menu2} onClick={() => setExpanded(false)}>
                 <Image src="/menu2.svg" alt="menu" width={4} height={16} />
               </div>
             </div>
-            <div className={styles.section}>
+            <div
+              className={styles["section"]}
+              id={expanded ? styles["xpanded"] : ""}
+            >
               <div className={styles.teddy}>
                 <div className={styles.bear}>
                   <Image src="/bear.svg" alt="bear" width={88} height={88} />
@@ -103,7 +111,10 @@ export default function index() {
                 <p>Send and receive messages here</p>
               </div>
             </div>
-            <div className={styles.msgInput}>
+            <div
+              className={styles["msgInput"]}
+              id={expanded ? styles["xpand"] : ""}
+            >
               <div className={styles.add}>
                 <div className={styles.imj}>
                   <Image src="/add.svg" alt="add" width={14} height={14} />
@@ -128,8 +139,11 @@ export default function index() {
               </div>
             </div>
           </div>
-          <div className={styles.rightpane}>
-            <div className={styles.close}>
+          <div className={expanded ? styles["none"] : styles["rightpane"]}>
+            <div
+              className={styles["close"]}
+              onClick={() => setExpanded(!expanded)}
+            >
               <Image src="/close.svg" alt="close" width={14} height={14} />
             </div>
             <div className={styles.txt}>
