@@ -4,16 +4,20 @@
   overflow: auto;
 }
 .nav {
-  width: 100%;
+  width: 99%;
   margin: auto;
-  /* margin-top: 1%; */
+  margin-top: 0.5%;
   /* height: 80px; */
   padding: 1.5% 0;
   background-color: #fefefe;
   border: 10px;
   display: grid;
-
-  grid-template-columns: 70% auto auto auto auto;
+  border-radius: 10px;
+  grid-template-columns: 75% auto auto auto auto auto;
+}
+.user {
+  margin-top: 5%;
+  margin-left: -16%;
 }
 .spot {
   width: 36px;
@@ -53,9 +57,9 @@
 }
 .leftPane {
   /* width: 24%; */
-  height: 87vh;
+  height: 85vh;
   background-color: #fefefe;
-  /* margin-left: 4%; */
+  margin-left: 2%;
   margin-top: 1%;
   border-radius: 10px;
 }
@@ -98,8 +102,8 @@
   margin-left: 6%;
 }
 .deet a {
-  color: blue;
-  text-decoration: underline blue;
+  color: #4ab5e1;
+  text-decoration: underline #4ab5e1;
 }
 
 .midpane .navi {
@@ -115,6 +119,7 @@
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   grid-template-columns: 76% auto auto auto auto;
+  transition: width 0.2s linear;
 }
 .dot {
   width: 36px;
@@ -143,8 +148,25 @@
   height: 75%;
   margin: auto;
   overflow: auto;
+  transition: width 0.2s linear;
 
   margin-top: 0.2%;
+}
+#xpand {
+  height: 10%;
+  width: 132%;
+  margin-left: 0.5%;
+}
+.xpanded {
+  width: 132%;
+  margin-left: 0.5%;
+}
+#xpanded {
+  width: 132%;
+  margin-left: 0.5%;
+}
+.none {
+  display: none;
 }
 
 .bear {
@@ -158,7 +180,8 @@
   margin-top: 2%;
 }
 .msgInput {
-  height: 11.4%;
+  min-height: 40px;
+  position: relative;
   width: 99%;
   margin: auto;
   margin-top: 0.2%;
@@ -166,6 +189,9 @@
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   display: grid;
+
+  overflow-y: auto;
+  overflow-x: hidden;
   grid-template-columns: 10% 8% 70% 20%;
 }
 .msgInput input {
@@ -173,18 +199,21 @@
   outline: none;
   background-color: #f2f2f2;
   border: none;
-  padding: 1.5%;
-  margin-top: 3.5%;
+  /* padding: 0% 1.5%; */
+  height: 51px;
+  word-wrap: break-word;
+  word-break: break-all;
+  margin-top: 3%;
   border-radius: 10px;
 }
 .fol {
-  margin-top: 41%;
+  margin-top: 35%;
   margin-left: 16%;
 
   /* background-color: brown; */
 }
 .send {
-  margin-top: 13%;
+  margin-top: 10%;
   margin-left: 20%;
   background-color: #f2f2f2;
   width: 30px;
@@ -200,7 +229,7 @@
   height: 36px;
   background-color: #f2f2f2;
   border-radius: 50%;
-  margin-top: 20%;
+  margin-top: 17%;
   margin-left: 26%;
 }
 .add .imj {
@@ -210,12 +239,12 @@
 .rightpane {
   background-color: #fefefe;
   margin-top: 1.2%;
-  width: 95%;
+  width: 92%;
   border-radius: 10px;
 }
 .close {
   float: right;
-  margin: 6%;
+  margin: 11%;
 }
 .txt {
   margin: auto;
