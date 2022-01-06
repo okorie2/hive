@@ -131,10 +131,10 @@ export default function Home() {
               <div>
                 <p>
                   <b>
-                    <b>Feature 1</b>
+                    <b>Disappearing mvessages</b>
                   </b>{" "}
                   <br />
-                  128gb worth of free space for 2months
+                  Set your messages to disappear at a pre-defined time
                 </p>
               </div>
             </div>
@@ -142,8 +142,8 @@ export default function Home() {
               <div className={styles.bullet}></div>
               <div>
                 <p>
-                  <b>Feature 1</b> <br />
-                  128gb worth of free space for 2months
+                  <b>Video call upto 20 people</b> <br />
+                  Nothing is more fun than more people on the video chat!
                 </p>
               </div>
             </div>
@@ -151,8 +151,8 @@ export default function Home() {
               <div className={styles.bullet}></div>
               <div>
                 <p>
-                  <b>Feature 1</b> <br />
-                  128gb worth of free space for 2months
+                  <b>Schedule your messages for later</b> <br />
+                  Send messages whether you are busy or asleep
                 </p>
               </div>
             </div>
@@ -160,16 +160,7 @@ export default function Home() {
               <div className={styles.bullet}></div>
               <div>
                 <p>
-                  <b>Feature 1</b> <br />
-                  128gb worth of free space for 2months
-                </p>
-              </div>
-            </div>
-            <div className={styles.miniGrid}>
-              <div className={styles.bullet}></div>
-              <div>
-                <p>
-                  <b>Feature 1</b> <br />
+                  <b>Groups search</b> <br />
                   128gb worth of free space for 2months
                 </p>
               </div>
@@ -185,7 +176,8 @@ export default function Home() {
           </div>
           <div>
             <p>
-              The new way to connect with the people you care about at al ltimes
+              The new way to connect with the people
+              <br /> you care about
             </p>
             <button className={styles.btn}>
               <Link href="/auth/signup">
