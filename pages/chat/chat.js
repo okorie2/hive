@@ -104,37 +104,46 @@ export default function Chat() {
               className={styles["section"]}
               id={expanded ? styles["xpanded"] : ""}
             >
-              <div className={styles.teddy}>
-                <div className={styles.bear}>
-                  <Image src="/bear.svg" alt="bear" width={88} height={88} />
-                </div>
-                <p>Send and receive messages here</p>
-              </div>
-            </div>
-            <div
-              className={styles["msgInput"]}
-              id={expanded ? styles["xpand"] : ""}
-            >
-              <div className={styles.add}>
-                <div className={styles.imj}>
-                  <Image src="/add.svg" alt="add" width={14} height={14} />
+              <div className={styles.msgArea}>
+                <div className={styles.teddy}>
+                  <div className={styles.bear}>
+                    <Image src="/bear.svg" alt="bear" width={88} height={88} />
+                  </div>
+                  <p>Send and receive messages here</p>
                 </div>
               </div>
-              <div className={styles.fol}>
-                <Image src="/folder.svg" alt="folder" width={22} height={19} />
-              </div>
-              <div>
-                {/* <Image src="/emoji.svg" alt="emoji" width={20} height={10} /> */}
-                <input type="text" placeholder="Send a message" />{" "}
-              </div>
-              <div className={styles.send}>
-                <div className={styles.imj}>
+              <div
+                className={styles["msgInput"]}
+                id={expanded ? styles["xpand"] : ""}
+              >
+                <div className={styles.add}>
+                  <div className={styles.imj}>
+                    <Image src="/add.svg" alt="add" width={14} height={14} />
+                  </div>
+                </div>
+                <div className={styles.fol}>
                   <Image
-                    src="/send.svg"
-                    alt="send"
-                    width={17.84}
-                    height={15.56}
+                    src="/folder.svg"
+                    alt="folder"
+                    width={22}
+                    height={19}
                   />
+                </div>
+                <div>
+                  {/* <Image src="/emoji.svg" alt="emoji" width={20} height={10} /> */}
+                  <div contentEditable="true" className={styles.edit}>
+                    edit
+                  </div>
+                </div>
+                <div className={styles.send}>
+                  <div className={styles.imj}>
+                    <Image
+                      src="/send.svg"
+                      alt="send"
+                      width={17.84}
+                      height={15.56}
+                    />
+                  </div>
                 </div>
               </div>
             </div>
