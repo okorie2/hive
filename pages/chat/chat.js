@@ -2,9 +2,14 @@ import React, { useState } from "react";
 import styles from "./chat.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import ModalA from "../../Component/Modals/ModalA";
 
 export default function Chat() {
   const [expanded, setExpanded] = useState(false);
+  const [modal, setModal] = useState(false);
+  const showModal = () => {
+    setModal(!modal);
+  };
   return (
     <>
       <div className={styles.layout}>
@@ -96,7 +101,7 @@ export default function Chat() {
                   height={12}
                 />
               </div>
-              <div id={styles.menu2} onClick={() => setExpanded(false)}>
+              <div id={styles.menu2} onClick={showModal}>
                 <Image src="/menu2.svg" alt="menu" width={4} height={16} />
               </div>
             </div>
@@ -161,6 +166,18 @@ export default function Chat() {
             </div>
           </div>
         </div>
+
+        {modal ? (
+          <ModalA
+            onClick={() => {
+              setExpanded(false);
+              setModal(false);
+            }}
+            expanded={expanded}
+          />
+        ) : (
+          ""
+        )}
       </div>
     </>
   );
