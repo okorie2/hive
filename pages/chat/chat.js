@@ -137,7 +137,7 @@ export default function Chat() {
                 <div>
                   {/* <Image src="/emoji.svg" alt="emoji" width={20} height={10} /> */}
                   <div contentEditable="true" className={styles.edit}>
-                    edit
+                    edit <div className={styles.emoji}></div>
                   </div>
                 </div>
                 <div className={styles.send}>
