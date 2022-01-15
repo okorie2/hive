@@ -3,6 +3,7 @@ import styles from "./chat.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import ModalA from "../../Component/Modals/ModalA";
+import LeftPane from "../../Component/Panes/LeftPane";
 
 export default function Chat() {
   const [expanded, setExpanded] = useState(false);
@@ -47,29 +48,7 @@ export default function Chat() {
           <div className={styles.user}>John1234</div>
         </div>
         <div className={styles.sec}>
-          <div className={styles.leftPane}>
-            <div className={styles.spans}>
-              <div>
-                <h4>Chats</h4>
-              </div>
-              <div className={styles.menuspot}>
-                <div className={styles.menu}>
-                  <Image src="/menu.svg" alt="profile" width={4} height={16} />
-                </div>
-              </div>
-            </div>
-            <div className={styles.search}>
-              <input type="search" placeholder="Search" />
-            </div>
-            <div className={styles.nil}>
-              <div className={styles.deet}>
-                <p>No chats here</p>
-                <Link href="#">
-                  <a>Start a new chat </a>
-                </Link>
-              </div>
-            </div>
-          </div>
+          <LeftPane />
           <div className={styles.midpane}>
             <div
               className={styles["navi"]}
@@ -137,7 +116,8 @@ export default function Chat() {
                 <div>
                   {/* <Image src="/emoji.svg" alt="emoji" width={20} height={10} /> */}
                   <div contentEditable="true" className={styles.edit}>
-                    edit <div className={styles.emoji}></div>
+                    edit{" "}
+                    <div className={styles.emoji} contentEditable="false"></div>
                   </div>
                 </div>
                 <div className={styles.send}>

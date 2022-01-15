@@ -55,56 +55,6 @@
   display: grid;
   grid-template-columns: 24% 57% 20%;
 }
-.leftPane {
-  /* width: 24%; */
-  height: 85vh;
-  background-color: #fefefe;
-  margin-left: 2%;
-  margin-top: 1%;
-  border-radius: 10px;
-}
-.spans {
-  display: grid;
-  grid-template-columns: 85% auto;
-}
-.spans h4 {
-  font-size: 20px;
-  font-weight: 400;
-  margin-top: 5%;
-  margin-left: 4%;
-}
-.menuspot {
-  width: 30px;
-  height: 30px;
-  background-color: #f2f2f2;
-  border-radius: 50%;
-  margin-top: 23%;
-}
-.menu {
-  margin-top: 17%;
-  margin-left: 43%;
-}
-.search input {
-  padding: 2.5%;
-  outline: none;
-  background-color: rgba(130, 131, 130, 0.1);
-  border-radius: 10px;
-  border: none;
-  width: 93%;
-  margin-left: 3%;
-}
-.deet {
-  width: 37%;
-  margin: auto;
-  margin-top: 30%;
-}
-.deet p {
-  margin-left: 6%;
-}
-.deet a {
-  color: #4ab5e1;
-  text-decoration: underline #4ab5e1;
-}
 
 .midpane .navi {
   /* width: 58%; */
