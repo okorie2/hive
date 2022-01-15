@@ -52,6 +52,7 @@
 .srchLst {
   display: flex;
   flex-direction: column;
+  margin-top: 5%;
 }
 .srchLst div {
   padding: 3%;
@@ -62,4 +63,10 @@
 #sp {
   margin-top: 3%;
   margin-left: 2%;
+}
+#nSpans {
+  margin-left: 3%;
+}
+#nSpans span {
+  margin-right: 3%;
 }
