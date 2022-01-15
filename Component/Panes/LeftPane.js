@@ -4,12 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 export default function LeftPane() {
   const [newChat, setNewChat] = useState(false);
-  const searchNewChat = () => {
-    setNewChat(true);
+  const searchNewChat = (bool) => {
+    setNewChat(bool);
   };
-  useEffect(() => {
-    console.log(newChat);
-  }, []);
+
   return (
     <>
       <div className={styles.leftPane}>
@@ -32,7 +30,7 @@ export default function LeftPane() {
               <div className={styles.deet}>
                 <p>No chats here</p>
                 <Link href="#">
-                  <a onClick={searchNewChat}>Start a new chat </a>
+                  <a onClick={() => searchNewChat(true)}>Start a new chat </a>
                 </Link>
               </div>
             </div>
@@ -40,8 +38,20 @@ export default function LeftPane() {
         ) : (
           <div>
             <div className={styles.spans}>
-              <div>
-                <h4>New Chat</h4>
+              <div id={styles.nSpans}>
+                {" "}
+                <h4>
+                  {" "}
+                  <span onClick={() => setNewChat(false)}>
+                    <Image
+                      src="/arrowBack.svg"
+                      alt="avi"
+                      height={16}
+                      width={16}
+                    />
+                  </span>
+                  New Chat
+                </h4>
               </div>
             </div>
             <div className={styles.search}>
