@@ -1,16 +1,20 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import styles from "./chat.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import ModalA from "../../Component/Modals/ModalA";
 import LeftPane from "../../Component/Panes/LeftPane";
+import UseOutsideAlerter from "./utilities/UseOutsideAlerter";
 
 export default function Chat() {
   const [expanded, setExpanded] = useState(false);
   const [modal, setModal] = useState(false);
-  const showModal = () => {
+  const showModal = (e) => {
     setModal(!modal);
   };
+  const modalRef = useRef();
+  UseOutsideAlerter(modalRef);
+
   return (
     <>
       <div className={styles.layout}>
@@ -149,6 +153,7 @@ export default function Chat() {
 
         {modal ? (
           <ModalA
+            ref={modalRef}
             onClick={() => {
               setExpanded(false);
               setModal(false);

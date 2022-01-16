@@ -1,9 +1,13 @@
 import React from "react";
 import styles from "./modala.module.css";
-export default function ModalA({ onClick, expanded }) {
+export default function ModalA({ onClick, expanded, ref }) {
   return (
     <>
-      <div className={styles.modalA} id={expanded ? styles["modalAx"] : ""}>
+      <div
+        className={styles.modalA}
+        id={expanded ? styles["modalAx"] : ""}
+        ref={ref}
+      >
         <div onClick={onClick}>Contact Info</div>
         <div>Name Contact </div>
         <div>Select Messages</div>
