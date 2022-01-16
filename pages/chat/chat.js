@@ -12,7 +12,7 @@ export default function Chat() {
   const showModal = (e) => {
     setModal(!modal);
   };
-  const modalRef = useRef();
+  const modalRef = useRef(null);
   UseOutsideAlerter(modalRef);
 
   return (
