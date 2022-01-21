@@ -4,12 +4,13 @@
   padding: 2% 4%;
   font-weight: 400;
   /* font-size: 15px; */
+  align-items: center;
 }
 .active {
   width: 60%;
   font-size: larger;
   font-weight: 500;
-  margin-top: -1%;
+  align-items: center;
 }
 .spot {
   float: left;
@@ -243,4 +244,5 @@
 
 .hiveright {
   font-family: "Fertigo", sans-serif;
+
 }
