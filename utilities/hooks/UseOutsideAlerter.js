@@ -4,11 +4,10 @@ import UseModalState from "./UseModalState";
 export default function UseOutsideAlerter(ref) {
   const [state, setState] = useState(false);
   useEffect(() => {
-    console.log("started");
     const handleClickOutside = (e) => {
       if (ref?.current && !ref?.current?.contains(e.target)) {
-        console.log("clicked outside");
         setState(true);
+        console.log(state, "clicked outside");
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
