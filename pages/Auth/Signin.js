@@ -71,7 +71,7 @@ export default function Signin() {
               </div>
               <div>
                 <button className={styles.signupBtn} id={styles.signinBtn}>
-                  Log In
+                  Login
                 </button>
               </div>
               {/* <div>

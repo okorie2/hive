@@ -4,9 +4,8 @@ import UseModalState from "../../utilities/hooks/UseModalState";
 import UseOutsideAlerter from "../../utilities/hooks/UseOutsideAlerter";
 export default function ModalA({ onClick, expanded }) {
   const modalRef = useRef(null);
-  const { state } = UseOutsideAlerter(modalRef);
-
-  console.log(state, "outside?");
+  const { state, setState } = UseOutsideAlerter(modalRef);
+  console.log(state, "modala state");
   return (
     <>
       {!state ? (
