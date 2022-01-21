@@ -12,7 +12,7 @@
 .leftRec {
   background-image: url('../../public/Rectangleleft.png');
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: cover;
 
   
 }
