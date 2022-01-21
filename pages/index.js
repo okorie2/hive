@@ -237,7 +237,7 @@ export default function Home() {
           </div>
           <div>
             <h4>Legal</h4>
-            <p>Terms and Consitions</p>
+            <p>Terms and Conditions</p>
             <p>Privacy</p>
           </div>
           <div>
