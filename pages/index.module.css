@@ -11,15 +11,20 @@
   font-size: larger;
   font-weight: 500;
   align-items: center;
+  display: grid;
+  grid-template-columns: 10% auto;
 }
-.spot {
-  float: left;
-  width: 30px;
-  height: 30px;
-  background-color: black;
-  border-radius: 50%;
-  margin-right: 2%;
+
+.hiveright {
+  font-family: "Fertigo", sans-serif;
+  text-align: left;
+  margin-left: 1.5%;
+
 }
+.nav button {
+  cursor: pointer;
+}
+
 .navlist button {
   width: 70%;
   padding: 8%;
@@ -55,6 +60,8 @@
   padding: 3% 4%;
   /* height: 90px; */
   border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
 }
 .right {
   /* background-color: #f5f5f5; */
@@ -146,18 +153,38 @@
   font-weight: 600;
   /* font-size: 18px; */
 }
-/* .miniGrid {
+
+.featureheader {
+  font-family: "Fertigo", sans-serif;
+  text-align: center;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.7rem;
+  margin-top: 6%;
+  margin-bottom: 5%;
+
+}
+.miniGrid {
   display: grid;
-  grid-template-columns: 30% 70%;
-} */
+  grid-template-columns: 15% 85%;
+  margin-bottom: 5%;
+}
+.featuretext{
+  font-family: "Open Sans";
+}
+.featurespan {
+  width: 70%;
+  margin-top: 3%;
+}
+.miniGrid span {
+  color: #616061;
+}
 .bullet {
-  width: 30px;
-  height: 30px;
-  background-color: #f0f0f0;
-  border-radius: 50%;
-  float: left;
+  width: 50px;
+  height: 50px;
   margin-right: 5%;
 }
+
 
 .center {
   background-color: #023e8a;
@@ -172,7 +199,6 @@
   background-size: cover;
   width: 100%;
   height: 423px;
-  margin-bottom: 1%;
   overflow: auto;
   color: white;
 }
@@ -180,11 +206,28 @@
   margin-top: 10%;
 }
 .center .active {
-  width: 8%;
+  width: 6%;
+  grid-template-columns: 40% 60%;
   margin: auto;
+  font-family: "Fertigo", sans-serif;
+  align-items: center;
+  
 }
-.active .spot {
-  background-color: white;
+
+.center .activetext {
+  font-family: "Open Sans";
+}
+
+.center .spot {
+  text-align: left;
+}
+
+.center .hive {
+  text-align: right;
+}
+
+.center button {
+  cursor: pointer;
 }
 /* .cent h3 {
   margin-left: 25%;
@@ -203,7 +246,6 @@
   font-size: 20px;
   width: 55%;
   text-align: center;
-  font-family: "Fertigo", sans-serif;
 }
 .cent button {
   margin-left: 41%;
@@ -212,12 +254,14 @@
   color: white;
   padding: 1% 4%;
   border-radius: 5px;
+  font-size: 1rem;
 }
 .ft {
   background-color: #1d1d1d;
   /* padding: 1%; */
   color: #fff;
   font-size: small;
+  padding-bottom: 2%;
 }
 .ftGrid {
   padding: 1%;
@@ -242,7 +286,4 @@
   margin-left: -10%;
 }
 
-.hiveright {
-  font-family: "Fertigo", sans-serif;
 
-}
