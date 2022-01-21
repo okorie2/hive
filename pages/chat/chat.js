@@ -9,13 +9,11 @@ import UseOutsideAlerter from "../../utilities/hooks/UseOutsideAlerter";
 export default function Chat() {
   const [expanded, setExpanded] = useState(false);
   const { state, setState } = UseOutsideAlerter(null);
-  console.log(state, "props state");
   const showModal = (e) => {
     setState(!state);
     console.log(state, "modal status");
   };
 
-  console.log("welcome");
   return (
     <>
       <div className={styles.layout}>
@@ -120,9 +118,12 @@ export default function Chat() {
                 </div>
                 <div>
                   {/* <Image src="/emoji.svg" alt="emoji" width={20} height={10} /> */}
-                  <div contentEditable="true" className={styles.edit}>
-                    edit{" "}
-                    <div className={styles.emoji} contentEditable="false"></div>
+                  <div
+                    contentEditable="true"
+                    suppressContentEditableWarning={true}
+                    className={styles.edit}
+                  >
+                    edit <div className={styles.emoji}></div>
                   </div>
                 </div>
                 <div className={styles.send}>
@@ -156,7 +157,7 @@ export default function Chat() {
           <ModalA
             onClick={() => {
               setExpanded(false);
-              setState(false);
+              setState(!state);
             }}
             expanded={expanded}
           />
