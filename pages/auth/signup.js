@@ -13,6 +13,7 @@ export default function Signup() {
     <>
       <div className={styles.authContainer}>
         <div className={styles.leftRec}>
+        <div className={styles.leftContent}>
           <div className={styles.leftRecLogo}>
          <div className={styles.leftRecLogologo}> <Image 
               src='/logooutline.svg' 
@@ -26,6 +27,8 @@ export default function Signup() {
               Enjoy instant messaging with your contacts anytime, anywhere!
             </span>
           </div>
+          </div>
+
         </div>
 
         <div className={styles.mainRec}>

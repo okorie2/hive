@@ -12,8 +12,13 @@
 .leftRec {
   background-image: url('../../public/Rectangleleft.png');
   background-repeat: no-repeat;
-  padding-top: 90%;
+  background-size: cover;
+
   
+}
+
+.leftContent {
+  margin-top: 80%;
 }
 .leftRecLogo {
   margin: auto;
