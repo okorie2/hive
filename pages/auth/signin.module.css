@@ -1,20 +1,59 @@
+
 .authContainer {
-  background-color: #fff;
+  background-color: #E5E5E5;
   display: grid;
   margin: auto;
-  width: 88%;
-  grid-template-columns: 44% 49%;
+  width: 100%;
+  grid-template-columns: 50% 50%;
   /* padding-bottom: 5%; */
+
 }
 
+.leftRec {
+  background-image: url('../../public/Rectangleleft.png');
+  background-repeat: no-repeat;
+  padding-top: 90%;
+  
+}
+.leftRecLogo {
+  margin: auto;
+  /* text-align: center; */
+  align-items: center;
+  color: white;
+  font-family: "Fertigo", sans-serif;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  width: 13%;
+}
+
+.leftRecLogospan {
+  font-size: 1.3rem;
+  text-align: right;
+}
+.leftRecLogolog {
+  text-align: left;
+}
+
+.leftRectxt {
+  margin: auto;
+  width: 45%;
+  text-align: center;
+  color: white;
+  font-family: "Open Sans";
+  margin-top: 3%;
+}
 .mainRec {
-  padding-top: 3%;
-  margin-top: 10%;
-  width: 88%;
-  height: 87vh;
+  padding-top: 5%;
+  width: 70%;
   border-radius: 10px;
-  background-color: #e4e4e4;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
+  background-color: #fff;
   font-family: "Open Sans", sans-serif;
+  margin: auto;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  padding-bottom: 5%;
+  
 }
 #signin {
   padding-top: 1%;
@@ -29,6 +68,12 @@
 }
 .mainRec .txt {
   margin-left: 5%;
+}
+
+.mainRec .txt p {
+  color: #616061;
+  font-family: "Open Sans";
+  font-size: 0.8rem;
 }
 .mainRec .txt h2 {
   font-weight: 400;
@@ -49,7 +94,7 @@
 .btnRw button {
   width: 89%;
   height: 152%;
-  background-color: #e5e5e5;
+  background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.12);
   border-radius: 5px;
   font-family: "Open Sans", sans-serif;
@@ -86,25 +131,45 @@
   padding: 2.6%;
   outline: none;
   margin: auto;
-  background-color: #c4c4c4;
+  background-color: #fff;
   border-radius: 5px;
   /* border-color: #c4c4c4; */
-  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.authpass{
+  background-image: url(../../public/eye.svg);
+  background-repeat: no-repeat;
+  background-size: 6%;
+  background-position: 97% 50%;
+}
+
+.authInput::placeholder {
+  color: #1D1C1D;
 }
 .formContainer {
   padding-top: 5%;
 }
+
 .authInputContainer {
   margin-left: 4%;
   margin-bottom: 2%;
 }
 .authInputContainer label {
   font-size: smaller;
-  color: rgba(0, 0, 0, 0.8);
+}
+
+.formContainer label{
+  color: #616061;
 }
 .signupBtn {
-  background-color: #2e2e2e;
-  padding: 2%;
+  text-align: center;
+  margin-top: 5%;
+}
+
+.signupBtn button {
+  background-color: #4AB5E1;
+  padding: 3% 2%;
   border-radius: 5px;
   border: none;
   width: 40%;
@@ -117,10 +182,11 @@
 .ft {
   bottom: -5%;
   width: 100%;
-  box-shadow: 9px 5px 4px 4px rgb(148, 144, 144);
+  /* box-shadow: 9px 5px 4px 4px rgb(148, 144, 144); */
   display: grid;
   padding: 1%;
   font-size: small;
+  background-color: #fff;
 
   /* margin-top: 10%; */
 
@@ -237,6 +303,29 @@
 .resetam span {
   font-weight: 400;
 }
+
+.terms {
+  width: 92%;
+  margin: auto;
+  margin-top: 4%;
+  display: grid;
+  grid-template-columns: 5% 95%;
+}
+
+.termstxt {
+  margin-left: 2%;
+  color: #616061;
+  font-size: 0.8rem;
+  width: 90%;
+}
+
+.termstxt a{
+  color: #4AB5E1;
+}
+
+
+
+
 
 .successbut {
   margin-top: 8%;
