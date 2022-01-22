@@ -3,7 +3,7 @@ import styles from "./signin.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import FacebookIcon from "@mui/icons-material/Facebook";
-import GoogleIcon from "@mui/icons-material/Google";
+
 import Mockup from "../../Component/Laptop Mockup/Mockup";
 import Footerr from "./Footer";
 import LeftImage from "../../public/Rectangle302.jpg";
@@ -15,11 +15,6 @@ export default function Signup() {
         <div className={styles.leftRec}>
         <div className={styles.leftContent}>
           <div className={styles.leftRecLogo}>
-         <div className={styles.leftRecLogologo}> <Image 
-              src='/logooutline.svg' 
-              alt='logo'
-              height={30}
-              width={30}/></div>
             <div className={styles.leftRecLogospan}><span>Hive</span></div>  
           </div>
           <div  className={styles.leftRectxt}>
@@ -92,7 +87,7 @@ export default function Signup() {
                 <label>Password</label> <br />
                 <input
                   type="password"
-                  placeholder="*******"
+                  placeholder=" "
                   className={styles.authInput + " "+ styles.authpass}
                   
                 />

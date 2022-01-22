@@ -8,15 +8,20 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 export default function ResetSuccessful() {
   return (
     <>
-      <div className={styles.bg}>
+      <div className={styles.bgauth + " " + styles.resetsuccessbg}>
         <div className={styles["hiveright"] + " " + styles["hivetopleft"]}>
           <p>Hive</p>
         </div>
         <div className={styles.forgotcard}>
+        <Image 
+              src='/resetsuccessicon.svg' 
+              alt='sent'
+              height={50}
+              width={50}/>
           <p className={styles.hiveright}>Password Reset</p>
           <span>Your password has been successfully reset</span>
           <br />
-          <button className={styles.successbut}>Login</button>
+          <Link href="/auth/signin"><button className={styles.successbut}>Login</button></Link> 
         </div>
         <div className={styles.push}></div>
         <Footerr />

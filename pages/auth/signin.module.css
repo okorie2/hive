@@ -9,6 +9,16 @@
 
 }
 
+.bg {
+  background-color: #E5E5E5;
+  padding-top: 7%;
+}
+
+
+.bgauth {
+  background-color: #E5E5E5;
+}
+
 .leftRec {
   background-image: url('../../public/Rectangleleft.png');
   background-repeat: no-repeat;
@@ -27,17 +37,21 @@
   color: white;
   font-family: "Fertigo", sans-serif;
   display: grid;
-  grid-template-columns: 40% 60%;
-  width: 13%;
+  width: 6rem;
+  height: 2.5rem;
+  background-image: url('../../public/logooutline.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left;
 }
 
 .leftRecLogospan {
   font-size: 1.3rem;
   text-align: right;
 }
-.leftRecLogolog {
+/* .leftRecLogologo {
   text-align: left;
-}
+} */
 
 .leftRectxt {
   margin: auto;
@@ -65,8 +79,9 @@
 
   margin: auto;
   width: 34%;
-  height: 67vh;
-  margin-top: 7%;
+  padding-bottom: 4%;
+
+  /* margin-top: 7%; */
 }
 #signin .txt {
   text-align: center;
@@ -148,10 +163,17 @@
   background-size: 6%;
   background-position: 97% 50%;
 }
+.authpass::placeholder{
+  background-image: url(../../public/passworddots.svg);
+  background-repeat: no-repeat;
+  background-position: 1% 50%;
+}
 
 .authInput::placeholder {
   color: #1D1C1D;
 }
+
+
 .formContainer {
   padding-top: 5%;
 }
@@ -160,9 +182,10 @@
   margin-left: 4%;
   margin-bottom: 2%;
 }
-.authInputContainer label {
+.authInputContainer label, .authInputContainer p{
   font-size: smaller;
 }
+
 
 .formContainer label{
   color: #616061;
@@ -178,11 +201,11 @@
   border-radius: 5px;
   border: none;
   width: 40%;
-  margin-left: 5%;
   color: #fff;
 }
 #signinBtn {
-  width: 25%;
+  padding: 2% 1%;
+  width: 30%;
 }
 .ft {
   bottom: -5%;
@@ -203,17 +226,20 @@
 }
 
 .hivetopleft {
-  margin-top: 3%;
-  margin-left: 5%;
+  padding-top: 2%;
+  padding-left: 5%;
 }
 
 .forgotcard {
-  background-color: #e4e4e4;
-  width: 35%;
+  background: #FEFEFE;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
+  width: 34%;
   text-align: center;
   margin: auto;
   border-radius: 10px;
   margin-top: 7%;
+  margin-bottom: 8%;
+  padding-top: 4.5%;
 }
 
 .forgotcard img {
@@ -221,7 +247,7 @@
   width: 52px;
   height: 52px;
   background-color: #c4c4c4;
-  margin-top: 15%;
+
 }
 
 .forgotcard p {
@@ -231,9 +257,10 @@
 
 .forgotcard span {
   font-size: 14px;
-  color: #000000;
+  color: #616061;
   font-weight: 300;
   font-family: "Open Sans", sans-serif;
+
 }
 
 .forgotcard form {
@@ -244,7 +271,8 @@
 }
 .forgotcard label {
   font-weight: 300;
-  font-size: 14px;
+  font-size: 16px;
+  color: #616061;
 }
 
 .forgotcard input {
@@ -252,27 +280,42 @@
   width: 100%;
   padding: 3%;
   outline: none;
-  background-color: #c4c4c4;
+  background-color: #fff;
   border: none;
   border-radius: 5px;
+  margin-bottom: 5%;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.resetpasswordinput input{
+  margin-bottom: 0%;
+}
+
+.resetpasswordinput {
   margin-bottom: 5%;
 }
 
 .forgotcard button {
   border: none;
   color: #fff;
-  background-color: #2e2e2e;
+  background-color: #4AB5E1;
   font-size: 14px;
   font-weight: 100;
   padding: 2.5% 9%;
   border-radius: 7px;
   font-family: "Open Sans", sans-serif;
+  cursor: pointer;
 }
 
-.forgotbutton {
-  margin-top: 5%;
-  margin-bottom: 20%;
+
+.forgotbutton button {
+  margin-top: 2%;
+  margin-bottom: 15%;
   font-family: "Open Sans", sans-serif;
+}
+
+.forgotbutton{
+  text-align: center;
 }
 
 .checkembutton {
@@ -280,8 +323,9 @@
   margin-bottom: 5%;
 }
 
-.checkspan b {
-  font-weight: 500;
+.checkspan a {
+  color: #4AB5E1;
+  padding-left: 1%;
 }
 
 .checkspan {
@@ -297,8 +341,12 @@
   font-weight: 400;
 }
 
-.resetbutton {
+.resetbutton button{
   margin-bottom: 12%;
+}
+
+.resetbutton {
+  text-align: center;
 }
 
 .resetam {
@@ -344,4 +392,19 @@
 .arrowback {
   vertical-align: middle;
   font-size: 1rem;
+  color: #616061;
+}
+
+
+.authInputContainer a {
+  color: #4AB5E1;
+}
+.resetbg .forgotcard{
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.resetsuccessbg .forgotcard{
+  margin-top: 8%;
+  margin-bottom: 14%;
 }
