@@ -60,24 +60,23 @@ export default function Signin() {
                 <label>Password</label> <br />
                 <input
                   type="password"
-                  placeholder="*******"
-                  className={styles.authInput}
+                  placeholder=" "
+                  className={styles.authInput +" "+ styles.authpass }
                 />
-                <label>
-                  <Link href="/Auth/forgotpassword">
-                    <b>Forgot Password?</b>
+                <br/>
+                
+                <p className={styles.authsigninpass}>
+                  <Link href="/auth/forgotpassword">
+                    <a>Forgot Password?</a>
                   </Link>
-                </label>
+                </p>
               </div>
-              <div>
-                <button className={styles.signupBtn} id={styles.signinBtn}>
+              <div className={styles.signupBtn}>
+                <button  id={styles.signinBtn}>
                   Login
                 </button>
               </div>
-              {/* <div>
-                <span></span> Creating an account means you agree with our Terms
-                of Service and Privacy Policy{" "}
-              </div> */}
+
             </form>
           </div>
         </div>
