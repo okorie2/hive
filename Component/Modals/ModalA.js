@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
+import UseOutsideAlerter from "../../hooks/UseOutsideAlerter";
 import styles from "./modala.module.css";
-import UseModalState from "../../utilities/hooks/UseModalState";
-import UseOutsideAlerter from "../../utilities/hooks/UseOutsideAlerter";
 export default function ModalA({ onClick, expanded }) {
   const modalRef = useRef(null);
   const { state, setState } = UseOutsideAlerter(modalRef);

@@ -6,19 +6,27 @@ import FacebookTwoToneIcon from "@mui/icons-material/FacebookTwoTone";
 import TwitterIcon from "@mui/icons-material/Twitter";
 
 import styles from "./index.module.css";
-
+import { useDispatch } from "react-redux";
+import { handleAuth } from "../redux/actions/auth";
+import { useEffect } from "react";
 export default function Home() {
+  console.log(process.env.NEXT_PUBLIC_BASE_URL);
+
+  const dispatch = useDispatch();
+
   return (
     <>
       <nav>
         <div className={styles.nav}>
           <div className={styles.active}>
             <div className={styles.spot}>
-              <Image 
-              src='/logohighlight.svg' 
-              alt='logo'
-              height={30}
-              width={30}/></div>
+              <Image
+                src="/logohighlight.svg"
+                alt="logo"
+                height={30}
+                width={30}
+              />
+            </div>
             <div className={styles.hiveright}>Hive</div>
           </div>
           <div className={styles.navlist}>About</div>
@@ -26,13 +34,9 @@ export default function Home() {
           <div className={styles.navlist}>FAQs</div>
           <div className={styles.navlist}>Contact</div>
           <div className={styles.navlist}>
-            
-              <Link href="/auth/signin">
-              <button>
-                Log in
-                </button>
-              </Link>
-            
+            <Link href="/auth/signin">
+              <button>Log in</button>
+            </Link>
           </div>
         </div>
       </nav>
@@ -44,13 +48,10 @@ export default function Home() {
               Enjoy amazing features and instant messaging that connects you to
               the people you love and care about.
             </p>
-            
-              <Link href="/auth/signup">
-              <button>
-                Create an account
-                </button>
-              </Link>
-            
+
+            <Link href="/auth/signup">
+              <button>Create an account</button>
+            </Link>
           </div>
           <div className={styles.right}>
             <Image
@@ -122,9 +123,10 @@ export default function Home() {
       </section>
 
       <section className={styles.tod}>
-      <div className={styles.featureheader}><span>Enjoy Amazing Features</span></div>
+        <div className={styles.featureheader}>
+          <span>Enjoy Amazing Features</span>
+        </div>
         <div className={styles.todGrid}>
-
           <div>
             <div>
               <Image
@@ -136,64 +138,74 @@ export default function Home() {
             </div>
           </div>
           <div className={styles.rii}>
-
             <div className={styles.miniGrid}>
               <div className={styles.bullet}>
-              <Image 
-              src='/featureicon1.svg' 
-              alt='feature1'
-              height={50}
-              width={50}/>
+                <Image
+                  src="/featureicon1.svg"
+                  alt="feature1"
+                  height={50}
+                  width={50}
+                />
               </div>
               <div className={styles.featuretext}>
-               <b>Disappearing messages</b>
-                  <br />
-                  <div className={styles.featurespan}><span>Set your messages to disappear at a pre-defined time</span></div>
+                <b>Disappearing messages</b>
+                <br />
+                <div className={styles.featurespan}>
+                  <span>
+                    Set your messages to disappear at a pre-defined time
+                  </span>
+                </div>
               </div>
             </div>
             <div className={styles.miniGrid}>
               <div className={styles.bullet}>
-              <Image 
-              src='/featureicon2.svg' 
-              alt='feature2'
-              height={50}
-              width={50}/>
+                <Image
+                  src="/featureicon2.svg"
+                  alt="feature2"
+                  height={50}
+                  width={50}
+                />
               </div>
               <div className={styles.featuretext}>
-
-                  <b>Video call up to 20 people</b>
-                  <div className={styles.featurespan}><span> Nothing is more fun than more people on the video chat!</span></div>
-
+                <b>Video call up to 20 people</b>
+                <div className={styles.featurespan}>
+                  <span>
+                    {" "}
+                    Nothing is more fun than more people on the video chat!
+                  </span>
+                </div>
               </div>
             </div>
             <div className={styles.miniGrid}>
               <div className={styles.bullet}>
-              <Image 
-              src='/featureicon3.svg' 
-              alt='feature3'
-              height={50}
-              width={50}/>
+                <Image
+                  src="/featureicon3.svg"
+                  alt="feature3"
+                  height={50}
+                  width={50}
+                />
               </div>
               <div className={styles.featuretext}>
-
-                  <b>Schedule your messages for later</b> 
-            <div className={styles.featurespan}><span>Send messages whether you are busy or asleep</span></div>
-
+                <b>Schedule your messages for later</b>
+                <div className={styles.featurespan}>
+                  <span>Send messages whether you are busy or asleep</span>
+                </div>
               </div>
             </div>
             <div className={styles.miniGrid}>
               <div className={styles.bullet}>
-              <Image 
-              src='/featureicon4.svg' 
-              alt='feature4'
-              height={50}
-              width={50}/>
+                <Image
+                  src="/featureicon4.svg"
+                  alt="feature4"
+                  height={50}
+                  width={50}
+                />
               </div>
               <div className={styles.featuretext}>
-
-                  <b>Groups search</b>
-                  <div className={styles.featurespan}><span> 128gb worth of free space for 2months</span></div>
-
+                <b>Groups search</b>
+                <div className={styles.featurespan}>
+                  <span> 128gb worth of free space for 2months</span>
+                </div>
               </div>
             </div>
           </div>
@@ -203,11 +215,7 @@ export default function Home() {
         <div className={styles.cent}>
           <div className={styles.active}>
             <div className={styles.spot}>
-            <Image 
-              src='/logooutline.svg' 
-              alt='logo'
-              height={30}
-              width={30}/>
+              <Image src="/logooutline.svg" alt="logo" height={30} width={30} />
             </div>
             <div className={styles.hive}>Hive</div>
           </div>
@@ -216,13 +224,10 @@ export default function Home() {
               The new way to connect with the people
               <br /> you care about
             </p>
-            
-              <Link href="/auth/signup">
-              <button className={styles.btn}>
-                Create an account
-                </button>
-              </Link>
-      
+
+            <Link href="/auth/signup">
+              <button className={styles.btn}>Create an account</button>
+            </Link>
           </div>
         </div>
       </section>

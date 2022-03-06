@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import UseModalState from "./UseModalState";
 
 export default function UseOutsideAlerter(ref) {
   const [state, setState] = useState(false);
