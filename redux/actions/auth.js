@@ -19,9 +19,26 @@ export const handleAuth = (body) => async (dispatch) => {
   dispatch(getAuth());
   try {
     const response = await useAxios("POST", "/v1/auth/register", body);
-    console.log(response);
-    dispatch(getAuthSuccess(response));
+    // console.log(response);
+
+    dispatch(
+      getAuthSuccess({
+        status: true,
+        response,
+      })
+    );
+    // console.log(response, "check");
+
+    if (typeof window !== "undefined") {
+      localStorage.setItem("user", JSON.stringify(response));
+      localStorage.setItem("hasBeenAuthenticated", true);
+    }
   } catch (error) {
-    dispatch(getAuthError(error));
+    dispatch(
+      getAuthError({
+        status: false,
+        response: error.response,
+      })
+    );
   }
 };

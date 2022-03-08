@@ -1,9 +1,14 @@
 import { AUTH, AUTH_ERROR, AUTH_SUCCESS } from "../actions/actionTypes";
+var authenticated;
+if (typeof window !== "undefined") {
+  authenticated = JSON.parse(localStorage.getItem("hasBeenAuthenticated"));
+}
 
 const initialState = {
   loading: false,
   error: null,
-  data: [],
+  data: {},
+  auth: authenticated ? true : false,
 };
 export const auth = (state = initialState, action) => {
   switch (action.type) {
@@ -17,12 +22,14 @@ export const auth = (state = initialState, action) => {
         ...state,
         loading: false,
         data: action.payload,
+        auth: true,
       };
     case AUTH_ERROR:
       return {
         ...state,
         loading: false,
-        error: action.payload,
+        data: action.payload,
+        auth: false,
       };
     default:
       return state;

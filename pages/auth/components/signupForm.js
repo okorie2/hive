@@ -1,8 +1,14 @@
 import { useFormik } from "formik";
 import Link from "next/link";
-import { useDispatch } from "react-redux";
+import Image from "next/image";
+
+import { useDispatch, useSelector } from "react-redux";
 import * as Yup from "yup";
+import { handleAuth } from "../../../redux/actions/auth";
+import { Error } from "../../../styles/components/Error";
 import styles from "../signin.module.css";
+import { useEffect, useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
 
 export const FormHandler = () => {
   const dispatch = useDispatch();
@@ -37,81 +43,163 @@ export const FormHandler = () => {
         .required("required"),
     }),
     onSubmit: (values) => {
-      dispatch(handleAuth(userDetails));
+      dispatch(handleAuth(values));
     },
   });
+
+  const [visibility, setVisibility] = useState(false);
+  const [checked, setChecked] = useState(false);
+  const toggleVisibility = () => {
+    setVisibility(!visibility);
+  };
+  const { data, loading, error } = useSelector(({ auth }) => auth);
+
+  console.log(data.status, "data");
+  const alert = () => {
+    if (data?.status) {
+      toast.success(data && data?.response?.data?.message, { autoClose: 4000 });
+    } else {
+      toast.warn(data && data?.response?.data?.message, { autoClose: 4000 });
+    }
+  };
+
+  useEffect(() => {
+    if (!loading) {
+      alert();
+    }
+  }, [data]);
+
   return (
     <>
       <form onSubmit={formik.handleSubmit}>
+        <ToastContainer autoClose={8000} />
         <div className={styles.authInputContainer}>
           <label>Firstname</label> <br />
-          <input
-            type="text"
-            name="first_name"
-            placeholder="doe"
-            className={styles.authInput}
-            {...formik.getFieldProps("first_name")}
-          />
-          {formik.touched.first_name && formik.errors.first_name ? (
-            <div>{formik.errors.first_name}</div>
+          <div
+            className={styles.inputContainer}
+            style={{
+              border:
+                formik.touched.first_name && formik.errors.first_name
+                  ? "1.5px solid red"
+                  : "1.5px solid rgba(0, 0, 0, 0.12)",
+            }}
+          >
+            <input
+              type="text"
+              name="first_name"
+              placeholder="doe"
+              className={styles.authInput}
+              {...formik.getFieldProps("first_name")}
+            />
+          </div>
+          {formik.touched.last_name && formik.errors.last_name ? (
+            <Error>{formik.errors.last_name}</Error>
           ) : null}
         </div>{" "}
         <div className={styles.authInputContainer}>
           <label>Lastname</label> <br />
-          <input
-            type="text"
-            name="last_name"
-            placeholder="john"
-            className={styles.authInput}
-            {...formik.getFieldProps("last_name")}
-          />
+          <div
+            className={styles.inputContainer}
+            style={{
+              border:
+                formik.touched.last_name && formik.errors.last_name
+                  ? "1.5px solid red"
+                  : "1.5px solid rgba(0, 0, 0, 0.12)",
+            }}
+          >
+            <input
+              type="text"
+              name="last_name"
+              placeholder="john"
+              className={styles.authInput}
+              {...formik.getFieldProps("last_name")}
+            />
+          </div>
           {formik.touched.last_name && formik.errors.last_name ? (
-            <div>{formik.errors.last_name}</div>
+            <Error>{formik.errors.last_name}</Error>
           ) : null}
         </div>
         <div className={styles.authInputContainer}>
           <label>Username</label> <br />
-          <input
-            type="text"
-            name="username"
-            placeholder="john123"
-            className={styles.authInput}
-            {...formik.getFieldProps("username")}
-          />
+          <div
+            className={styles.inputContainer}
+            style={{
+              border:
+                formik.touched.username && formik.errors.username
+                  ? "1.5px solid red"
+                  : "1.5px solid rgba(0, 0, 0, 0.12)",
+            }}
+          >
+            <input
+              type="text"
+              name="username"
+              placeholder="john123"
+              className={styles.authInput}
+              {...formik.getFieldProps("username")}
+            />
+          </div>
           {formik.touched.username && formik.errors.username ? (
-            <div>{formik.errors.username}</div>
+            <Error>{formik.errors.username}</Error>
           ) : null}
         </div>
         <div className={styles.authInputContainer}>
           <label>Email</label> <br />
-          <input
-            type="email"
-            placeholder="Email"
-            name="email"
-            className={styles.authInput}
-            {...formik.getFieldProps("email")}
-          />
+          <div
+            className={styles.inputContainer}
+            style={{
+              border:
+                formik.touched.email && formik.errors.email
+                  ? "1.5px solid red"
+                  : "1.5px solid rgba(0, 0, 0, 0.12)",
+            }}
+          >
+            <input
+              type="email"
+              placeholder="Email"
+              name="email"
+              className={styles.authInput}
+              {...formik.getFieldProps("email")}
+            />
+          </div>
           {formik.touched.email && formik.errors.email ? (
-            <div>{formik.errors.email}</div>
+            <Error>{formik.errors.email}</Error>
           ) : null}
         </div>
         <div className={styles.authInputContainer}>
           <label>Password</label> <br />
-          <input
-            type="password"
-            name="password"
-            placeholder="*******"
-            {...formik.getFieldProps("password")}
-            className={styles.authInput + " " + styles.authpass}
-          />
+          <div
+            className={styles.inputContainer}
+            style={{
+              border:
+                formik.touched.password && formik.errors.password
+                  ? "1px solid red"
+                  : "1.5px solid rgba(0, 0, 0, 0.12)",
+            }}
+          >
+            <input
+              type={visibility ? "text" : "password"}
+              name="password"
+              placeholder="*******"
+              {...formik.getFieldProps("password")}
+              className={styles.authInput + " " + styles.authpass}
+            />
+            <div className={styles.icon} onClick={toggleVisibility}>
+              <Image src={"/svgs/eye.svg"} width={25} height={25} alt="eye" />
+            </div>
+          </div>
           {formik.touched.password && formik.errors.password ? (
-            <div>{formik.errors.password}</div>
+            <Error>{formik.errors.password}</Error>
           ) : null}
           <label>Password must be atleast 6 characters long</label>
         </div>
         <div className={styles.terms}>
           <div>
-            <input type="checkbox" />
+            <input
+              type="checkbox"
+              name="acceptTerms"
+              checked={checked}
+              onChange={() => setChecked(!checked)}
+            />
           </div>
           <div className={styles.termstxt}>
             <span>
@@ -122,7 +210,13 @@ export const FormHandler = () => {
           </div>
         </div>
         <div className={styles.signupBtn}>
-          <button type="submit">Create your account</button>
+          <button
+            type="submit"
+            disabled={checked ? false : true}
+            style={{ backgroundColor: !checked ? "grey" : "#4ab5e1" }}
+          >
+            Create your account
+          </button>
         </div>
       </form>
     </>

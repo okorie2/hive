@@ -1,20 +1,16 @@
-
 .authContainer {
-  background-color: #E5E5E5;
+  background-color: #e5e5e5;
   display: grid;
   margin: auto;
   width: 100%;
   grid-template-columns: 50% 50%;
   /* padding-bottom: 5%; */
-
 }
 
 .leftRec {
-  background-image: url('../../public/Rectangleleft.png');
+  background-image: url("../../public/pngs/Rectangleleft.png");
   background-repeat: no-repeat;
   background-size: cover;
-
-  
 }
 
 .leftContent {
@@ -58,7 +54,6 @@
   margin-top: 10%;
   margin-bottom: 10%;
   padding-bottom: 5%;
-  
 }
 #signin {
   padding-top: 1%;
@@ -131,26 +126,38 @@
 
   width: 20%;
 }
+.inputContainer {
+  display: flex;
+  border-radius: 5px;
+  background-color: #fff;
+  border: 1.5px solid rgba(0, 0, 0, 0.12);
+  /* margin: auto; */
+  position: relative;
+  width: 94%;
+}
+.icon {
+  position: absolute;
+  right: 3%;
+  top: 19%;
+  cursor: pointer;
+}
 .authInput {
-  width: 91%;
   padding: 2.6%;
   outline: none;
-  margin: auto;
-  background-color: #fff;
-  border-radius: 5px;
-  /* border-color: #c4c4c4; */
-  border: 1px solid rgba(0, 0, 0, 0.12);
-}
+  border: none;
+  background-color: none;
 
-.authpass{
-  background-image: url(../../public/eye.svg);
-  background-repeat: no-repeat;
-  background-size: 6%;
-  background-position: 97% 50%;
+  /* margin: auto; */
+  width: 100%;
+
+  /* background-color: #fff; */
+  /* border-radius: 5px; */
+  /* border-color: #c4c4c4; */
+  /* border: 1px solid rgba(0, 0, 0, 0.12); */
 }
 
 .authInput::placeholder {
-  color: #1D1C1D;
+  color: #1d1c1d;
 }
 .formContainer {
   padding-top: 5%;
@@ -160,11 +167,12 @@
   margin-left: 4%;
   margin-bottom: 2%;
 }
+
 .authInputContainer label {
   font-size: smaller;
 }
 
-.formContainer label{
+.formContainer label {
   color: #616061;
 }
 .signupBtn {
@@ -173,7 +181,7 @@
 }
 
 .signupBtn button {
-  background-color: #4AB5E1;
+  background-color: #4ab5e1;
   padding: 3% 2%;
   border-radius: 5px;
   border: none;
@@ -324,13 +332,9 @@
   width: 90%;
 }
 
-.termstxt a{
-  color: #4AB5E1;
+.termstxt a {
+  color: #4ab5e1;
 }
-
-
-
-
 
 .successbut {
   margin-top: 8%;
