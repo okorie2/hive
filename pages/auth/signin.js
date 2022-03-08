@@ -1,7 +1,7 @@
 import FacebookIcon from "@mui/icons-material/Facebook";
 import GoogleIcon from "@mui/icons-material/Google";
 import React from "react";
-import Footerr from "./Footer";
+import Footerr from "./footer";
 import styles from "./signin.module.css";
 import Image from "next/image";
 import Link from "next/link";
@@ -60,24 +60,19 @@ export default function Signin() {
                 <label>Password</label> <br />
                 <input
                   type="password"
-                  placeholder="*******"
-                  className={styles.authInput}
+                  placeholder=" "
+                  className={styles.authInput + " " + styles.authpass}
                 />
-                <label>
-                  <Link href="/Auth/forgotpassword">
-                    <b>Forgot Password?</b>
+                <br />
+                <p className={styles.authsigninpass}>
+                  <Link href="/auth/forgotpassword">
+                    <a>Forgot Password?</a>
                   </Link>
-                </label>
+                </p>
               </div>
-              <div>
-                <button className={styles.signupBtn} id={styles.signinBtn}>
-                  Login
-                </button>
+              <div className={styles.signupBtn}>
+                <button id={styles.signinBtn}>Login</button>
               </div>
-              {/* <div>
-                <span></span> Creating an account means you agree with our Terms
-                of Service and Privacy Policy{" "}
-              </div> */}
             </form>
           </div>
         </div>
