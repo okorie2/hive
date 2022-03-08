@@ -2,12 +2,15 @@ import React from "react";
 import Footerr from "./Footer";
 import styles from "./signin.module.css";
 import Link from "next/link";
+
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import Image from "next/image";
+
 
 export default function CheckMail() {
   return (
     <>
+
       <div className={styles.bgauth}>
           <div className={styles["hiveright"] + " " + styles["hivetopleft"]}><p>Hive</p></div>
         <div className={styles.forgotcard}>
@@ -23,6 +26,7 @@ export default function CheckMail() {
             <div className={styles.checkspan}><span >Didn’t receive the email?<Link href="#"><a>Resend</a></Link> </span></div>
             <br/>
             <div className={styles.checkam}><Link href="/auth/signin"><a><ArrowBackIcon className={styles.arrowback}/> <span>Back to log in</span></a></Link></div>
+
         </div>
         <div className={styles.push}></div>
         <Footerr />
