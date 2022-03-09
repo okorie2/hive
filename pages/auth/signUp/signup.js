@@ -1,17 +1,13 @@
 import React, { useState } from "react";
-import styles from "./signin.module.css";
+import styles from "../signin.module.css";
 import Image from "next/image";
 
 import FacebookIcon from "@mui/icons-material/Facebook";
 
-import Footerr from "./footer";
+import Footerr from "../components/footer";
 
-import Mockup from "../../Component/Laptop Mockup/Mockup";
-
-import LeftImage from "../../public/svgs/Rectangle302.jpg";
-import { useDispatch } from "react-redux";
-import { handleAuth } from "../../redux/actions/auth";
-import { FormHandler } from "./components/signupForm";
+import { FormHandler } from "./signupForm";
+import FormikWrapper from "./signUpFormik";
 
 export default function Signup() {
   return (
@@ -81,7 +77,7 @@ export default function Signup() {
             <div className={styles.bBom}></div>
           </div>
           <div className={styles.formContainer}>
-            <FormHandler />
+            <FormikWrapper />
           </div>
         </div>
       </div>
