@@ -6,8 +6,7 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 
 import Footerr from "../components/footer";
 
-import { FormHandler } from "./signupForm";
-import FormikWrapper from "./signUpFormik";
+import FormWrapper from "./formHandler";
 
 export default function Signup() {
   return (
@@ -77,7 +76,7 @@ export default function Signup() {
             <div className={styles.bBom}></div>
           </div>
           <div className={styles.formContainer}>
-            <FormikWrapper />
+            <FormWrapper />
           </div>
         </div>
       </div>

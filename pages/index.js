@@ -9,33 +9,33 @@ import styles from "./index.module.css";
 import { useDispatch } from "react-redux";
 import { handleAuth } from "../redux/actions/auth";
 import { useEffect } from "react";
+import { Nav, Navlist } from "./homeStyles";
 export default function Home() {
   return (
     <>
-      <nav>
-        <div className={styles.nav}>
-          <div className={styles.active}>
-            <div className={styles.spot}>
-              <Image
-                src="/svgs/logohighlight.svg"
-                alt="logo"
-                height={30}
-                width={30}
-              />
-            </div>
-            <div className={styles.hiveright}>Hive</div>
+      <Nav>
+        <div className="active">
+          <div className="spot">
+            <Image
+              src="/svgs/logohighlight.svg"
+              alt="logo"
+              height={30}
+              width={30}
+            />
           </div>
-          <div className={styles.navlist}>About</div>
-          <div className={styles.navlist}>Business</div>
-          <div className={styles.navlist}>FAQs</div>
-          <div className={styles.navlist}>Contact</div>
-          <div className={styles.navlist}>
-            <Link href="/auth/signIn/signin">
-              <button>Log in</button>
-            </Link>
-          </div>
+          <div className="hiveright">Hive</div>
         </div>
-      </nav>
+        <Navlist>About</Navlist>
+        <Navlist>Business</Navlist>
+        <Navlist>FAQs</Navlist>
+        <Navlist>Contact</Navlist>
+        <Navlist>
+          <Link href="/auth/signIn/signin">
+            <button>Log in</button>
+          </Link>
+        </Navlist>
+      </Nav>
+
       <section>
         <div className={styles.tuGrid}>
           <div className={styles.left}>
