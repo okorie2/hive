@@ -1,18 +1,18 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import styles from "./chat.module.css";
 import Image from "next/image";
 import Link from "next/link";
-import ModalA from "../../Component/Modals/ModalA";
-import LeftPane from "../../Component/Panes/LeftPane";
-import UseOutsideAlerter from "../../utilities/hooks/UseOutsideAlerter";
-
+import ModalA from "../../component/modals/modalA";
+import LeftPane from "../../component/panes/leftPane";
+import UseOutsideAlerter from "../../hooks/UseOutsideAlerter";
+import { ModalContext } from "../../context/modalContext";
 export default function Chat() {
   const [expanded, setExpanded] = useState(false);
-  const { state, setState } = UseOutsideAlerter(null);
+  const [state, setState] = useState(false);
   const showModal = (e) => {
     setState(!state);
-    console.log(state, "modal status");
   };
+  console.log(state, "modal status");
 
   return (
     <>
@@ -154,13 +154,15 @@ export default function Chat() {
         </div>
 
         {state ? (
-          <ModalA
-            onClick={() => {
-              setExpanded(false);
-              setState(!state);
-            }}
-            expanded={expanded}
-          />
+          <ModalContext.Provider value={{ state, setState }}>
+            <ModalA
+              onClick={() => {
+                setExpanded(false);
+                setState(!state);
+              }}
+              expanded={expanded}
+            />
+          </ModalContext.Provider>
         ) : (
           ""
         )}

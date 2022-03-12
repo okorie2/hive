@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import styles from "./LeftPane.module.css";
+import styles from "./leftPane.module.css";
 import Image from "next/image";
 import Link from "next/link";
 export default function LeftPane() {

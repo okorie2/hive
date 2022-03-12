@@ -1,50 +1,24 @@
 import React, { useState } from "react";
-import styles from "./signin.module.css";
+import styles from "../signin.module.css";
 import Image from "next/image";
-import Link from "next/link";
+
 import FacebookIcon from "@mui/icons-material/Facebook";
 
-import Mockup from "../../Component/Laptop Mockup/Mockup";
-import Footerr from "./Footer";
-import LeftImage from "../../public/Rectangle302.jpg";
-import { useDispatch } from "react-redux";
-import { handleAuth } from "../../redux/actions/auth";
-import { FormHandler } from "./components/signupForm";
+import Footerr from "../components/footer";
+
+import FormWrapper from "./formHandler";
 
 export default function Signup() {
-  const dispatch = useDispatch();
-  const [userDetails, setUserDetails] = useState({
-    username: "string",
-    email: "user@example.com",
-    first_name: "string",
-    last_name: "string",
-    image_url: "string",
-    password: "string",
-  });
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setUserDetails({
-      ...userDetails,
-      [name]: value,
-    });
-    console.log(name, value);
-  };
-
-  const registerUser = (e) => {
-    e.preventDefault();
-    dispatch(handleAuth(userDetails));
-  };
   return (
     <>
       <div className={styles.authContainer}>
         <div className={styles.leftRec}>
-
           <div className={styles.leftContent}>
             <div className={styles.leftRecLogo}>
               <div className={styles.leftRecLogologo}>
                 {" "}
                 <Image
-                  src="/logooutline.svg"
+                  src="/svgs/logooutline.svg"
                   alt="logo"
                   height={30}
                   width={30}
@@ -59,10 +33,7 @@ export default function Signup() {
                 Enjoy instant messaging with your contacts anytime, anywhere!
               </span>
             </div>
-
           </div>
-          </div>
-
         </div>
 
         <div className={styles.mainRec}>
@@ -105,9 +76,7 @@ export default function Signup() {
             <div className={styles.bBom}></div>
           </div>
           <div className={styles.formContainer}>
-
-            <FormHandler />
-
+            <FormWrapper />
           </div>
         </div>
       </div>

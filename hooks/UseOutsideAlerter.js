@@ -1,12 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { ModalContext } from "../context/modalContext";
 
 export default function UseOutsideAlerter(ref) {
-  const [state, setState] = useState(false);
+  // const { state, setState } = useState(false);
+  const { state, setState } = useContext(ModalContext);
+
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (ref?.current && !ref?.current?.contains(e.target)) {
-        setState(true);
-        console.log(state, "clicked outside");
+        setState(!state);
+        console.log("clicked outside");
       }
     };
     document.addEventListener("mousedown", handleClickOutside);

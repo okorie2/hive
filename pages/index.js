@@ -9,37 +9,33 @@ import styles from "./index.module.css";
 import { useDispatch } from "react-redux";
 import { handleAuth } from "../redux/actions/auth";
 import { useEffect } from "react";
+import { Nav, Navlist } from "./homeStyles";
 export default function Home() {
-  console.log(process.env.NEXT_PUBLIC_BASE_URL);
-
-  const dispatch = useDispatch();
-
   return (
     <>
-      <nav>
-        <div className={styles.nav}>
-          <div className={styles.active}>
-            <div className={styles.spot}>
-              <Image
-                src="/logohighlight.svg"
-                alt="logo"
-                height={30}
-                width={30}
-              />
-            </div>
-            <div className={styles.hiveright}>Hive</div>
+      <Nav>
+        <div className="active">
+          <div className="spot">
+            <Image
+              src="/svgs/logohighlight.svg"
+              alt="logo"
+              height={30}
+              width={30}
+            />
           </div>
-          <div className={styles.navlist}>About</div>
-          <div className={styles.navlist}>Business</div>
-          <div className={styles.navlist}>FAQs</div>
-          <div className={styles.navlist}>Contact</div>
-          <div className={styles.navlist}>
-            <Link href="/auth/signin">
-              <button>Log in</button>
-            </Link>
-          </div>
+          <div className="hiveright">Hive</div>
         </div>
-      </nav>
+        <Navlist>About</Navlist>
+        <Navlist>Business</Navlist>
+        <Navlist>FAQs</Navlist>
+        <Navlist>Contact</Navlist>
+        <Navlist>
+          <Link href="/auth/signIn/signin">
+            <button>Log in</button>
+          </Link>
+        </Navlist>
+      </Nav>
+
       <section>
         <div className={styles.tuGrid}>
           <div className={styles.left}>
@@ -49,13 +45,13 @@ export default function Home() {
               the people you love and care about.
             </p>
 
-            <Link href="/auth/signup">
+            <Link href="/auth/signUp/signup">
               <button>Create an account</button>
             </Link>
           </div>
           <div className={styles.right}>
             <Image
-              src="/Mac.svg"
+              src="/svgs/Mac.svg"
               height={430} // Desired size with correct aspect ratio
               width={430}
               alt="imag"
@@ -72,7 +68,7 @@ export default function Home() {
             <div className={styles.box}>
               <div className={styles.smc}>
                 <Image
-                  src="/Vector1.svg"
+                  src="/svgs/Vector1.svg"
                   height={23} // Desired size with correct aspect ratio
                   width={34}
                   alt="imag"
@@ -89,7 +85,7 @@ export default function Home() {
             <div className={styles.box}>
               <div className={styles.smc}>
                 <Image
-                  src="/Vector2.svg"
+                  src="/svgs/Vector2.svg"
                   height={23} // Desired size with correct aspect ratio
                   width={34}
                   alt="imag"
@@ -106,7 +102,7 @@ export default function Home() {
             <div className={styles.box}>
               <div className={styles.smc}>
                 <Image
-                  src="/Vector3.svg"
+                  src="/svgs/Vector3.svg"
                   height={23} // Desired size with correct aspect ratio
                   width={34}
                   alt="imag"
@@ -130,7 +126,7 @@ export default function Home() {
           <div>
             <div>
               <Image
-                src="/Man.svg"
+                src="/svgs/Man.svg"
                 height={414} // Desired size with correct aspect ratio
                 width={414}
                 alt="imag"
@@ -141,7 +137,7 @@ export default function Home() {
             <div className={styles.miniGrid}>
               <div className={styles.bullet}>
                 <Image
-                  src="/featureicon1.svg"
+                  src="/svgs/featureicon1.svg"
                   alt="feature1"
                   height={50}
                   width={50}
@@ -160,7 +156,7 @@ export default function Home() {
             <div className={styles.miniGrid}>
               <div className={styles.bullet}>
                 <Image
-                  src="/featureicon2.svg"
+                  src="/svgs/featureicon2.svg"
                   alt="feature2"
                   height={50}
                   width={50}
@@ -179,7 +175,7 @@ export default function Home() {
             <div className={styles.miniGrid}>
               <div className={styles.bullet}>
                 <Image
-                  src="/featureicon3.svg"
+                  src="/svgs/featureicon3.svg"
                   alt="feature3"
                   height={50}
                   width={50}
@@ -195,7 +191,7 @@ export default function Home() {
             <div className={styles.miniGrid}>
               <div className={styles.bullet}>
                 <Image
-                  src="/featureicon4.svg"
+                  src="/svgs/featureicon4.svg"
                   alt="feature4"
                   height={50}
                   width={50}
@@ -215,7 +211,12 @@ export default function Home() {
         <div className={styles.cent}>
           <div className={styles.active}>
             <div className={styles.spot}>
-              <Image src="/logooutline.svg" alt="logo" height={30} width={30} />
+              <Image
+                src="/svgs/logooutline.svg"
+                alt="logo"
+                height={30}
+                width={30}
+              />
             </div>
             <div className={styles.hive}>Hive</div>
           </div>
@@ -225,7 +226,7 @@ export default function Home() {
               <br /> you care about
             </p>
 
-            <Link href="/auth/signup">
+            <Link href="/auth/signUp/signup">
               <button className={styles.btn}>Create an account</button>
             </Link>
           </div>

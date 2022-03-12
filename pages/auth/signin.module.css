@@ -1,30 +1,25 @@
-
 .authContainer {
-  background-color: #E5E5E5;
+  background-color: #e5e5e5;
   display: grid;
   margin: auto;
   width: 100%;
   grid-template-columns: 50% 50%;
   /* padding-bottom: 5%; */
-
 }
 
 .bg {
-  background-color: #E5E5E5;
+  background-color: #e5e5e5;
   padding-top: 7%;
 }
 
-
 .bgauth {
-  background-color: #E5E5E5;
+  background-color: #e5e5e5;
 }
 
 .leftRec {
-  background-image: url('../../public/Rectangleleft.png');
+  background-image: url("../../public/pngs/Rectangleleft.png");
   background-repeat: no-repeat;
   background-size: cover;
-
-  
 }
 
 .leftContent {
@@ -39,7 +34,7 @@
   display: grid;
   width: 6rem;
   height: 2.5rem;
-  background-image: url('../../public/logooutline.svg');
+  background-image: url("../../public/svgs/logooutline.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: left;
@@ -72,7 +67,6 @@
   margin-top: 10%;
   margin-bottom: 10%;
   padding-bottom: 5%;
-  
 }
 #signin {
   padding-top: 1%;
@@ -146,33 +140,44 @@
 
   width: 20%;
 }
+.inputContainer {
+  display: flex;
+  border-radius: 5px;
+  background-color: #fff;
+  border: 1.5px solid rgba(0, 0, 0, 0.12);
+  /* margin: auto; */
+  position: relative;
+  width: 94%;
+}
+.icon {
+  position: absolute;
+  right: 3%;
+  top: 19%;
+  cursor: pointer;
+}
 .authInput {
-  width: 91%;
   padding: 2.6%;
   outline: none;
-  margin: auto;
-  background-color: #fff;
-  border-radius: 5px;
-  /* border-color: #c4c4c4; */
-  border: 1px solid rgba(0, 0, 0, 0.12);
-}
+  border: none;
+  background-color: none;
 
-.authpass{
-  background-image: url(../../public/eye.svg);
-  background-repeat: no-repeat;
-  background-size: 6%;
-  background-position: 97% 50%;
+  /* margin: auto; */
+  width: 100%;
+
+  /* background-color: #fff; */
+  /* border-radius: 5px; */
+  /* border-color: #c4c4c4; */
+  /* border: 1px solid rgba(0, 0, 0, 0.12); */
 }
-.authpass::placeholder{
+.authpass::placeholder {
   background-image: url(../../public/passworddots.svg);
   background-repeat: no-repeat;
   background-position: 1% 50%;
 }
 
 .authInput::placeholder {
-  color: #1D1C1D;
+  color: #1d1c1d;
 }
-
 
 .formContainer {
   padding-top: 5%;
@@ -182,12 +187,12 @@
   margin-left: 4%;
   margin-bottom: 2%;
 }
-.authInputContainer label, .authInputContainer p{
+.authInputContainer label,
+.authInputContainer p {
   font-size: smaller;
 }
 
-
-.formContainer label{
+.formContainer label {
   color: #616061;
 }
 .signupBtn {
@@ -196,7 +201,7 @@
 }
 
 .signupBtn button {
-  background-color: #4AB5E1;
+  background-color: #4ab5e1;
   padding: 3% 2%;
   border-radius: 5px;
   border: none;
@@ -231,7 +236,7 @@
 }
 
 .forgotcard {
-  background: #FEFEFE;
+  background: #fefefe;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
   width: 34%;
   text-align: center;
@@ -247,7 +252,6 @@
   width: 52px;
   height: 52px;
   background-color: #c4c4c4;
-
 }
 
 .forgotcard p {
@@ -260,7 +264,6 @@
   color: #616061;
   font-weight: 300;
   font-family: "Open Sans", sans-serif;
-
 }
 
 .forgotcard form {
@@ -287,7 +290,7 @@
   border: 1px solid rgba(0, 0, 0, 0.12);
 }
 
-.resetpasswordinput input{
+.resetpasswordinput input {
   margin-bottom: 0%;
 }
 
@@ -298,7 +301,7 @@
 .forgotcard button {
   border: none;
   color: #fff;
-  background-color: #4AB5E1;
+  background-color: #4ab5e1;
   font-size: 14px;
   font-weight: 100;
   padding: 2.5% 9%;
@@ -307,14 +310,13 @@
   cursor: pointer;
 }
 
-
 .forgotbutton button {
   margin-top: 2%;
   margin-bottom: 15%;
   font-family: "Open Sans", sans-serif;
 }
 
-.forgotbutton{
+.forgotbutton {
   text-align: center;
 }
 
@@ -324,7 +326,7 @@
 }
 
 .checkspan a {
-  color: #4AB5E1;
+  color: #4ab5e1;
   padding-left: 1%;
 }
 
@@ -341,7 +343,7 @@
   font-weight: 400;
 }
 
-.resetbutton button{
+.resetbutton button {
   margin-bottom: 12%;
 }
 
@@ -372,13 +374,9 @@
   width: 90%;
 }
 
-.termstxt a{
-  color: #4AB5E1;
+.termstxt a {
+  color: #4ab5e1;
 }
-
-
-
-
 
 .successbut {
   margin-top: 8%;
@@ -395,16 +393,15 @@
   color: #616061;
 }
 
-
 .authInputContainer a {
-  color: #4AB5E1;
+  color: #4ab5e1;
 }
-.resetbg .forgotcard{
+.resetbg .forgotcard {
   margin-top: 5%;
   margin-bottom: 5%;
 }
 
-.resetsuccessbg .forgotcard{
+.resetsuccessbg .forgotcard {
   margin-top: 8%;
   margin-bottom: 14%;
 }
