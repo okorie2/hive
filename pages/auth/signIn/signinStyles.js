@@ -59,3 +59,8 @@ export const AuthInputContainer = styled.form`
 
 }
 `;
+
+export const SignInBtn = styled.div`
+  text-align: center;
+  margin-top: 5%;
+`;

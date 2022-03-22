@@ -5,8 +5,7 @@ import Image from "next/image";
 import FacebookIcon from "@mui/icons-material/Facebook";
 
 import Footerr from "../components/footer";
-
-import FormWrapper from "./formHandler";
+import FormWrapper from "./form";
 
 import { AuthContainer, BtnRw, DRow, FacebookButton, FormContainer, GoogleButton, LeftRec, MainRec } from "./signUpStyles";
 
