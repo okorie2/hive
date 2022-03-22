@@ -4,7 +4,6 @@ import { ToastContainer, toast } from "react-toastify";
 
 import { useForm } from "react-hook-form";
 import FormController from "../../../component/formHandler/formController";
-import { handleAuth } from "../../../redux/actions/auth";
 import { Error, ErrorStyle } from "../../../styles/components/Error";
 import { SignUpBtn, Terms } from "./signUpStyles";
 import Link from "next/link";
@@ -12,6 +11,7 @@ import { ButtonHighlight } from "../../../styles/components/buttons/buttonHiglig
 import { ButtonFade } from "../../../styles/components/buttons/buttonFade";
 import { InputIcon } from "../../../styles/components/inputs/authInput";
 import Image from "next/image";
+import { handleRegister } from "../../../redux/actions/auth/register";
 
 export default function FormWrapper() {
   const {
@@ -22,7 +22,7 @@ export default function FormWrapper() {
 
   const dispatch = useDispatch();
   const onSubmit = (data) => {
-    dispatch(handleAuth(data));
+    dispatch(handleRegister(data));
     console.log(data);
   };
   const [visibility, setVisibility] = useState(false);
@@ -32,7 +32,7 @@ export default function FormWrapper() {
     setVisibility(!visibility);
   };
 
-  const { data, loading, error } = useSelector(({ auth }) => auth);
+  const { data, loading, error } = useSelector(({ register }) => register);
 
   const alert = () => {
     if (data?.status) {

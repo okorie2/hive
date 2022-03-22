@@ -4,12 +4,13 @@ import { ToastContainer, toast } from "react-toastify";
 
 import { useForm } from "react-hook-form";
 import FormController from "../../../component/formHandler/formController";
-import { handleAuth } from "../../../redux/actions/auth";
 import { ButtonHighlight } from "../../../styles/components/buttons/buttonHiglight";
 import { InputIcon } from "../../../styles/components/inputs/authInput";
 import Image from "next/image";
 import { SignInBtn } from "./signinStyles";
 import { ErrorStyle } from "../../../styles/components/Error";
+import { handleRegister } from "../../../redux/actions/auth/register";
+import { handleSignin } from "../../../redux/actions/auth/signin";
 
 export default function Form() {
   const {
@@ -20,7 +21,7 @@ export default function Form() {
 
   const dispatch = useDispatch();
   const onSubmit = (data) => {
-    dispatch(handleAuth(data));
+    dispatch(handleSignin(data));
     console.log(data);
   };
   const [visibility, setVisibility] = useState(false);
@@ -29,13 +30,13 @@ export default function Form() {
     setVisibility(!visibility);
   };
 
-  const { data, loading, error } = useSelector(({ auth }) => auth);
+  const { data, loading, error } = useSelector(({ signin }) => signin);
 
   const alert = () => {
     if (data?.status) {
       toast.success(data && data?.response?.data?.message, { autoClose: 4000 });
-    } else {
-      toast.warn(data && data?.response?.data?.message, { autoClose: 4000 });
+    } else if (error) {
+      toast.warn(error && error?.data?.message, { autoClose: 4000 });
     }
   };
 
@@ -43,7 +44,7 @@ export default function Form() {
     if (!loading) {
       alert();
     }
-  }, [data]);
+  }, [data, error]);
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
@@ -52,12 +53,12 @@ export default function Form() {
       <FormController
         control="input"
         defaultValue="test"
-        label="email"
+        label="username"
         register={register}
-        border={errors.email && "1px solid red"}
+        border={errors.username && "1px solid red"}
         required={true}
       />
-      {errors.email && <ErrorStyle>This field is required</ErrorStyle>}
+      {errors.username && <ErrorStyle>This field is required</ErrorStyle>}
 
       <FormController
         control="input"
