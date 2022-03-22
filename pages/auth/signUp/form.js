@@ -5,7 +5,7 @@ import { ToastContainer, toast } from "react-toastify";
 import { useForm } from "react-hook-form";
 import FormController from "../../../component/formHandler/formController";
 import { handleAuth } from "../../../redux/actions/auth";
-import { Error } from "../../../styles/components/Error";
+import { Error, ErrorStyle } from "../../../styles/components/Error";
 import { SignUpBtn, Terms } from "./signUpStyles";
 import Link from "next/link";
 import { ButtonHighlight } from "../../../styles/components/buttons/buttonHiglight";
@@ -56,22 +56,22 @@ export default function FormWrapper() {
         control="input"
         defaultValue="test"
         label="username"
-        border={errors.first_name && "1px solid red"}
+        border={errors.username && "1px solid red"}
         register={register}
         required={true}
         minLength={3}
       />
-      {errors.username && <Error>This field is required</Error>}
+      {errors.username && <ErrorStyle>This field is required</ErrorStyle>}
 
       <FormController
         control="input"
         defaultValue="test"
         label="email"
         register={register}
-        border={errors.first_name && "1px solid red"}
+        border={errors.email && "1px solid red"}
         required={true}
       />
-      {errors.email && <Error>This field is required</Error>}
+      {errors.email && <ErrorStyle>This field is required</ErrorStyle>}
 
       <FormController
         control="input"
@@ -88,17 +88,17 @@ export default function FormWrapper() {
         defaultValue="test"
         label="last_name"
         register={register}
-        border={errors.first_name && "1px solid red"}
+        border={errors.last_name && "1px solid red"}
         required
       />
-      {errors.last_name && <Error>This field is required</Error>}
+      {errors.last_name && <ErrorStyle>This field is required</ErrorStyle>}
 
       <FormController
         control="input"
         defaultValue="test"
         label="password"
         type={visibility ? "text" : "password"}
-        border={errors.first_name && "1px solid red"}
+        border={errors.password && "1px solid red"}
         register={register}
         required
       >
@@ -107,7 +107,7 @@ export default function FormWrapper() {
         </InputIcon>
       </FormController>
 
-      {errors.password && <Error>This field is required</Error>}
+      {errors.password && <ErrorStyle>This field is required</ErrorStyle>}
       <Terms>
         <FormController
           control="checkbox"
