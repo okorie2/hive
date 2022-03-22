@@ -8,14 +8,16 @@ import Footerr from "../components/footer";
 
 import FormWrapper from "./formHandler";
 
+import { AuthContainer, BtnRw, DRow, FacebookButton, FormContainer, GoogleButton, LeftRec, MainRec } from "./signUpStyles";
+
 export default function Signup() {
   return (
     <>
-      <div className={styles.authContainer}>
-        <div className={styles.leftRec}>
-          <div className={styles.leftContent}>
-            <div className={styles.leftRecLogo}>
-              <div className={styles.leftRecLogologo}>
+      <AuthContainer>
+        <LeftRec>
+          <div className="leftContent">
+            <div className="leftRecLogo">
+              <div className="leftRecLogologo">
                 {" "}
                 <Image
                   src="/svgs/logooutline.svg"
@@ -24,62 +26,65 @@ export default function Signup() {
                   width={30}
                 />
               </div>
-              <div className={styles.leftRecLogospan}>
+              <div className="leftRecLogospan">
                 <span>Hive</span>
               </div>
             </div>
-            <div className={styles.leftRectxt}>
+            <div className= "leftRectxt">
               <span>
                 Enjoy instant messaging with your contacts anytime, anywhere!
               </span>
             </div>
           </div>
-        </div>
+        </LeftRec>
 
-        <div className={styles.mainRec}>
-          <div className={styles.txt}>
+        <MainRec>
+          <div className="txt">
             <h2>Sign up to Hive</h2>
             <p>
               Create your account quick and easy and connect <br /> with your
               friends
             </p>
           </div>
-          <div className={styles.btnRw}>
+          <BtnRw>
             <div>
-              <button>
+              <GoogleButton>
                 <span>
                   <img
                     src="https://img.icons8.com/color/50/000000/google-logo.png"
                     fontSize="small"
-                    id={styles.gIcon}
                     alt="gimage"
+                    id = "gIcon"
                   />
                 </span>
                 Sign up with Google
-              </button>
+              </GoogleButton>
             </div>
 
             <div>
-              <button>
+              <FacebookButton>
                 <span>
-                  <FacebookIcon fontSize="small" id={styles.fbIcon} />
+                  <FacebookIcon
+                    fontSize="small"
+                    id = "fbIcon"  />
                 </span>
                 Sign up with Facebook
-              </button>
+              </FacebookButton>
             </div>
-          </div>
+          </BtnRw>
 
-          <div className={styles.dRow}>
-            <div className={styles.bBom}></div>
+          <DRow>
+            <div className="bBom"></div>
 
             <div>or</div>
-            <div className={styles.bBom}></div>
-          </div>
-          <div className={styles.formContainer}>
+
+            <div className="bBom"></div>
+          </DRow>
+          <FormContainer>
             <FormWrapper />
-          </div>
-        </div>
-      </div>
+          </FormContainer>
+        </MainRec>
+      </AuthContainer>
 
       <Footerr />
     </>

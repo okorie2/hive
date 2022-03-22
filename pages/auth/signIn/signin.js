@@ -2,22 +2,24 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import GoogleIcon from "@mui/icons-material/Google";
 import React from "react";
 import Footerr from "../components/footer";
-import styles from "./signin.module.css";
+import styles from "../signin.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import { BtnRw, DRow, FacebookButton, FormContainer, GoogleButton, } from "../signUp/signUpStyles";
+import {Bg, MainRecc, AuthInputContainer} from "./signinStyles"
 
 export default function Signin() {
   return (
     <>
-      <div className={styles.bg}>
-        <div className={styles.mainRec} id={styles.signin}>
-          <div className={styles.txt}>
+      <Bg>
+        <MainRecc>
+          <div className = "txt">
             <h2> Hive</h2>
             <p>Log in to your account</p>
           </div>
-          <div className={styles.btnRw}>
+          <BtnRw>
             <div>
-              <button>
+              <GoogleButton>
                 <span>
                   <img
                     src="https://img.icons8.com/color/50/000000/google-logo.png"
@@ -29,34 +31,34 @@ export default function Signin() {
                   {/* <GoogleIcon  /> */}
                 </span>
                 Log in with Google
-              </button>
+              </GoogleButton>
             </div>
 
             <div>
-              <button>
+              <FacebookButton>
                 <span>
                   <FacebookIcon fontSize="small" id={styles.fbIcon} />
                 </span>
                 Log in with Facebook
-              </button>
+              </FacebookButton>
             </div>
-          </div>
-          <div className={styles.dRow}>
+          </BtnRw>
+          <DRow>
             <div className={styles.bBom}></div>
             <div>or</div>
             <div className={styles.bBom}></div>
-          </div>
-          <div className={styles.formContainer}>
-            <form>
-              <div className={styles.authInputContainer}>
+          </DRow>
+          <FormContainer>
+            <AuthInputContainer>
+              <div className="authInputContainer">
                 <label>Username or Email address</label> <br />
                 <input
                   type="email"
                   placeholder="Email"
-                  className={styles.authInput}
+                  className="authInput"
                 />
               </div>
-              <div className={styles.authInputContainer}>
+              <div className="authInputContainer">
                 <label>Password</label> <br />
                 <input
                   type="password"
@@ -73,12 +75,12 @@ export default function Signin() {
               <div className={styles.signupBtn}>
                 <button id={styles.signinBtn}>Login</button>
               </div>
-            </form>
-          </div>
-        </div>
+            </AuthInputContainer>
+          </FormContainer>
+        </MainRecc>
         <div className={styles.push}></div>
         <Footerr />
-      </div>
+      </Bg>
     </>
   );
 }
