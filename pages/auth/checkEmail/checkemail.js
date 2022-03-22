@@ -1,6 +1,6 @@
 import React from "react";
 import Footerr from "../components/footer";
-import styles from "./signin.module.css";
+import styles from "../signin.module.css";
 import Link from "next/link";
 
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
