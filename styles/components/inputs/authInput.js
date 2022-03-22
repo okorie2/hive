@@ -5,6 +5,7 @@ export const AuthInput = styled.input`
   outline: none;
   border: none;
   background-color: none;
+  border-radius: 5px;
 
   width: 100%;
 `;

@@ -1,12 +1,27 @@
 import FacebookIcon from "@mui/icons-material/Facebook";
 import GoogleIcon from "@mui/icons-material/Google";
-import React from "react";
+import React, { useEffect } from "react";
 import Footerr from "../components/footer";
-import styles from "./signin.module.css";
-import Image from "next/image";
+import styles from "../signin.module.css";
+import { useRouter } from "next/router";
+import { ToastContainer, toast } from "react-toastify";
+
 import Link from "next/link";
+import FormWrapper from "./form";
+import Form from "./form";
 
 export default function Signin() {
+  const router = useRouter();
+  console.log(router.pathname);
+  const { token } = router.query;
+  console.log(token);
+
+  useEffect(() => {
+    if (token) {
+      toast.success("Email confirmed Successfully!", { autoClose: 4000 });
+    }
+  }, []);
+
   return (
     <>
       <div className={styles.bg}>
@@ -47,33 +62,7 @@ export default function Signin() {
             <div className={styles.bBom}></div>
           </div>
           <div className={styles.formContainer}>
-            <form>
-              <div className={styles.authInputContainer}>
-                <label>Username or Email address</label> <br />
-                <input
-                  type="email"
-                  placeholder="Email"
-                  className={styles.authInput}
-                />
-              </div>
-              <div className={styles.authInputContainer}>
-                <label>Password</label> <br />
-                <input
-                  type="password"
-                  placeholder=" "
-                  className={styles.authInput + " " + styles.authpass}
-                />
-                <br />
-                <p className={styles.authsigninpass}>
-                  <Link href="/auth/forgotpassword">
-                    <a>Forgot Password?</a>
-                  </Link>
-                </p>
-              </div>
-              <div className={styles.signupBtn}>
-                <button id={styles.signinBtn}>Login</button>
-              </div>
-            </form>
+            <Form />
           </div>
         </div>
         <div className={styles.push}></div>
