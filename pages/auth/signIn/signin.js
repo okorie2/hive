@@ -3,26 +3,28 @@ import GoogleIcon from "@mui/icons-material/Google";
 import React, { useEffect } from "react";
 import Footerr from "../components/footer";
 import styles from "../signin.module.css";
-import Image from "next/image";
-import Link from "next/link";
-import { BtnRw, DRow, FacebookButton, FormContainer, GoogleButton, } from "../signUp/signUpStyles";
-import {Bg, MainRecc, AuthInputContainer} from "./signinStyles"
+import {
+  BtnRw,
+  DRow,
+  FacebookButton,
+  FormContainer,
+  GoogleButton,
+} from "../signUp/signUpStyles";
+import { Bg, MainRecc, AuthInputContainer } from "./signinStyles";
 import { useRouter } from "next/router";
 import { ToastContainer, toast } from "react-toastify";
 
-import Link from "next/link";
-import FormWrapper from "./form";
 import Form from "./form";
 
 export default function Signin() {
   const router = useRouter();
   console.log(router.pathname);
-  const { token } = router.query;
-  console.log(token);
+  const { token, msg } = router.query;
+  console.log("hey", msg);
 
   useEffect(() => {
     if (token) {
-      toast.success("Email confirmed Successfully!", { autoClose: 4000 });
+      toast.info(msg, { autoClose: 4000 });
     }
   }, []);
 
@@ -30,7 +32,7 @@ export default function Signin() {
     <>
       <Bg>
         <MainRecc>
-          <div className = "txt">
+          <div className="txt">
             <h2> Hive</h2>
             <p>Log in to your account</p>
           </div>
