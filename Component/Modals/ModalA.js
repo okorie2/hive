@@ -8,7 +8,7 @@ export default function ModalA({ onClick, expanded }) {
   const modalRef = useRef(null);
   UseOutsideAlerter(modalRef);
   const { state, setState } = useContext(ModalContext);
-  console.log(state, "modala state");
+  // console.log(state, "modala state");
   return (
     <>
       {state ? (

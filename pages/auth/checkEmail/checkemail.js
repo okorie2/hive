@@ -1,6 +1,6 @@
 import React from "react";
 import Footerr from "../components/footer";
-import styles from "./signin.module.css";
+import styles from "../signin.module.css";
 import Link from "next/link";
 
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
@@ -14,7 +14,12 @@ export default function CheckMail() {
           <p>Hive</p>
         </div>
         <div className={styles.forgotcard}>
-          <Image src="/sentmailicon.svg" alt="sent" height={50} width={50} />
+          <Image
+            src="/svgs/sentmailicon.svg"
+            alt="sent"
+            height={50}
+            width={50}
+          />
           <p className={styles.hiveright}>Check your mail</p>
           <span>A link Has been sent to owhondahsam@gmail.com</span>
           <button className={styles.checkembutton}>Open email app</button>

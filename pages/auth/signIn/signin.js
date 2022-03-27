@@ -28,6 +28,8 @@ export default function Signin() {
     }
   }, []);
 
+  //sammy fix cors :(
+
   return (
     <>
       <Bg>
