@@ -170,7 +170,7 @@
   /* border: 1px solid rgba(0, 0, 0, 0.12); */
 }
 .authpass::placeholder {
-  background-image: url(../../public/passworddots.svg);
+  background-image: url("../../public/svgs/passworddots.svg");
   background-repeat: no-repeat;
   background-position: 1% 50%;
 }

@@ -14,7 +14,7 @@ export default function ResetSuccessful() {
         </div>
         <div className={styles.forgotcard}>
           <Image
-            src="/resetsuccessicon.svg"
+            src="/svgs/resetsuccessicon.svg"
             alt="sent"
             height={50}
             width={50}

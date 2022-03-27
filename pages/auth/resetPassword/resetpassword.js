@@ -13,7 +13,12 @@ export default function ResetPassword() {
           <p>Hive</p>
         </div>
         <div className={styles.forgotcard}>
-          <Image src="/resetlockicon.svg" alt="sent" height={50} width={50} />
+          <Image
+            src="/svgs/resetlockicon.svg"
+            alt="sent"
+            height={50}
+            width={50}
+          />
           <p className={styles.hiveright}>Set new password</p>
           <span>Your new password should be strong an unique</span>
           <form>

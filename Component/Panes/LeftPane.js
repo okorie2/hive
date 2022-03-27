@@ -19,7 +19,12 @@ export default function LeftPane() {
               </div>
               <div className={styles.menuspot}>
                 <div className={styles.menu}>
-                  <Image src="/menu.svg" alt="profile" width={4} height={16} />
+                  <Image
+                    src="/svgs/menu.svg"
+                    alt="profile"
+                    width={4}
+                    height={16}
+                  />
                 </div>
               </div>
             </div>
@@ -44,7 +49,7 @@ export default function LeftPane() {
                   {" "}
                   <span onClick={() => setNewChat(false)}>
                     <Image
-                      src="/arrowBack.svg"
+                      src="/svgs/arrowBack.svg"
                       alt="avi"
                       height={16}
                       width={16}
@@ -60,19 +65,19 @@ export default function LeftPane() {
             <div className={styles.srchLst}>
               <div className={styles.lst}>
                 <span>
-                  <Image src="/avi.svg" alt="avi" height={48} width={48} />
+                  <Image src="/svgs/avi.svg" alt="avi" height={48} width={48} />
                 </span>
                 <span id={styles.sp}>@ellahokorie</span>
               </div>
               <div className={styles.lst}>
                 <span>
-                  <Image src="/avi.svg" alt="avi" height={48} width={48} />
+                  <Image src="/svgs/avi.svg" alt="avi" height={48} width={48} />
                 </span>
                 <span id={styles.sp}>@joseph33</span>
               </div>
               <div className={styles.lst}>
                 <span>
-                  <Image src="/avi.svg" alt="avi" height={48} width={48} />
+                  <Image src="/svgs/avi.svg" alt="avi" height={48} width={48} />
                 </span>
                 <span id={styles.sp}>@markjohanne</span>
               </div>
