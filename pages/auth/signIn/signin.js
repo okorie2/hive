@@ -4,9 +4,8 @@ import React, { useEffect } from "react";
 import Footerr from "../components/footer";
 import styles from "../signin.module.css";
 import Image from "next/image";
-import Link from "next/link";
 import { BtnRw, DRow, FacebookButton, FormContainer, GoogleButton, } from "../signUp/signUpStyles";
-import {Bg, MainRecc, AuthInputContainer} from "./signinStyles"
+import {Bg, MainRecc, Push} from "./signinStyles"
 import { useRouter } from "next/router";
 import { ToastContainer, toast } from "react-toastify";
 
@@ -41,7 +40,7 @@ export default function Signin() {
                   <img
                     src="https://img.icons8.com/color/50/000000/google-logo.png"
                     fontSize="small"
-                    id={styles.gIcon}
+                    id="gIcon"
                     alt="gimage"
                   />
 
@@ -54,22 +53,23 @@ export default function Signin() {
             <div>
               <FacebookButton>
                 <span>
-                  <FacebookIcon fontSize="small" id={styles.fbIcon} />
+                  <FacebookIcon fontSize="small" id="fbIcon" />
                 </span>
                 Log in with Facebook
               </FacebookButton>
             </div>
           </BtnRw>
           <DRow>
-            <div className={styles.bBom}></div>
+            <div className="bBom"></div>
             <div>or</div>
-            <div className={styles.bBom}></div>
+            <div className="bBom"></div>
           </DRow>
-          <div className={styles.formContainer}>
+          <FormContainer>
             <Form />
-          </div>
+            <div><Link href="">Forgot Password?</Link></div>
+          </FormContainer>
         </MainRecc>
-        <div className={styles.push}></div>
+        <Push></Push>
         <Footerr />
       </Bg>
     </>
