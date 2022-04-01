@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import styles from "../signin.module.css";
 import Image from "next/image";
 
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -7,7 +6,16 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import Footerr from "../components/footer";
 import FormWrapper from "./form";
 
-import { AuthContainer, BtnRw, DRow, FacebookButton, FormContainer, GoogleButton, LeftRec, MainRec } from "./signUpStyles";
+import {
+  AuthContainer,
+  BtnRw,
+  DRow,
+  FacebookButton,
+  FormContainer,
+  GoogleButton,
+  LeftRec,
+  MainRec,
+} from "./signUpStyles";
 
 export default function Signup() {
   return (
@@ -29,7 +37,7 @@ export default function Signup() {
                 <span>Hive</span>
               </div>
             </div>
-            <div className= "leftRectxt">
+            <div className="leftRectxt">
               <span>
                 Enjoy instant messaging with your contacts anytime, anywhere!
               </span>
@@ -53,7 +61,7 @@ export default function Signup() {
                     src="https://img.icons8.com/color/50/000000/google-logo.png"
                     fontSize="small"
                     alt="gimage"
-                    id = "gIcon"
+                    id="gIcon"
                   />
                 </span>
                 Sign up with Google
@@ -63,9 +71,7 @@ export default function Signup() {
             <div>
               <FacebookButton>
                 <span>
-                  <FacebookIcon
-                    fontSize="small"
-                    id = "fbIcon"  />
+                  <FacebookIcon fontSize="small" id="fbIcon" />
                 </span>
                 Sign up with Facebook
               </FacebookButton>

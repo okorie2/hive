@@ -1,35 +1,41 @@
-import { AUTH, AUTH_ERROR, AUTH_SUCCESS } from "../actions/actionTypes";
-var authenticated;
+import {
+  REGISTER,
+  REGISTER_SUCCESS,
+  REGISTER_ERROR,
+} from "../../actions/actionTypes";
+
+REGISTER;
+var registered;
 if (typeof window !== "undefined") {
-  authenticated = JSON.parse(localStorage.getItem("hasBeenAuthenticated"));
+  registered = JSON.parse(localStorage.getItem("hasBeenAuthenticated"));
 }
 
 const initialState = {
   loading: false,
   error: null,
   data: {},
-  auth: authenticated ? true : false,
+  register: registered ? true : false,
 };
-export const auth = (state = initialState, action) => {
+export const register = (state = initialState, action) => {
   switch (action.type) {
-    case AUTH:
+    case REGISTER:
       return {
         ...state,
         loading: true,
       };
-    case AUTH_SUCCESS:
+    case REGISTER_SUCCESS:
       return {
         ...state,
         loading: false,
         data: action.payload,
-        auth: true,
+        register: true,
       };
-    case AUTH_ERROR:
+    case REGISTER_ERROR:
       return {
         ...state,
         loading: false,
         data: action.payload,
-        auth: false,
+        register: false,
       };
     default:
       return state;

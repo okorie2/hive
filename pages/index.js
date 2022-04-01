@@ -3,34 +3,33 @@ import Image from "next/image";
 import Link from "next/link";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import FacebookTwoToneIcon from "@mui/icons-material/FacebookTwoTone";
-import TwitterIcon from "@mui/icons-material/Twitter"
-import { useDispatch } from "react-redux";
-import { handleAuth } from "../redux/actions/auth";
-import { useEffect } from "react";
-import { Nav, 
-        Navlist,
-        Tugrid,
-        Left,
-        Right,
-        Mid,
-        Trigrid,
-        Box,
-        Smc, 
-        Tod,
-        TodGrid,
-        Rii,
-        FeatureHeader,
-        MiniGrid,
-        Bullet,
-        FeatureText,
-        FeatureSpan,
-        Center,
-        Cent,
-        Active,
-        Spot,
-        Hive,
-        Footer
-      } from "./homeStyles";
+import TwitterIcon from "@mui/icons-material/Twitter";
+
+import {
+  Nav,
+  Navlist,
+  Tugrid,
+  Left,
+  Right,
+  Mid,
+  Trigrid,
+  Box,
+  Smc,
+  Tod,
+  TodGrid,
+  Rii,
+  FeatureHeader,
+  MiniGrid,
+  Bullet,
+  FeatureText,
+  FeatureSpan,
+  Center,
+  Cent,
+  Active,
+  Spot,
+  Hive,
+  Footer,
+} from "./homeStyles";
 export default function Home() {
   return (
     <>
@@ -241,7 +240,7 @@ export default function Home() {
             </Spot>
             <Hive>Hive</Hive>
           </Active>
-          <div class="activetext">
+          <div className="activetext">
             <p>
               The new way to connect with the people
               <br /> you care about
@@ -254,7 +253,7 @@ export default function Home() {
         </Cent>
       </Center>
       <Footer>
-        <div class="ftGrid">
+        <div className="ftGrid">
           <div>
             <h4>Menu</h4>
             <p>About</p>
@@ -287,7 +286,7 @@ export default function Home() {
             </ul>
           </div>
         </div>
-        <div class="copy">Hive © 2021 </div>
+        <div className="copy">Hive © 2021 </div>
       </Footer>
     </>
   );
