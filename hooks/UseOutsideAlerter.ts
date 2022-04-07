@@ -1,7 +1,7 @@
-import React, { useContext, useEffect, useState } from "react";
+import{ useContext, useEffect} from "react";
 import { ModalContext } from "../context/modalContext";
 
-export default function UseOutsideAlerter(ref) {
+export default function UseOutsideAlerter(ref:React.MutableRefObject<HTMLDivElement>) {
   // const { state, setState } = useState(false);
   const { state, setState } = useContext(ModalContext);
 
