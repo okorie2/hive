@@ -1,14 +1,20 @@
 import React from "react";
-import Image from "next/image";
 import {
   AuthInput,
   AuthInputContainer,
   InputContainer,
-  InputIcon,
 } from "../../styles/components/inputs/authInput";
+import {UseFormRegister, FieldValues} from 'react-hook-form'
 
+interface Props{
+  label: string,
+  required: boolean,
+  border: string,
+ children: JSX.Element,
+ register:   UseFormRegister<FieldValues>
+}
 export default function Inputs(props) {
-  const { label, register, required, border, children, ...rest } = props;
+  const { label, register, required, border, children, ...rest }: Props = props;
 
   return (
     <AuthInputContainer>
@@ -22,6 +28,6 @@ export default function Inputs(props) {
 }
 
 export function Checkbox(props) {
-  const { label, register, required, ...rest } = props;
+  const { ...rest }:Props = props;
   return <input {...rest} type="checkbox" />;
 }

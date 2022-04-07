@@ -1,8 +1,12 @@
 import React from "react";
-import Inputs, { Checkbox } from "./Inputs";
+import Inputs, { Checkbox } from "./inputs";
+interface Props{
+  control: string,
+  src: string,
 
+}
 export default function FormController(props) {
-  const { control, src, ...rest } = props;
+  const { control, src, ...rest }: Props = props;
   switch (control) {
     case "input":
       return <Inputs src={src} {...rest} />;

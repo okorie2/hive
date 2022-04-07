@@ -8,3 +8,5 @@ export const rootReducer = combineReducers({
   signin: signin,
   confirmMail: confirmMail,
 });
+
+export type RootState = ReturnType<typeof rootReducer>

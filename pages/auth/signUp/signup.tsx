@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -57,11 +57,12 @@ export default function Signup() {
             <div>
               <GoogleButton>
                 <span>
-                  <img
+                <Image
                     src="https://img.icons8.com/color/50/000000/google-logo.png"
-                    fontSize="small"
-                    alt="gimage"
+                  width={17}
+                  height={17}
                     id="gIcon"
+                    alt="gimage"
                   />
                 </span>
                 Sign up with Google

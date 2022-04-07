@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import styles from "./leftPane.module.css";
 import Image from "next/image";
 import Link from "next/link";

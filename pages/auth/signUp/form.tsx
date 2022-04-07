@@ -3,8 +3,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { ToastContainer, toast } from "react-toastify";
 
 import { useForm } from "react-hook-form";
+
 import FormController from "../../../component/formHandler/formController";
-import { Error, ErrorStyle } from "../../../styles/components/Error";
+import {  ErrorStyle } from "../../../styles/components/Error";
 import { SignUpBtn, Terms } from "./signUpStyles";
 import Link from "next/link";
 import { ButtonHighlight } from "../../../styles/components/buttons/buttonHiglight";
@@ -12,6 +13,7 @@ import { ButtonFade } from "../../../styles/components/buttons/buttonFade";
 import { InputIcon } from "../../../styles/components/inputs/authInput";
 import Image from "next/image";
 import { handleRegister } from "../../../redux/actions/auth/register";
+import { RootState } from "../../../redux/reducers";
 
 export default function FormWrapper() {
   const {
@@ -32,7 +34,7 @@ export default function FormWrapper() {
     setVisibility(!visibility);
   };
 
-  const { data, loading, error } = useSelector(({ register }) => register);
+  const { data, loading } = useSelector(({ register}:RootState) => register);
 
   const alert = () => {
     if (data?.status) {
@@ -81,7 +83,7 @@ export default function FormWrapper() {
         register={register}
         required
       />
-      {errors.first_name && <Error>This field is required</Error>}
+      {errors.first_name && <ErrorStyle>This field is required</ErrorStyle>}
 
       <FormController
         control="input"
