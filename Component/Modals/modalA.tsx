@@ -1,7 +1,7 @@
 import React, { useContext, useRef, useState } from "react";
 import { ModalContext } from "../../context/modalContext";
 import UseOutsideAlerter from "../../hooks/UseOutsideAlerter";
-import Chat from "../../pages/chat/chat";
+
 import styles from "./modala.module.css";
 
 export default function ModalA({ onClick, expanded }) {

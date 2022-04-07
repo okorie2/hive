@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import GitHubIcon from "@mui/icons-material/GitHub";

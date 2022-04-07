@@ -10,6 +10,7 @@ import { SignInBtn } from "./signinStyles";
 import { ErrorStyle } from "../../../styles/components/Error";
 import { handleSignin } from "../../../redux/actions/auth/signin";
 import FormController from "../../../component/formHandler/formController";
+import { RootState } from "../../../redux/reducers";
 
 export default function Form() {
   const {
@@ -29,7 +30,7 @@ export default function Form() {
     setVisibility(!visibility);
   };
 
-  const { data, loading, error } = useSelector(({ signin }) => signin);
+  const { data, loading, error } = useSelector((state:RootState) => state.signin);
 
   const alert = () => {
     if (data?.status) {
