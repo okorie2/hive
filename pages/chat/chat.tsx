@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import styles from "./chat.module.css";
 import Image from "next/image";
 import ModalA from "../../component/modals/modalA";
@@ -7,10 +7,10 @@ import { ModalContext } from "../../context/modalContext";
 export default function Chat() {
   const [expanded, setExpanded] = useState(false);
   const [state, setState] = useState(false);
-  const [open, setOpen] = useState(false);
-  const showModal = (e) => {
-    setState(!state);
-  };
+  // const [open, setOpen] = useState(false);
+  // const showModal = (e) => {
+  //   setState(!state);
+  // };
   console.log(state, "modal status");
 
   return (

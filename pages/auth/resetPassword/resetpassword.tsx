@@ -1,8 +1,7 @@
 import React from "react";
 
 import Footerr from "../components/footer";
-import Link from "next/link";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+
 import Image from "next/image";
 import { BgAuthReset, HiveTopLeft } from "../signIn/signinStyles";
 

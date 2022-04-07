@@ -3,7 +3,8 @@ import { Provider } from "react-redux";
 import store from "../redux/store/store";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
-function MyApp({ Component, pageProps }) {
+import { AppProps } from "next/app";
+function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Provider store={store}>
       <Component {...pageProps} />

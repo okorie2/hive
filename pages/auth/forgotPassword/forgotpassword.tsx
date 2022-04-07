@@ -33,7 +33,7 @@ export default function ForgotPass() {
         </ForgotCard>
         {/* <div className={styles.push}></div> */}
 
-        </div>
+   
 
         <Footerr />
       </BgAuth>
