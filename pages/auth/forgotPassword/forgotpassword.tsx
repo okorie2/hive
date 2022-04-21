@@ -2,7 +2,6 @@ import React from "react";
 import Image from "next/image";
 import Footerr from "../components/footer";
 import { BgAuth, ForgotCard, HiveTopLeft } from "../signIn/signinStyles";
-
 export default function ForgotPass() {
   return (
     <>
@@ -29,12 +28,7 @@ export default function ForgotPass() {
               <button>Send</button>
             </div>
           </form>
-
         </ForgotCard>
-        {/* <div className={styles.push}></div> */}
-
-   
-
         <Footerr />
       </BgAuth>
     </>

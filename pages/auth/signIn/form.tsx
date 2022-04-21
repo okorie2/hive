@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 
-import { useForm } from "react-hook-form";
+import { useForm } from "react-hook-form"; 
 import { ButtonHighlight } from "../../../styles/components/buttons/buttonHiglight";
 import { InputIcon } from "../../../styles/components/inputs/authInput";
 import Image from "next/image";
@@ -12,7 +12,7 @@ import { handleSignin } from "../../../redux/actions/auth/signin";
 import FormController from "../../../component/formHandler/formController";
 import { RootState } from "../../../redux/reducers";
 
-interface IsignInForm {
+export interface IsignInForm {
   username: string;
   password: string;
 }
@@ -24,7 +24,7 @@ export default function Form() {
   } = useForm();
 
   const dispatch = useDispatch();
-  const onSubmit = (data: IsignInForm) => {
+  const onSubmit = (data) => {
     dispatch(handleSignin(data));
     console.log(data);
   };
@@ -40,12 +40,12 @@ export default function Form() {
 
   const alert = () => {
     if (data?.status) {
-      toast.success(data && data?.response?.data?.message, { autoClose: 4000 });
+      toast.success(data && data?.data?.message, { autoClose: 4000 });
     } else if (error) {
       toast.warn(error && error?.data?.message, { autoClose: 4000 });
     }
   };
-
+console.log(data, 'loading')
   useEffect(() => {
     if (!loading) {
       alert();
@@ -54,7 +54,6 @@ export default function Form() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <ToastContainer autoClose={8000} />
 
       <FormController
         control="input"
