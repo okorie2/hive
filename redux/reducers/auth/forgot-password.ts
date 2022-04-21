@@ -7,6 +7,7 @@ import {
   const initialState = {
     loading: false,
     data: {},
+    error: null
   };
   export const forgotPassword = (state = initialState, action) => {
     switch (action.type) {
@@ -26,7 +27,7 @@ import {
         return {
           ...state,
           loading: false,
-          data: action.payload,
+          error: action.payload,
         };
   
       default:
