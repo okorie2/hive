@@ -10,7 +10,12 @@ import { SignInBtn } from "./signinStyles";
 import { ErrorStyle } from "../../../styles/components/Error";
 import { handleSignin } from "../../../redux/actions/auth/signin";
 import FormController from "../../../component/formHandler/formController";
+import { RootState } from "../../../redux/reducers";
 
+interface IsignInForm {
+  username: string;
+  password: string;
+}
 export default function Form() {
   const {
     register,
@@ -19,7 +24,7 @@ export default function Form() {
   } = useForm();
 
   const dispatch = useDispatch();
-  const onSubmit = (data) => {
+  const onSubmit = (data: IsignInForm) => {
     dispatch(handleSignin(data));
     console.log(data);
   };
@@ -29,7 +34,9 @@ export default function Form() {
     setVisibility(!visibility);
   };
 
-  const { data, loading, error } = useSelector(({ signin }) => signin);
+  const { data, loading, error } = useSelector(
+    (state: RootState) => state.signin
+  );
 
   const alert = () => {
     if (data?.status) {

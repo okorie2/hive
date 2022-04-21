@@ -3,9 +3,11 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { handleConfirmMail } from "../../../../redux/actions/auth/confirm-email";
 import _ from "lodash";
-export default function confirmEmail() {
+import { RootState } from "../../../../redux/reducers";
+export default function ConfirmEmail() {
   const dispatch = useDispatch();
-  const { data } = useSelector(({ confirmMail }) => confirmMail);
+
+  const { data } = useSelector(({ confirmMail }:RootState) => confirmMail);
 
   const router = useRouter();
   const { isReady } = useRouter();

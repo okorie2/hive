@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -51,7 +50,10 @@ export default function Home() {
         <Navlist>Contact</Navlist>
         <Navlist>
           <Link href="/auth/signIn/signin">
+            <a>
+
             <button>Log in</button>
+            </a>
           </Link>
         </Navlist>
       </Nav>
@@ -65,8 +67,11 @@ export default function Home() {
               the people you love and care about.
             </p>
 
-            <Link href="/auth/signUp/signup">
+            <Link href="/auth/signUp/signup" >
+              <a>
+
               <button>Create an account</button>
+              </a>
             </Link>
           </Left>
           <Right>
@@ -246,7 +251,7 @@ export default function Home() {
               <br /> you care about
             </p>
 
-            <Link href="/auth/signUp/signup">
+            <Link href="/auth/signUp/signup" passHref>
               <button>Create an account</button>
             </Link>
           </div>

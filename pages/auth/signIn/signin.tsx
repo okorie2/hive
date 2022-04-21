@@ -1,17 +1,22 @@
 import FacebookIcon from "@mui/icons-material/Facebook";
-import GoogleIcon from "@mui/icons-material/Google";
+import Link from 'next/link'
 import React, { useEffect } from "react";
 import Footerr from "../components/footer";
-import styles from "../signin.module.css";
 
-import Image from "next/image";
-import { BtnRw, DRow, FacebookButton, FormContainer, GoogleButton, } from "../signUp/signUpStyles";
-import {Bg, MainRecc, Push, MainRecc, AuthInputContainer } from "./signinStyles";
+import {
+  BtnRw,
+  DRow,
+  FacebookButton,
+  FormContainer,
+  GoogleButton,
+} from "../signUp/signUpStyles";
+import { Bg, MainRecc, Push } from "./signinStyles";
 
 import { useRouter } from "next/router";
-import { ToastContainer, toast } from "react-toastify";
+import {  toast } from "react-toastify";
 
 import Form from "./form";
+import Image from "next/image";
 
 export default function Signin() {
   const router = useRouter();
@@ -39,9 +44,10 @@ export default function Signin() {
             <div>
               <GoogleButton>
                 <span>
-                  <img
+                  <Image
                     src="https://img.icons8.com/color/50/000000/google-logo.png"
-                    fontSize="small"
+                  width={17}
+                  height={17}
                     id="gIcon"
                     alt="gimage"
                   />
@@ -68,7 +74,9 @@ export default function Signin() {
           </DRow>
           <FormContainer>
             <Form />
-            <div><Link href="">Forgot Password?</Link></div>
+            <div>
+              <Link href="">Forgot Password?</Link>
+            </div>
           </FormContainer>
         </MainRecc>
         <Push></Push>
