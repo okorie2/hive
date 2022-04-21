@@ -1,4 +1,7 @@
+import { AxiosResponse } from "axios";
+import config from "../../../config";
 import useAxios from "../../../hooks/UseAxios";
+import { IsignInForm } from "../../../pages/auth/signIn/form";
 import { SIGNIN, SIGNIN_ERROR, SIGNIN_SUCCESS } from "../actionTypes";
 
 const signIn = () => ({
@@ -15,10 +18,10 @@ const signinError = (error) => ({
   payload: error,
 });
 
-export const handleSignin = (body) => async (dispatch) => {
+export const handleSignin = (body:IsignInForm) => async (dispatch) => {
   dispatch(signIn());
   try {
-    const response = await useAxios("POST", "/v1/auth/login", body);
+    const response = await useAxios({method:"POST", url: `${config.API_BASE_URL}/v1/auth/login`, data: body});
     console.log(response);
     dispatch(signInSuccess(response));
   } catch (error) {

@@ -10,211 +10,211 @@ export const BgAuth = styled.div`
   background-color: #e5e5e5;
 `;
 
-
-
 export const BgAuthReset = styled.div`
-   background-color: #e5e5e5;
+  background-color: #e5e5e5;
 
-   .resetsuccessbg .forgotcard {
-  margin-top: 8%;
-  margin-bottom: 14%;
-  background: #fefefe;
-  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
-  width: 34%;
-  text-align: center;
-  margin: auto;
-  border-radius: 10px;
-  margin-top: 7%;
-  margin-bottom: 8%;
-  padding-top: 4.5%;
-  margin-top: 5%;
-  margin-bottom: 5%;
-
-  .successbut {
-  margin-top: 8%;
-  margin-bottom: 17%;
-}
-
-  img {
-  border-radius: 50%;
-  width: 52px;
-  height: 52px;
-  background-color: #c4c4c4;
-}
-
-p {
-  font-size: 20px;
-  margin-bottom: 1%;
-}
-
-.hiveright {
-  font-family: "Fertigo", sans-serif;
-}
-
-span {
-  font-size: 14px;
-  color: #616061;
-  font-weight: 300;
-  font-family: "Open Sans", sans-serif;
-}
-
-form {
-  width: 85%;
-  margin: auto;
-  margin-top: 10%;
-  text-align: left;
-}
-
-label {
-  font-weight: 300;
-  font-size: 16px;
-  color: #616061;
-}
-
-input {
-  margin-top: 4px;
-  width: 100%;
-  padding: 3%;
-  outline: none;
-  background-color: #fff;
-  border: none;
-  border-radius: 5px;
-  margin-bottom: 5%;
-  border: 1px solid rgba(0, 0, 0, 0.12);
-}
-
-button {
-  border: none;
-  color: #fff;
-  background-color: #4ab5e1;
-  font-size: 14px;
-  font-weight: 100;
-  padding: 2.5% 9%;
-  border-radius: 7px;
-  font-family: "Open Sans", sans-serif;
-  cursor: pointer;
-  text-align: center;
-}
-
-.forgotbutton {
-  text-align: center;
-  button {
-  margin-top: 2%;
-  margin-bottom: 15%;
-  font-family: "Open Sans", sans-serif;
-}
-}
-
-.resetbutton {
-  text-align: center;
-}button {
-  margin-bottom: 12%;
-}
-
-.resetpasswordinput {
-  margin-bottom: 5%;
-  input {
-  margin-bottom: 0%;
-}
-}
-}
-
-   .forgotCard{
+  .resetsuccessbg .forgotcard {
+    margin-top: 8%;
+    margin-bottom: 14%;
     background: #fefefe;
-  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
-  width: 34%;
-  text-align: center;
-  margin: auto;
-  border-radius: 10px;
-  margin-top: 7%;
-  margin-bottom: 8%;
-  padding-top: 4.5%;
-  margin-top: 5%;
-  margin-bottom: 5%;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
+    width: 34%;
+    text-align: center;
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 7%;
+    margin-bottom: 8%;
+    padding-top: 4.5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
 
-  img {
-  border-radius: 50%;
-  width: 52px;
-  height: 52px;
-  background-color: #c4c4c4;
-}
+    .successbut {
+      margin-top: 8%;
+      margin-bottom: 17%;
+    }
 
-p {
-  font-size: 20px;
-  margin-bottom: 1%;
-}
+    img {
+      border-radius: 50%;
+      width: 52px;
+      height: 52px;
+      background-color: #c4c4c4;
+    }
 
-.hiveright {
-  font-family: "Fertigo", sans-serif;
-}
+    p {
+      font-size: 20px;
+      margin-bottom: 1%;
+    }
 
-span {
-  font-size: 14px;
-  color: #616061;
-  font-weight: 300;
-  font-family: "Open Sans", sans-serif;
-}
+    .hiveright {
+      font-family: "Fertigo", sans-serif;
+    }
 
-form {
-  width: 85%;
-  margin: auto;
-  margin-top: 10%;
-  text-align: left;
-}
+    span {
+      font-size: 14px;
+      color: #616061;
+      font-weight: 300;
+      font-family: "Open Sans", sans-serif;
+    }
 
-label {
-  font-weight: 300;
-  font-size: 16px;
-  color: #616061;
-}
+    form {
+      width: 85%;
+      margin: auto;
+      margin-top: 10%;
+      text-align: left;
+    }
 
-input {
-  margin-top: 4px;
-  width: 100%;
-  padding: 3%;
-  outline: none;
-  background-color: #fff;
-  border: none;
-  border-radius: 5px;
-  margin-bottom: 5%;
-  border: 1px solid rgba(0, 0, 0, 0.12);
-}
+    label {
+      font-weight: 300;
+      font-size: 16px;
+      color: #616061;
+    }
 
-button {
-  border: none;
-  color: #fff;
-  background-color: #4ab5e1;
-  font-size: 14px;
-  font-weight: 100;
-  padding: 2.5% 9%;
-  border-radius: 7px;
-  font-family: "Open Sans", sans-serif;
-  cursor: pointer;
-  text-align: center;
-}
+    input {
+      margin-top: 4px;
+      width: 100%;
+      padding: 3%;
+      outline: none;
+      background-color: #fff;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 5%;
+      border: 1px solid rgba(0, 0, 0, 0.12);
+    }
 
-.forgotbutton {
-  text-align: center;
-  button {
-  margin-top: 2%;
-  margin-bottom: 15%;
-  font-family: "Open Sans", sans-serif;
-}
-}
+    button {
+      border: none;
+      color: #fff;
+      background-color: #4ab5e1;
+      font-size: 14px;
+      font-weight: 100;
+      padding: 2.5% 9%;
+      border-radius: 7px;
+      font-family: "Open Sans", sans-serif;
+      cursor: pointer;
+      text-align: center;
+    }
 
-.resetbutton {
-  text-align: center;
-}button {
-  margin-bottom: 12%;
-}
+    .forgotbutton {
+      text-align: center;
+      button {
+        margin-top: 2%;
+        margin-bottom: 15%;
+        font-family: "Open Sans", sans-serif;
+      }
+    }
 
-.resetpasswordinput {
-  margin-bottom: 5%;
-  input {
-  margin-bottom: 0%;
-}
-}
-   }
+    .resetbutton {
+      text-align: center;
+    }
+    button {
+      margin-bottom: 12%;
+    }
+
+    .resetpasswordinput {
+      margin-bottom: 5%;
+      input {
+        margin-bottom: 0%;
+      }
+    }
+  }
+
+  .forgotCard {
+    background: #fefefe;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
+    width: 34%;
+    text-align: center;
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 7%;
+    margin-bottom: 8%;
+    padding-top: 4.5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+
+    img {
+      border-radius: 50%;
+      width: 52px;
+      height: 52px;
+      background-color: #c4c4c4;
+    }
+
+    p {
+      font-size: 20px;
+      margin-bottom: 1%;
+    }
+
+    .hiveright {
+      font-family: "Fertigo", sans-serif;
+    }
+
+    span {
+      font-size: 14px;
+      color: #616061;
+      font-weight: 300;
+      font-family: "Open Sans", sans-serif;
+    }
+
+    form {
+      width: 85%;
+      margin: auto;
+      margin-top: 10%;
+      text-align: left;
+    }
+
+    label {
+      font-weight: 300;
+      font-size: 16px;
+      color: #616061;
+    }
+
+    input {
+      margin-top: 4px;
+      width: 100%;
+      padding: 3%;
+      outline: none;
+      background-color: #fff;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 5%;
+      border: 1px solid rgba(0, 0, 0, 0.12);
+    }
+
+    button {
+      border: none;
+      color: #fff;
+      background-color: #4ab5e1;
+      font-size: 14px;
+      font-weight: 100;
+      padding: 2.5% 9%;
+      border-radius: 7px;
+      font-family: "Open Sans", sans-serif;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .forgotbutton {
+      text-align: center;
+      button {
+        margin-top: 2%;
+        margin-bottom: 15%;
+        font-family: "Open Sans", sans-serif;
+      }
+    }
+
+    .resetbutton {
+      text-align: center;
+    }
+    button {
+      margin-bottom: 12%;
+    }
+
+    .resetpasswordinput {
+      margin-bottom: 5%;
+      input {
+        margin-bottom: 0%;
+      }
+    }
+  }
 `;
 
 export const HiveTopLeft = styled.div`
@@ -224,7 +224,7 @@ export const HiveTopLeft = styled.div`
 `;
 
 export const ForgotCard = styled.div`
- background: #fefefe;
+  background: #fefefe;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
   width: 34%;
   text-align: center;
@@ -234,44 +234,43 @@ export const ForgotCard = styled.div`
   margin-bottom: 8%;
   padding-top: 4.5%;
 
-
   img {
-  border-radius: 50%;
-  width: 52px;
-  height: 52px;
-  background-color: #c4c4c4;
-}
+    border-radius: 50%;
+    width: 52px;
+    height: 52px;
+    background-color: #c4c4c4;
+  }
 
-p {
-  font-size: 20px;
-  margin-bottom: 1%;
-}
+  p {
+    font-size: 20px;
+    margin-bottom: 1%;
+  }
 
-.hiveright {
-  font-family: "Fertigo", sans-serif;
-}
+  .hiveright {
+    font-family: "Fertigo", sans-serif;
+  }
 
-span {
-  font-size: 14px;
-  color: #616061;
-  font-weight: 300;
-  font-family: "Open Sans", sans-serif;
-}
+  span {
+    font-size: 14px;
+    color: #616061;
+    font-weight: 300;
+    font-family: "Open Sans", sans-serif;
+  }
 
-form {
-  width: 85%;
-  margin: auto;
-  margin-top: 10%;
-  text-align: left;
-}
+  form {
+    width: 85%;
+    margin: auto;
+    margin-top: 10%;
+    text-align: left;
+  }
 
-label {
-  font-weight: 300;
-  font-size: 16px;
-  color: #616061;
-}
+  label {
+    font-weight: 300;
+    font-size: 16px;
+    color: #616061;
+  }
 
-input {
+  /* input {
   margin-top: 4px;
   width: 100%;
   padding: 3%;
@@ -281,42 +280,43 @@ input {
   border-radius: 5px;
   margin-bottom: 5%;
   border: 1px solid rgba(0, 0, 0, 0.12);
-}
+} */
 
-button {
-  border: none;
-  color: #fff;
-  background-color: #4ab5e1;
-  font-size: 14px;
-  font-weight: 100;
-  padding: 2.5% 9%;
-  border-radius: 7px;
-  font-family: "Open Sans", sans-serif;
-  cursor: pointer;
-  text-align: center;
-}
-
-.forgotbutton {
-  text-align: center;
   button {
-  margin-top: 2%;
-  margin-bottom: 15%;
-  font-family: "Open Sans", sans-serif;
-}
-}
+    border: none;
+    color: #fff;
+    background-color: #4ab5e1;
+    font-size: 14px;
+    font-weight: 100;
+    padding: 2.5% 9%;
+    border-radius: 7px;
+    font-family: "Open Sans", sans-serif;
+    cursor: pointer;
+    text-align: center;
+  }
 
-.resetbutton {
-  text-align: center;
-}button {
-  margin-bottom: 12%;
-}
+  .forgotbutton {
+    text-align: center;
+    button {
+      margin-top: 2%;
+      margin-bottom: 15%;
+      font-family: "Open Sans", sans-serif;
+    }
+  }
 
-.resetpasswordinput {
-  margin-bottom: 5%;
-  input {
-  margin-bottom: 0%;
-}
-}
+  .resetbutton {
+    text-align: center;
+  }
+  button {
+    margin-bottom: 12%;
+  }
+
+  .resetpasswordinput {
+    margin-bottom: 5%;
+    input {
+      margin-bottom: 0%;
+    }
+  }
 `;
 
 export const MainRecc = styled(MainRec)`
@@ -330,9 +330,9 @@ export const MainRecc = styled(MainRec)`
     text-align: center;
   }
 
-  a{
+  a {
     color: #4ab5e1;
-    font-family: 'Open Sans';
+    font-family: "Open Sans";
     font-style: normal;
     font-weight: 600;
     font-size: 14px;

@@ -1,5 +1,5 @@
 import FacebookIcon from "@mui/icons-material/Facebook";
-import Link from 'next/link'
+import Link from "next/link";
 import React, { useEffect } from "react";
 import Footerr from "../components/footer";
 
@@ -13,24 +13,22 @@ import {
 import { Bg, MainRecc, Push } from "./signinStyles";
 
 import { useRouter } from "next/router";
-import {  toast } from "react-toastify";
-
-import Form from "./form";
+import { toast } from "react-toastify";
 import Image from "next/image";
+import Form from "./form";
 
 export default function Signin() {
   const router = useRouter();
   console.log(router.pathname);
   const { token, msg } = router.query;
-  console.log("hey", msg);
+  console.log("hey", msg, token);
 
   useEffect(() => {
     if (token) {
       toast.info(msg, { autoClose: 4000 });
     }
-  }, []);
+  }, [token]);
 
-  //sammy fix cors :(
 
   return (
     <>
@@ -46,8 +44,8 @@ export default function Signin() {
                 <span>
                   <Image
                     src="https://img.icons8.com/color/50/000000/google-logo.png"
-                  width={17}
-                  height={17}
+                    width={17}
+                    height={17}
                     id="gIcon"
                     alt="gimage"
                   />
@@ -73,9 +71,11 @@ export default function Signin() {
             <div className="bBom"></div>
           </DRow>
           <FormContainer>
-            <Form />
+            <Form/>
             <div>
-              <Link href="">Forgot Password?</Link>
+              <Link href="/auth/forgotPassword/forgotpassword" >
+                <a>Forgot Password?</a>
+              </Link>
             </div>
           </FormContainer>
         </MainRecc>
