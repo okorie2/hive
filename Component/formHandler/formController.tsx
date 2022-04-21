@@ -4,6 +4,7 @@ import Inputs, { Checkbox } from "./inputs";
 interface IFormController{
   control: string,
   defaultValue?: string,
+  placeholder?: string,
   label?:string,
   border?:string,
   register?:UseFormRegister<FieldValues>,

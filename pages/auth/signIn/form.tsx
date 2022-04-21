@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
 
-import { useForm } from "react-hook-form"; 
+import { FieldValues, useForm } from "react-hook-form"; 
 import { ButtonHighlight } from "../../../styles/components/buttons/buttonHiglight";
 import { InputIcon } from "../../../styles/components/inputs/authInput";
 import Image from "next/image";
@@ -21,10 +21,10 @@ export default function Form() {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm();
+  } = useForm<FieldValues ,IsignInForm>();
 
   const dispatch = useDispatch();
-  const onSubmit = (data) => {
+  const onSubmit = (data:IsignInForm) => {
     dispatch(handleSignin(data));
     console.log(data);
   };

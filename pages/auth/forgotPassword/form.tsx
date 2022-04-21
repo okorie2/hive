@@ -50,9 +50,9 @@ console.log(data, 'loading')
 
       <FormController
         control="input"
-        defaultValue="test"
         label="email"
         register={register}
+        placeholder="ekejohn123@gmail.com"
         border={errors.email && "1px solid red"}
         required={true}
       />
