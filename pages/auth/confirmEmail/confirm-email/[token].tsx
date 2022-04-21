@@ -7,7 +7,7 @@ import { RootState } from "../../../../redux/reducers";
 export default function ConfirmEmail() {
   const dispatch = useDispatch();
 
-  const { data } = useSelector(({ confirmMail }:RootState) => confirmMail);
+  const { data } = useSelector(({ confirmMail }: RootState) => confirmMail);
 
   const router = useRouter();
   const { isReady } = useRouter();

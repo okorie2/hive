@@ -36,7 +36,7 @@ export default function ResetPassword() {
             <input type="password" placeholder="Re-enter Password"></input>
             <br />
 
-            <div className={styles.resetbutton}>
+            <div className='resetbutton'>
               <button>Reset Password</button>
 
             </div>
