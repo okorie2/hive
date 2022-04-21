@@ -6,8 +6,7 @@ import styles from "../signin.module.css";
 
 import Image from "next/image";
 import { BtnRw, DRow, FacebookButton, FormContainer, GoogleButton, } from "../signUp/signUpStyles";
-import {Bg, MainRecc, Push} from "./signinStyles"
-nRecc, AuthInputContainer } from "./signinStyles";
+import {Bg, MainRecc, Push, MainRecc, AuthInputContainer } from "./signinStyles";
 
 import { useRouter } from "next/router";
 import { ToastContainer, toast } from "react-toastify";
