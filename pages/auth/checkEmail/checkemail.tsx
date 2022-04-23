@@ -5,8 +5,13 @@ import Link from "next/link";
 
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 export default function CheckMail() {
+  const router = useRouter();
+  const { email } = router.query;
+  console.log(email, "email");
+
   return (
     <>
       <div className={styles.bgauth}>
@@ -21,7 +26,7 @@ export default function CheckMail() {
             width={50}
           />
           <p className={styles.hiveright}>Check your mail</p>
-          <span>A link Has been sent to owhondahsam@gmail.com</span>
+          <span>A link Has been sent to {email}</span>
           <button className={styles.checkembutton}>Open email app</button>
           <br />
           <div className={styles.checkspan}>

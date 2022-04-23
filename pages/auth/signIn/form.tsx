@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
 
-import { FieldValues, useForm } from "react-hook-form"; 
+import { FieldValues, SubmitHandler, useForm } from "react-hook-form"; 
 import { ButtonHighlight } from "../../../styles/components/buttons/buttonHiglight";
 import { InputIcon } from "../../../styles/components/inputs/authInput";
 import Image from "next/image";
@@ -21,16 +21,16 @@ export default function Form() {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<FieldValues ,IsignInForm>();
+  } = useForm<FieldValues>();
 
   const dispatch = useDispatch();
-  const onSubmit = (data:IsignInForm) => {
+  const onSubmit : SubmitHandler<FieldValues>  = (data) => {
     dispatch(handleSignin(data));
     console.log(data);
   };
   const [visibility, setVisibility] = useState(false);
 
-  const toggleVisibility = () => {
+  const toggleVisibility = () => {33
     setVisibility(!visibility);
   };
 
