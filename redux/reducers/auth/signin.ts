@@ -8,7 +8,7 @@ import {
 
 let registered;
 if (typeof window !== "undefined") {
-  registered = JSON.parse(localStorage.getItem("hasBeenAuthenticated"));
+  registered = JSON.parse(localStorage.getItem("hasBeenAuthenticated") || "");
 }
 
 const initialState: ActionState = {
@@ -20,8 +20,11 @@ const initialState: ActionState = {
     },
   },
   error: {
+    status: false,
     data: {
-      message: "",
+      data: {
+        message: "",
+      },
     },
   },
   register: registered ? true : false,
@@ -45,7 +48,8 @@ export const signin: Reducer<ActionState> = (state = initialState, action) => {
       return {
         ...state,
         loading: false,
-        error: action.payload,
+        error: { ...state.error, status: true, data: action.payload },
+
         register: false,
       };
     default:

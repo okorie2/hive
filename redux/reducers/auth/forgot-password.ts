@@ -15,8 +15,11 @@ const initialState: ActionState = {
     },
   },
   error: {
+    status: false,
     data: {
-      message: "",
+      data: {
+        message: "",
+      },
     },
   },
 };
@@ -41,7 +44,7 @@ export const forgotPassword: Reducer<ActionState> = (
       return {
         ...state,
         loading: false,
-        error: action.payload,
+        error: { ...state.error, status: true, data: action.payload },
       };
 
     default:

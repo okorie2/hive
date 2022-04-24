@@ -41,8 +41,8 @@ export default function FormWrapper() {
   const alert = () => {
     if (data?.status) {
       toast.success(data && data?.data?.message, { autoClose: 4000 });
-    } else {
-      toast.warn(error && error?.data?.message, { autoClose: 4000 });
+    } else if (error.status) {
+      toast.warn(error && error?.data?.data?.message, { autoClose: 4000 });
     }
   };
 
@@ -50,7 +50,7 @@ export default function FormWrapper() {
     if (!loading) {
       alert();
     }
-  }, [data, error]);
+  }, [data, error.status]);
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>

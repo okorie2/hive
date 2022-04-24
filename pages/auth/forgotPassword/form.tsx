@@ -43,8 +43,8 @@ export default function ForgotPasswordForm() {
         },
         "/auth/checkemail"
       );
-    } else if (error) {
-      toast.warn(error && error?.data?.message, { autoClose: 4000 });
+    } else if (error.status) {
+      toast.warn(error && error?.data?.data?.message, { autoClose: 4000 });
     }
   };
   console.log(data.status, loading);
@@ -53,7 +53,7 @@ export default function ForgotPasswordForm() {
       console.log("not empty");
       alert();
     }
-  }, [data, error]);
+  }, [data, error.status]);
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>

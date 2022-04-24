@@ -15,15 +15,18 @@ export const FORGOT_PASSWORD_SUCCESS = "FORGOT_PASSWORD_SUCCESS";
 export const FORGOT_PASSWORD_ERROR = "FORGOT_PASSWORD_ERROR";
 
 type data = {
-  status: number | boolean;
+  status: number | undefined;
   data: {
     message: string;
   };
 };
 
 type error = {
+  status: boolean;
   data: {
-    message: string;
+    data: {
+      message: string;
+    };
   };
 };
 export interface ActionState {

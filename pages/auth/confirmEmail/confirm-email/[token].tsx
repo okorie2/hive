@@ -11,7 +11,7 @@ export default function ConfirmEmail() {
 
   const router = useRouter();
   const { isReady } = useRouter();
-  const { token } = router.query;
+  const token = router.query.token as string;
 
   useEffect(() => {
     if (isReady) {

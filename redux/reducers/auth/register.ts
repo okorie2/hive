@@ -9,14 +9,17 @@ import {
 const initialState: ActionState = {
   loading: false,
   error: {
+    status: false,
     data: {
-      message: "",
+      data: {
+        message: "error",
+      },
     },
   },
   data: {
     status: 0,
     data: {
-      message: "",
+      message: "success",
     },
   },
 };
@@ -40,7 +43,7 @@ export const register: Reducer<ActionState> = (
       return {
         ...state,
         loading: false,
-        error: action.payload,
+        error: { ...state.error, status: true, data: action.payload },
       };
     default:
       return state;
