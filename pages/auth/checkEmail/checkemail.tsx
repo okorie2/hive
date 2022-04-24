@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Footerr from "../components/footer";
 import styles from "../signin.module.css";
 import Link from "next/link";
@@ -18,7 +18,6 @@ export default function CheckMail() {
 
   const resendEmail = () => {
     dispatch(handleForgotPassword(email));
-    alert();
   };
 
   const { data, error } = useSelector(
@@ -27,10 +26,19 @@ export default function CheckMail() {
 
   const alert = () => {
     if (data?.status === 200) {
-      toast.warn(error && error?.data?.data?.message, { autoClose: 4000 });
+      toast.success(data && data?.data?.message, { autoClose: 4000 });
     } else if (error.status) {
       toast.warn(error && error?.data?.data?.message, { autoClose: 4000 });
     }
+  };
+
+  console.log(data.status);
+  useEffect(() => {
+    alert();
+  }, [data, error.status]);
+
+  const openEmail = () => {
+    window.location.href = `mailto:${email}`;
   };
 
   return (
@@ -48,17 +56,19 @@ export default function CheckMail() {
           />
           <p className={styles.hiveright}>Check your mail</p>
           <span>A link Has been sent to {email}</span>
-          <button className={styles.checkembutton}>Open email app</button>
+          <button className={styles.checkembutton} onClick={openEmail}>
+            Open email app
+          </button>
           <br />
           <div className={styles.checkspan}>
             <span>
               Didn’t receive the email?
-              <p onClick={resendEmail}>Resend</p>
+              <a onClick={resendEmail}> Resend</a>
             </span>
           </div>
           <br />
           <div className={styles.checkam}>
-            <Link href="/auth/signin">
+            <Link href="/auth/signIn/signin">
               <a>
                 <ArrowBackIcon className={styles.arrowback} />{" "}
                 <span>Back to log in</span>
