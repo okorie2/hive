@@ -8,7 +8,7 @@ import {
 
 let registered;
 if (typeof window !== "undefined") {
-  registered = JSON.parse(localStorage.getItem("hasBeenAuthenticated") || "");
+  registered = localStorage.getItem("hasBeenAuthenticated") || "";
 }
 
 const initialState: ActionState = {

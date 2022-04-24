@@ -1,9 +1,9 @@
 import { Reducer } from "redux";
 import {
   ActionState,
-  CONFIRM_MAIL,
-  CONFIRM_MAIL_ERROR,
-  CONFIRM_MAIL_SUCCESS,
+  RESET_PASSWORD,
+  RESET_PASSWORD_ERROR,
+  RESET_PASSWORD_SUCCESS,
 } from "../../actions/actionTypes";
 
 const initialState: ActionState = {
@@ -23,24 +23,24 @@ const initialState: ActionState = {
     },
   },
 };
-export const confirmMail: Reducer<ActionState> = (
+export const resetPassword: Reducer<ActionState> = (
   state = initialState,
   action
 ) => {
   switch (action.type) {
-    case CONFIRM_MAIL:
+    case RESET_PASSWORD:
       return {
         ...state,
         loading: true,
       };
 
-    case CONFIRM_MAIL_SUCCESS:
+    case RESET_PASSWORD_SUCCESS:
       return {
         ...state,
         loading: false,
         data: action.payload,
       };
-    case CONFIRM_MAIL_ERROR:
+    case RESET_PASSWORD_ERROR:
       return {
         ...state,
         loading: false,
