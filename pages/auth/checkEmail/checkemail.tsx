@@ -6,11 +6,32 @@ import Link from "next/link";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import { useDispatch, useSelector } from "react-redux";
+import { handleForgotPassword } from "redux/actions/auth/forgotPassword";
+import { toast } from "react-toastify";
+import { RootState } from "redux/reducers";
 
 export default function CheckMail() {
+  const dispatch = useDispatch();
   const router = useRouter();
-  const { email } = router.query;
-  console.log(email, "email");
+  const email = router.query.email as string;
+
+  const resendEmail = () => {
+    dispatch(handleForgotPassword(email));
+    alert();
+  };
+
+  const { data, error } = useSelector(
+    (state: RootState) => state.forgotPassword
+  );
+
+  const alert = () => {
+    if (data?.status === 200) {
+      toast.warn(error && error?.data?.data?.message, { autoClose: 4000 });
+    } else if (error.status) {
+      toast.warn(error && error?.data?.data?.message, { autoClose: 4000 });
+    }
+  };
 
   return (
     <>
@@ -32,9 +53,7 @@ export default function CheckMail() {
           <div className={styles.checkspan}>
             <span>
               Didn’t receive the email?
-              <Link href="#">
-                <a>Resend</a>
-              </Link>{" "}
+              <p onClick={resendEmail}>Resend</p>
             </span>
           </div>
           <br />
