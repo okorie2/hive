@@ -1,22 +1,32 @@
+import { Reducer } from "redux";
 import {
   REGISTER,
   REGISTER_SUCCESS,
   REGISTER_ERROR,
+  ActionState,
 } from "../../actions/actionTypes";
 
-REGISTER;
-var registered;
-if (typeof window !== "undefined") {
-  registered = JSON.parse(localStorage.getItem("hasBeenAuthenticated"));
-}
-
-const initialState = {
+const initialState: ActionState = {
   loading: false,
-  error: null,
-  data: {},
-  register: registered ? true : false,
+  error: {
+    status: false,
+    data: {
+      data: {
+        message: "error",
+      },
+    },
+  },
+  data: {
+    status: 0,
+    data: {
+      message: "success",
+    },
+  },
 };
-export const register = (state = initialState, action) => {
+export const register: Reducer<ActionState> = (
+  state = initialState,
+  action
+) => {
   switch (action.type) {
     case REGISTER:
       return {
@@ -28,14 +38,12 @@ export const register = (state = initialState, action) => {
         ...state,
         loading: false,
         data: action.payload,
-        register: true,
       };
     case REGISTER_ERROR:
       return {
         ...state,
         loading: false,
-        data: action.payload,
-        register: false,
+        error: { ...state.error, status: true, data: action.payload },
       };
     default:
       return state;

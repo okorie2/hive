@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { ToastContainer, toast } from "react-toastify";
 
-import { useForm } from "react-hook-form";
+import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 
 import FormController from "../../../component/formHandler/formController";
-import {  ErrorStyle } from "../../../styles/components/Error";
+import { ErrorStyle } from "../../../styles/components/Error";
 import { SignUpBtn, Terms } from "./signUpStyles";
 import Link from "next/link";
 import { ButtonHighlight } from "../../../styles/components/buttons/buttonHiglight";
@@ -23,7 +23,7 @@ export default function FormWrapper() {
   } = useForm();
 
   const dispatch = useDispatch();
-  const onSubmit = (data) => {
+  const onSubmit: SubmitHandler<FieldValues> = (data) => {
     dispatch(handleRegister(data));
     console.log(data);
   };
@@ -34,13 +34,15 @@ export default function FormWrapper() {
     setVisibility(!visibility);
   };
 
-  const { data, loading } = useSelector(({ register}:RootState) => register);
+  const { data, loading, error } = useSelector(
+    ({ register }: RootState) => register
+  );
 
   const alert = () => {
     if (data?.status) {
-      toast.success(data && data?.response?.data?.message, { autoClose: 4000 });
-    } else {
-      toast.warn(data && data?.response?.data?.message, { autoClose: 4000 });
+      toast.success(data && data?.data?.message, { autoClose: 4000 });
+    } else if (error.status) {
+      toast.warn(error && error?.data?.data?.message, { autoClose: 4000 });
     }
   };
 
@@ -48,7 +50,7 @@ export default function FormWrapper() {
     if (!loading) {
       alert();
     }
-  }, [data]);
+  }, [data, error.status]);
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>

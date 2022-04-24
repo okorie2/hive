@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
-import { FieldValues, useForm } from "react-hook-form";
+import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 // import _ from 'lodash'
 import { ButtonHighlight } from "../../../styles/components/buttons/buttonHiglight";
 import { ErrorStyle } from "../../../styles/components/Error";
@@ -9,25 +9,20 @@ import FormController from "../../../component/formHandler/formController";
 import { RootState } from "../../../redux/reducers";
 import { SignInBtn } from "../signIn/signinStyles";
 import { handleForgotPassword } from "redux/actions/auth/forgotPassword";
-import _ from "lodash";
+import { useRouter } from "next/router";
 
-export interface IForgotPasswordForm {
-  email?: string | undefined;
-}
 export default function ForgotPasswordForm() {
   const dispatch = useDispatch();
-
+  const [email, setEmail] = useState("");
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<FieldValues, IForgotPasswordForm>();
+  } = useForm<FieldValues>();
 
-  const onSubmit = (data: IForgotPasswordForm) => {
-    if (data === undefined) {
-      return;
-    }
-    dispatch(handleForgotPassword(data && data?.email));
+  const onSubmit: SubmitHandler<FieldValues> = (data) => {
+    setEmail(data.email);
+    dispatch(handleForgotPassword(data.email));
     console.log(data);
   };
 
@@ -35,20 +30,30 @@ export default function ForgotPasswordForm() {
     (state: RootState) => state.forgotPassword
   );
 
+  const router = useRouter();
+
   const alert = () => {
-    if (data?.status) {
-      toast.success(data && data?.data?.message, { autoClose: 4000 });
-    } else if (error) {
-      toast.warn(error && error?.data?.message, { autoClose: 4000 });
+    if (data?.status === 200) {
+      router.push(
+        {
+          pathname: "/auth/checkEmail/checkemail",
+          query: {
+            email: email,
+          },
+        },
+        "/auth/checkemail"
+      );
+    } else if (error.status) {
+      toast.warn(error && error?.data?.data?.message, { autoClose: 4000 });
     }
   };
-  console.log(data, loading);
+  console.log(data.status, loading);
   useEffect(() => {
     if (!loading) {
       console.log("not empty");
       alert();
     }
-  }, [data, error]);
+  }, [data, error.status]);
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>

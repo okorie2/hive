@@ -1,16 +1,36 @@
+import { Reducer } from "redux";
 import {
+  ActionState,
   SIGNIN,
   SIGNIN_ERROR,
   SIGNIN_SUCCESS,
 } from "../../actions/actionTypes";
 
-const initialState = {
+let registered;
+if (typeof window !== "undefined") {
+  registered = JSON.parse(localStorage.getItem("hasBeenAuthenticated") || "");
+}
+
+const initialState: ActionState = {
   loading: false,
-  data: {},
-  error: null,
+  data: {
+    status: 0,
+    data: {
+      message: "",
+    },
+  },
+  error: {
+    status: false,
+    data: {
+      data: {
+        message: "",
+      },
+    },
+  },
+  register: registered ? true : false,
 };
 
-export const signin = (state = initialState, action) => {
+export const signin: Reducer<ActionState> = (state = initialState, action) => {
   switch (action.type) {
     case SIGNIN:
       return {
@@ -22,12 +42,15 @@ export const signin = (state = initialState, action) => {
         ...state,
         loading: false,
         data: action.payload,
+        register: true,
       };
     case SIGNIN_ERROR:
       return {
         ...state,
         loading: false,
-        error: action.payload,
+        error: { ...state.error, status: true, data: action.payload },
+
+        register: false,
       };
     default:
       return state;
