@@ -58,8 +58,9 @@ export default function FormWrapper() {
 
       <FormController
         control="input"
-        defaultValue="test"
+        placeholder="username"
         label="username"
+        name="username"
         border={errors.username && "1px solid red"}
         register={register}
         required={true}
@@ -69,8 +70,9 @@ export default function FormWrapper() {
 
       <FormController
         control="input"
-        defaultValue="test"
+        placeholder="email"
         label="email"
+        name="email"
         register={register}
         border={errors.email && "1px solid red"}
         required={true}
@@ -79,8 +81,9 @@ export default function FormWrapper() {
 
       <FormController
         control="input"
-        defaultValue="test"
-        label="first_name"
+        placeholder="first name"
+        label="first Name"
+        name="first_name"
         border={errors.first_name && "1px solid red"}
         register={register}
         required
@@ -89,8 +92,9 @@ export default function FormWrapper() {
 
       <FormController
         control="input"
-        defaultValue="test"
-        label="last_name"
+        placeholder="last name"
+        label="last Name"
+        name="last_name"
         register={register}
         border={errors.last_name && "1px solid red"}
         required
@@ -99,8 +103,9 @@ export default function FormWrapper() {
 
       <FormController
         control="input"
-        defaultValue="test"
+        placeholder="password"
         label="password"
+        name="password"
         type={visibility ? "text" : "password"}
         border={errors.password && "1px solid red"}
         register={register}

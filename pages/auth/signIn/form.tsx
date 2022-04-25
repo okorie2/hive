@@ -59,6 +59,7 @@ export default function Form() {
         control="input"
         defaultValue="test"
         label="username"
+        name="username"
         register={register}
         border={errors.username && "1px solid red"}
         required={true}
@@ -69,6 +70,7 @@ export default function Form() {
         control="input"
         defaultValue="test"
         label="password"
+        name="password"
         type={visibility ? "text" : "password"}
         border={errors.password && "1px solid red"}
         register={register}

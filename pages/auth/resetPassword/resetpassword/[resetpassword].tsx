@@ -4,8 +4,13 @@ import Footerr from "../../components/footer";
 
 import Image from "next/image";
 import { BgAuthReset, HiveTopLeft } from "../../signIn/signinStyles";
+import Form from "./form";
+import { useRouter } from "next/router";
 
 export default function ResetPassword() {
+  const router = useRouter();
+  const resetpassword = router.query.resetpassword as string;
+  console.log(resetpassword, "token");
   return (
     <>
       <BgAuthReset>
@@ -21,7 +26,8 @@ export default function ResetPassword() {
           />
           <p className="hiveright">Set new password</p>
           <span>Your new password should be strong an unique</span>
-          <form>
+          <Form token={resetpassword} />
+          {/* <form>
             <div className="resetpasswordinput">
               <label>Password</label>
               <input type="password" placeholder="Enter password" />
@@ -35,7 +41,7 @@ export default function ResetPassword() {
             <div className="resetbutton">
               <button>Reset Password</button>
             </div>
-          </form>
+          </form> */}
         </div>
         {/* <div className={styles.push}></div> */}
         <Footerr />
