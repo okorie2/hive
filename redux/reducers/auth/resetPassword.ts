@@ -44,7 +44,7 @@ export const resetPassword: Reducer<ActionState> = (
       return {
         ...state,
         loading: false,
-        data: action.payload,
+        error: { ...state.error, status: true, data: action.payload },
       };
 
     default:

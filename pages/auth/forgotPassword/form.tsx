@@ -59,6 +59,7 @@ export default function ForgotPasswordForm() {
     <form onSubmit={handleSubmit(onSubmit)}>
       <FormController
         control="input"
+        name="email"
         label="email"
         register={register}
         placeholder="ekejohn123@gmail.com"

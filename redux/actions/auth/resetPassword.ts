@@ -1,4 +1,5 @@
 import axios, { AxiosResponse } from "axios";
+import { FieldValues } from "react-hook-form";
 import { AppDispatch } from "redux/store/store";
 import config from "../../../config";
 import useAxios from "../../../hooks/UseAxios";
@@ -23,12 +24,13 @@ const resetPasswordError = (error: AxiosResponse) => ({
 });
 
 export const handleresetPassword =
-  (token: string) => async (dispatch: AppDispatch) => {
+  (token: string, body: FieldValues) => async (dispatch: AppDispatch) => {
     dispatch(resetPassword());
     try {
       const response = await useAxios({
-        method: "GET",
+        method: "PUT",
         url: `${config.API_BASE_URL}/v1/auth/reset-password/${token}`,
+        data: body,
       });
       console.log(response);
       dispatch(resetPasswordSuccess(response));
