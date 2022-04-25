@@ -1,13 +1,16 @@
 import FormController from "component/formHandler/formController";
-import React from "react";
+import React, { useEffect } from "react";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import * as Yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { ErrorStyle } from "styles/components/Error";
 import { SignInBtn } from "pages/auth/signIn/signinStyles";
 import { ButtonHighlight } from "styles/components/buttons/buttonHiglight";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { handleresetPassword } from "redux/actions/auth/resetPassword";
+import { toast } from "react-toastify";
+import { RootState } from "redux/reducers";
+import { useRouter } from "next/router";
 
 const formSchema = Yup.object().shape({
   password: Yup.string()
@@ -35,6 +38,24 @@ export default function Signin({ token }: IToken) {
     console.log(data);
     dispatch(handleresetPassword(token, data));
   };
+
+  const { data, loading, error } = useSelector(
+    (state: RootState) => state.resetPassword
+  );
+  const router = useRouter();
+  const formAlert = () => {
+    if (data?.status) {
+      router.push("/auth/resetSuccessful/resetsuccessful");
+    } else if (error.status) {
+      toast.warn(error && error?.data?.data?.message, { autoClose: 4000 });
+    }
+  };
+
+  useEffect(() => {
+    if (!loading) {
+      formAlert();
+    }
+  }, [data, error.status]);
 
   return (
     <>

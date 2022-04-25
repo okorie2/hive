@@ -3,9 +3,9 @@ import styled from "styled-components";
 
 export const BackG = styled(Bg)`
   background: #e5e5e5;
-  height: 100vh;
-  width: 100%;
-  padding-top: 6%;
+  /* height: 100vh;
+  width: 100%; */
+  /* padding-top: 6%; */
 `;
 
 export const WhiteCard = styled(MainRecc)`
