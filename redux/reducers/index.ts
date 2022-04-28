@@ -4,6 +4,7 @@ import { forgotPassword } from "./auth/forgot-password";
 import { register } from "./auth/register";
 import { resetPassword } from "./auth/resetPassword";
 import { signin } from "./auth/signin";
+import { getUsers } from "./users/getUsers";
 
 export const rootReducer = combineReducers({
   register: register,
@@ -11,6 +12,7 @@ export const rootReducer = combineReducers({
   confirmMail: confirmMail,
   forgotPassword: forgotPassword,
   resetPassword: resetPassword,
+  getUsers: getUsers,
 });
 
 export type RootState = ReturnType<typeof rootReducer>;

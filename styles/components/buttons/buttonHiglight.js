@@ -7,4 +7,5 @@ export const ButtonHighlight = styled.button`
   border: none;
   width: 40%;
   color: #fff;
+  cursor: pointer;
 `;

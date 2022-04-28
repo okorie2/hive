@@ -1,17 +1,70 @@
-import { Bg, MainRecc } from "pages/auth/signIn/signinStyles";
+import { MainRecc } from "pages/auth/signIn/signinStyles";
 import styled from "styled-components";
 
-export const BackG = styled(Bg)`
+export const BackG = styled.div`
   background: #e5e5e5;
-  /* height: 100vh;
-  width: 100%; */
-  /* padding-top: 6%; */
+  height: 100vh;
+  /* width: 100%; */
+  padding-top: 0.1%;
 `;
 
+export const SelectPaper = styled.div`
+  width: 85%;
+  height: 10em;
+  overflow-y: auto;
+  margin: auto;
+  background-color: #fefefe;
+  p {
+    font-family: "fertigo pro";
+    color: #1d1c1d;
+    font-weight: 400;
+  }
+
+  &::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  &::-webkit-scrollbar-track {
+    box-shadow: inset #b0afb0;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #b0afb0;
+    border-radius: 5px;
+    border: 1px solid #b0afb0;
+  }
+
+  .item-container {
+    width: 100%;
+    /* background-color: pink; */
+    margin-bottom: 3%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    .item {
+      display: flex;
+      width: 30%;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 1.5%;
+      font-family: "Open Sans";
+      /* background-color: yellow; */
+
+      div:nth-child(1) {
+        /* background-color: pink; */
+        flex-basis: 28%;
+      }
+      div:nth-child(2) {
+        /* background-color: green; */
+        flex-basis: 25%;
+        flex-grow: 1;
+      }
+    }
+  }
+`;
 export const WhiteCard = styled(MainRecc)`
   background-color: #fefefe;
   width: 40%;
   padding-bottom: 2%;
+  margin-top: 5%;
 
   .checkDiv {
     display: flex;
@@ -24,7 +77,7 @@ export const WhiteCard = styled(MainRecc)`
   .addFriend {
     display: flex;
     justify-content: center;
-    margin-top: 30%;
+    margin-top: 5%;
   }
 
   .addFriend button {

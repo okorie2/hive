@@ -18,6 +18,10 @@ export const RESET_PASSWORD = "RESET_PASSWORD";
 export const RESET_PASSWORD_SUCCESS = "RESET_PASSWORD_SUCCESS";
 export const RESET_PASSWORD_ERROR = "RESET_PASSWORD_ERROR";
 
+export const GET_USERS = "GET_USERS";
+export const GET_USERS_SUCCESS = "GET_USERS_SUCCESS";
+export const GET_USERS_ERROR = "GET_USERS_ERROR";
+
 type data = {
   status: number | undefined;
   data: {
@@ -33,9 +37,26 @@ type error = {
     };
   };
 };
+
+type getUsersData = {
+  username: string;
+  email: string;
+  first_name: string;
+  last_name: string;
+  image_url?: string | null;
+};
+
 export interface ActionState {
   loading: boolean;
   data: data;
   error: error;
   register?: boolean;
+}
+
+export interface GetUsersActionState {
+  loading: boolean;
+  data: {
+    data: getUsersData[];
+  };
+  error: error;
 }
