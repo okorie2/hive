@@ -33,6 +33,7 @@ export const handleSignin =
 
       if (typeof window !== "undefined") {
         localStorage.setItem("user", JSON.stringify(response));
+
         localStorage.setItem("hasBeenRegistered", "true");
       }
     } catch (error) {

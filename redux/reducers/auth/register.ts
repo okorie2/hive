@@ -3,10 +3,10 @@ import {
   REGISTER,
   REGISTER_SUCCESS,
   REGISTER_ERROR,
-  ActionState,
+  AuthActionState,
 } from "../../actions/actionTypes";
 
-const initialState: ActionState = {
+const initialState: AuthActionState = {
   loading: false,
   error: {
     status: false,
@@ -23,7 +23,7 @@ const initialState: ActionState = {
     },
   },
 };
-export const register: Reducer<ActionState> = (
+export const register: Reducer<AuthActionState> = (
   state = initialState,
   action
 ) => {

@@ -1,12 +1,12 @@
 import { Reducer } from "redux";
 import {
-  ActionState,
+  AuthActionState,
   FORGOT_PASSWORD,
   FORGOT_PASSWORD_ERROR,
   FORGOT_PASSWORD_SUCCESS,
 } from "../../actions/actionTypes";
 
-const initialState: ActionState = {
+const initialState: AuthActionState = {
   loading: false,
   data: {
     status: 0,
@@ -23,7 +23,7 @@ const initialState: ActionState = {
     },
   },
 };
-export const forgotPassword: Reducer<ActionState> = (
+export const forgotPassword: Reducer<AuthActionState> = (
   state = initialState,
   action
 ) => {

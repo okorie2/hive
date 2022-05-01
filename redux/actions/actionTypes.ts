@@ -22,6 +22,10 @@ export const GET_USERS = "GET_USERS";
 export const GET_USERS_SUCCESS = "GET_USERS_SUCCESS";
 export const GET_USERS_ERROR = "GET_USERS_ERROR";
 
+export const ADD_FRIENDS = "ADD_FRIENDS";
+export const ADD_FRIENDS_SUCCESS = "ADD_FRIENDS_SUCCESS";
+export const ADD_FRIENDS_ERROR = "ADD_FRIENDS_ERROR";
+
 type data = {
   status: number | undefined;
   data: {
@@ -46,7 +50,7 @@ type getUsersData = {
   image_url?: string | null;
 };
 
-export interface ActionState {
+export interface AuthActionState {
   loading: boolean;
   data: data;
   error: error;
@@ -58,5 +62,11 @@ export interface GetUsersActionState {
   data: {
     data: getUsersData[];
   };
+  error: error;
+}
+
+export interface AddFriendsActionState {
+  loading: boolean;
+  data: data;
   error: error;
 }

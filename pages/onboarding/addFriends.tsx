@@ -1,5 +1,10 @@
-import React from "react";
-import { BackG, SelectPaper, WhiteCard } from "./onboardingStyles";
+import React, { useState } from "react";
+import {
+  BackG,
+  SearchInputContainer,
+  SelectPaper,
+  WhiteCard,
+} from "./onboardingStyles";
 import { ButtonFade } from "styles/components/buttons/buttonFade";
 import TopPane from "component/panes/topPane";
 import Image from "next/image";
@@ -7,9 +12,19 @@ import { useDispatch, useSelector } from "react-redux";
 import { handleGetUsers } from "redux/actions/users/getUsers";
 import { RootState } from "../../redux/reducers";
 import { debounce, isEmpty } from "lodash";
+import { handleaddFriends } from "redux/actions/friends/addFriends";
+import { ButtonHighlight } from "styles/components/buttons/buttonHiglight";
+import { useRouter } from "next/router";
+
+export interface IFriends {
+  users: string[];
+}
 export default function AddFriend() {
   const dispatch = useDispatch();
-  // const [searchField, setSearchField] = useState("");
+  const { data } = useSelector((state: RootState) => state.getUsers);
+  const addFriendsData = useSelector((state: RootState) => state.addFriends);
+  const router = useRouter();
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     debounceSearch(e);
   };
@@ -20,7 +35,22 @@ export default function AddFriend() {
     }
   }, 300);
 
-  const { data } = useSelector((state: RootState) => state.getUsers);
+  const [usersList, setUsersList] = useState<string[]>([]);
+
+  const friends = {
+    users: usersList,
+  };
+  const addToUsers = (name: string) => {
+    setUsersList([...usersList, name]);
+  };
+
+  const handleSubmitFriends = () => {
+    dispatch(handleaddFriends(friends));
+    if (addFriendsData.data.status == 200) {
+      console.log("yayy");
+      router.push("/onboarding/addedSuccess");
+    }
+  };
 
   return (
     <BackG>
@@ -32,7 +62,16 @@ export default function AddFriend() {
             Enter the names of people you want <br />
             to add below
           </p>
-          <input type={"search"} onChange={handleChange} />
+          <SearchInputContainer grow={usersList.length > 0 ? 1 : 0}>
+            <div className="list">
+              {usersList.map((user, i) => (
+                <div key={i}>{user}</div>
+              ))}
+            </div>
+            <div className="search">
+              <input type={"search"} onChange={handleChange} />
+            </div>
+          </SearchInputContainer>
         </div>
         <SelectPaper>
           <p>Matches</p>
@@ -48,13 +87,19 @@ export default function AddFriend() {
                       height={30}
                     />
                   </div>
-                  <div>{user?.username}</div>
+                  <div onClick={() => addToUsers(user?.username)}>
+                    {user?.username}
+                  </div>
                 </div>
               </div>
             ))}
         </SelectPaper>
         <div className="addFriend">
-          <ButtonFade>Add</ButtonFade>
+          {usersList.length > 0 ? (
+            <ButtonHighlight onClick={handleSubmitFriends}>Add</ButtonHighlight>
+          ) : (
+            <ButtonFade>Add</ButtonFade>
+          )}
         </div>
       </WhiteCard>
     </BackG>

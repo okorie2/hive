@@ -1,6 +1,6 @@
 import { MainRecc } from "pages/auth/signIn/signinStyles";
 import styled from "styled-components";
-
+import close from "../../public/pngs/close.png";
 export const BackG = styled.div`
   background: #e5e5e5;
   height: 100vh;
@@ -60,6 +60,52 @@ export const SelectPaper = styled.div`
     }
   }
 `;
+
+export const SearchInputContainer = styled.div`
+  width: 85%;
+  margin: auto;
+  display: flex;
+  border-radius: 7px;
+  padding: 15px;
+  flex-wrap: wrap;
+  border: 0.5px solid #dae3dc;
+  justify-content: space-between;
+  .list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: ${(props) => (props.grow ? props.grow : 0)};
+
+    background-color: red;
+    div {
+      margin: 1%;
+      color: #2ba9dc;
+      background-color: #e3f3fa;
+      border-radius: 5px;
+      width: fit-content;
+      padding: 2%;
+      padding-right: 10%;
+      background-image: url(${close.src});
+      background-repeat: no-repeat;
+      background-position: 96% 59%;
+    }
+  }
+  .search {
+    /* flex-basis: 65%; */
+    display: flex;
+    flex-grow: 1;
+    background-color: yellow;
+    align-items: center;
+    input {
+      width: 100%;
+      /* align-items: center; */
+
+      /* flex-shrink: 2; */
+      outline: none;
+      border: none;
+    }
+  }
+`;
+
 export const WhiteCard = styled(MainRecc)`
   background-color: #fefefe;
   width: 40%;
@@ -115,12 +161,12 @@ export const WhiteCard = styled(MainRecc)`
     margin-bottom: 0;
   }
 
-  input {
+  /* input {
     border-radius: 7px;
     padding: 15px;
     border: 0.5px solid #dae3dc;
     width: 85%;
-  }
+  } */
 
   .imageDiv {
     margin-top: 4%;
