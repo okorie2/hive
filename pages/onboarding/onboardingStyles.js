@@ -39,6 +39,10 @@ export const SelectPaper = styled.div`
     /* background-color: pink; */
     margin-bottom: 3%;
     border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    &:hover {
+      background-color: #f2f2f2;
+    }
     .item {
       display: flex;
       width: 30%;
@@ -75,7 +79,7 @@ export const SearchInputContainer = styled.div`
     flex-wrap: wrap;
     flex-grow: ${(props) => (props.grow ? props.grow : 0)};
 
-    background-color: red;
+    /* background-color: red; */
     div {
       margin: 1%;
       color: #2ba9dc;
@@ -84,6 +88,7 @@ export const SearchInputContainer = styled.div`
       width: fit-content;
       padding: 2%;
       padding-right: 10%;
+      cursor: pointer;
       background-image: url(${close.src});
       background-repeat: no-repeat;
       background-position: 96% 59%;
@@ -93,7 +98,7 @@ export const SearchInputContainer = styled.div`
     /* flex-basis: 65%; */
     display: flex;
     flex-grow: 1;
-    background-color: yellow;
+    /* background-color: yellow; */
     align-items: center;
     input {
       width: 100%;

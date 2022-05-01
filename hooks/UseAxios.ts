@@ -23,6 +23,7 @@ if (typeof window !== "undefined") {
   data = JSON.parse(localStorage.getItem("user") || "");
 }
 const token = data?.data?.access_token;
+
 const useAxios = async function apiRequest<T>(
   request: AxiosRequestConfig
 ): Promise<AxiosResponse<T>> {
@@ -34,7 +35,11 @@ const useAxios = async function apiRequest<T>(
       mode: "cors",
     },
   });
-  console.log(token, "token");
+  console.log(resp, "response!");
+  if (resp.status === 401) {
+    console.log("clear");
+    localStorage.clear();
+  }
   return resp;
 };
 export default useAxios;

@@ -41,13 +41,19 @@ export default function AddFriend() {
     users: usersList,
   };
   const addToUsers = (name: string) => {
+    const selectedName = usersList.find((element) => element === name);
+    if (selectedName) {
+      return;
+    }
     setUsersList([...usersList, name]);
   };
-
+  const deleteUser = (name: string) => {
+    const filteredList = usersList.filter((i) => name != i);
+    setUsersList(filteredList);
+  };
   const handleSubmitFriends = () => {
     dispatch(handleaddFriends(friends));
     if (addFriendsData.data.status == 200) {
-      console.log("yayy");
       router.push("/onboarding/addedSuccess");
     }
   };
@@ -65,7 +71,9 @@ export default function AddFriend() {
           <SearchInputContainer grow={usersList.length > 0 ? 1 : 0}>
             <div className="list">
               {usersList.map((user, i) => (
-                <div key={i}>{user}</div>
+                <div key={i} onClick={() => deleteUser(user)}>
+                  {user}
+                </div>
               ))}
             </div>
             <div className="search">
