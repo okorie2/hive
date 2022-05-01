@@ -1,12 +1,12 @@
 import { Reducer } from "redux";
 import {
-  ActionState,
+  AuthActionState,
   CONFIRM_MAIL,
   CONFIRM_MAIL_ERROR,
   CONFIRM_MAIL_SUCCESS,
 } from "../../actions/actionTypes";
 
-const initialState: ActionState = {
+const initialState: AuthActionState = {
   loading: false,
   data: {
     status: 0,
@@ -23,7 +23,7 @@ const initialState: ActionState = {
     },
   },
 };
-export const confirmMail: Reducer<ActionState> = (
+export const confirmMail: Reducer<AuthActionState> = (
   state = initialState,
   action
 ) => {

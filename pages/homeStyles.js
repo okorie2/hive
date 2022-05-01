@@ -106,7 +106,7 @@ export const Mid = styled.div`
   }
 `;
 
-export const Trigrid =styled.div `
+export const Trigrid = styled.div`
   display: grid;
   grid-template-columns: auto auto auto;
   width: 80%;
@@ -120,7 +120,7 @@ export const Trigrid =styled.div `
   }
 `;
 
-export const Box = styled.div `
+export const Box = styled.div`
   width: 50px;
   height: 40px;
   background-color: #fff;
@@ -128,7 +128,7 @@ export const Box = styled.div `
   margin: auto;
 `;
 
-export const Smc = styled.div `
+export const Smc = styled.div`
   /* width: 30px;s
   height: 30px;
   border-radius: 50%; */
@@ -137,20 +137,20 @@ export const Smc = styled.div `
   /* margin: auto; */
 `;
 
-export const Tod = styled.section `
+export const Tod = styled.section`
   /* background-color: black; */
   margin-top: 3%;
   margin-bottom: 5%;
 `;
 
-export const TodGrid = styled.div `
+export const TodGrid = styled.div`
   width: 80%;
   margin: auto;
   display: grid;
   grid-template-columns: auto auto;
 `;
 
-export const Rii = styled.div `
+export const Rii = styled.div`
   padding: 3%;
   font-size: 0.9rem;
 
@@ -159,14 +159,14 @@ export const Rii = styled.div `
     font-family: "Fertigo", sans-serif;
     font-size: 1rem;
   }
-  
+
   b {
     font-weight: 600;
     /* font-size: 18px; */
   }
 `;
 
-export const FeatureHeader = styled.div `
+export const FeatureHeader = styled.div`
   font-family: "Fertigo", sans-serif;
   text-align: center;
   font-style: normal;
@@ -176,7 +176,7 @@ export const FeatureHeader = styled.div `
   margin-bottom: 5%;
 `;
 
-export const MiniGrid = styled.div `
+export const MiniGrid = styled.div`
   display: grid;
   grid-template-columns: 15% 85%;
   margin-bottom: 5%;
@@ -186,51 +186,48 @@ export const MiniGrid = styled.div `
   }
 `;
 
-export const Bullet = styled.div `
+export const Bullet = styled.div`
   width: 50px;
   height: 50px;
   margin-right: 5%;
 `;
 
-export const FeatureText = styled.div `
+export const FeatureText = styled.div`
   font-family: "Open Sans";
 `;
 
-export const FeatureSpan = styled.div `
+export const FeatureSpan = styled.div`
   width: 70%;
   margin-top: 3%;
 `;
 
-export const Center = styled.section `
-     background:
-     linear-gradient(
+export const Center = styled.section`
+  background: linear-gradient(
       to right,
       rgba(1, 2, 29, 0),
       rgba(13, 13, 14, 0.596)
     ),
     //  url(".../public/pngs/bg.png")
-     url(${img.src});
-    
-      
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    width: 100%;
-    height: 423px;
-    overflow: auto;
-    color: white;
- 
-    button {
-      cursor: pointer;
-    }
+    url(${img.src});
 
-    .activetext {
-      font-family: "Open Sans";
-    }
-   
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  height: 423px;
+  overflow: auto;
+  color: white;
+
+  button {
+    cursor: pointer;
+  }
+
+  .activetext {
+    font-family: "Open Sans";
+  }
 `;
 
-export const Cent = styled.div `
+export const Cent = styled.div`
   margin-top: 10%;
 
   p {
@@ -254,25 +251,24 @@ export const Cent = styled.div `
   }
 `;
 
-export const Active = styled.div `
+export const Active = styled.div`
   display: grid;
   width: 6%;
   grid-template-columns: 40% 60%;
   margin: auto;
   font-family: "Fertigo", sans-serif;
   align-items: center;
-
 `;
 
-export const Spot = styled.div `
+export const Spot = styled.div`
   text-align: left;
 `;
 
-export const Hive = styled.div `
+export const Hive = styled.div`
   text-align: right;
 `;
 
-export const Footer = styled.footer `
+export const Footer = styled.footer`
   background-color: #1d1d1d;
   /* padding: 1%; */
   color: #fff;

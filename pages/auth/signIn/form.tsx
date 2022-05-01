@@ -11,11 +11,12 @@ import { ErrorStyle } from "../../../styles/components/Error";
 import { handleSignin } from "../../../redux/actions/auth/signin";
 import FormController from "../../../component/formHandler/formController";
 import { RootState } from "../../../redux/reducers";
+import { useRouter } from "next/router";
 
-export interface IsignInForm {
-  username: string;
-  password: string;
-}
+// export interface IsignInForm {
+//   username: string;
+//   password: string;
+// }
 export default function Form() {
   const {
     register,
@@ -38,10 +39,12 @@ export default function Form() {
   const { data, loading, error } = useSelector(
     (state: RootState) => state.signin
   );
+  const router = useRouter();
 
   const alert = () => {
     if (data?.status) {
-      toast.success(data && data?.data?.message, { autoClose: 4000 });
+      router.push("/onboarding/welcome");
+      // toast.success(data && data?.data?.message, { autoClose: 4000 });
     } else if (error.status) {
       toast.warn(error && error?.data?.data?.message, { autoClose: 4000 });
     }

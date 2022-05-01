@@ -1,50 +1,50 @@
 import { Reducer } from "redux";
 import {
-  REGISTER,
-  REGISTER_SUCCESS,
-  REGISTER_ERROR,
-  AuthActionState,
-} from "../../actions/actionTypes";
+  GetUsersActionState,
+  GET_USERS,
+  GET_USERS_ERROR,
+  GET_USERS_SUCCESS,
+} from "redux/actions/actionTypes";
 
-const initialState: AuthActionState = {
+const initialState: GetUsersActionState = {
   loading: false,
+  data: {
+    data: [],
+  },
   error: {
     status: false,
     data: {
       data: {
-        message: "error",
+        message: "",
       },
     },
   },
-  data: {
-    status: 0,
-    data: {
-      message: "success",
-    },
-  },
 };
-export const register: Reducer<AuthActionState> = (
+
+export const getUsers: Reducer<GetUsersActionState> = (
   state = initialState,
   action
 ) => {
   switch (action.type) {
-    case REGISTER:
+    case GET_USERS:
       return {
         ...state,
         loading: true,
       };
-    case REGISTER_SUCCESS:
+
+    case GET_USERS_SUCCESS:
       return {
         ...state,
         loading: false,
         data: action.payload,
       };
-    case REGISTER_ERROR:
+    case GET_USERS_ERROR:
       return {
         ...state,
         loading: false,
         error: { ...state.error, status: true, data: action.payload },
       };
+
     default:
       return state;
   }

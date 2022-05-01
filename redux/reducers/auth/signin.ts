@@ -1,6 +1,6 @@
 import { Reducer } from "redux";
 import {
-  ActionState,
+  AuthActionState,
   SIGNIN,
   SIGNIN_ERROR,
   SIGNIN_SUCCESS,
@@ -11,7 +11,7 @@ if (typeof window !== "undefined") {
   registered = localStorage.getItem("hasBeenAuthenticated") || "";
 }
 
-const initialState: ActionState = {
+const initialState: AuthActionState = {
   loading: false,
   data: {
     status: 0,
@@ -30,7 +30,10 @@ const initialState: ActionState = {
   register: registered ? true : false,
 };
 
-export const signin: Reducer<ActionState> = (state = initialState, action) => {
+export const signin: Reducer<AuthActionState> = (
+  state = initialState,
+  action
+) => {
   switch (action.type) {
     case SIGNIN:
       return {

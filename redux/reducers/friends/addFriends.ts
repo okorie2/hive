@@ -1,50 +1,53 @@
 import { Reducer } from "redux";
 import {
-  REGISTER,
-  REGISTER_SUCCESS,
-  REGISTER_ERROR,
-  AuthActionState,
-} from "../../actions/actionTypes";
+  AddFriendsActionState,
+  ADD_FRIENDS,
+  ADD_FRIENDS_ERROR,
+  ADD_FRIENDS_SUCCESS,
+} from "redux/actions/actionTypes";
 
-const initialState: AuthActionState = {
+const initialState: AddFriendsActionState = {
   loading: false,
+  data: {
+    status: 0,
+    data: {
+      message: "",
+    },
+  },
   error: {
     status: false,
     data: {
       data: {
-        message: "error",
+        message: "",
       },
     },
   },
-  data: {
-    status: 0,
-    data: {
-      message: "success",
-    },
-  },
 };
-export const register: Reducer<AuthActionState> = (
+
+export const addFriends: Reducer<AddFriendsActionState> = (
   state = initialState,
   action
 ) => {
   switch (action.type) {
-    case REGISTER:
+    case ADD_FRIENDS:
       return {
         ...state,
         loading: true,
       };
-    case REGISTER_SUCCESS:
+
+    case ADD_FRIENDS_SUCCESS:
       return {
         ...state,
         loading: false,
         data: action.payload,
       };
-    case REGISTER_ERROR:
+    case ADD_FRIENDS_ERROR:
       return {
         ...state,
         loading: false,
         error: { ...state.error, status: true, data: action.payload },
       };
+
     default:
       return state;
   }
