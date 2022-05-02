@@ -1,5 +1,7 @@
 import styled from "styled-components";
-
+interface IAuthStyleProps {
+  border: string;
+}
 export const AuthInput = styled.input`
   padding: 2.6%;
   outline: none;
@@ -10,7 +12,7 @@ export const AuthInput = styled.input`
   width: 100%;
 `;
 
-export const InputContainer = styled.div`
+export const InputContainer = styled.div<IAuthStyleProps>`
   display: flex;
   border-radius: 5px;
   background-color: #fff;

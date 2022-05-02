@@ -19,7 +19,7 @@ export default function Inputs(props: Iinputs) {
     label,
     register,
     required,
-    border,
+    border = "",
     children,
     name = "",
     ...rest
