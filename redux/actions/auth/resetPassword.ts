@@ -1,8 +1,8 @@
 import axios, { AxiosResponse } from "axios";
 import { FieldValues } from "react-hook-form";
-import { AppDispatch } from "redux/store/store";
 import config from "../../../config";
 import useAxios from "../../../hooks/UseAxios";
+import { AppDispatch } from "../../store/store";
 import {
   RESET_PASSWORD,
   RESET_PASSWORD_ERROR,

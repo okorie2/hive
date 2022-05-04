@@ -1,16 +1,23 @@
-import FormController from "component/formHandler/formController";
 import React, { useEffect } from "react";
-import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
+import {
+  FieldValues,
+  Mode,
+  Resolver,
+  SubmitHandler,
+  useForm,
+} from "react-hook-form";
 import * as Yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { ErrorStyle } from "styles/components/Error";
-import { SignInBtn } from "pages/auth/signIn/signinStyles";
-import { ButtonHighlight } from "styles/components/buttons/buttonHiglight";
+
 import { useDispatch, useSelector } from "react-redux";
-import { handleresetPassword } from "redux/actions/auth/resetPassword";
 import { toast } from "react-toastify";
-import { RootState } from "redux/reducers";
 import { useRouter } from "next/router";
+import FormController from "../../../../component/formHandler/formController";
+import { handleresetPassword } from "../../../../redux/actions/auth/resetPassword";
+import { ErrorStyle } from "../../../../styles/components/Error";
+import { SignInBtn } from "../../signIn/signinStyles";
+import { ButtonHighlight } from "../../../../styles/components/buttons/buttonHiglight";
+import { RootState } from "../../../../redux/reducers";
 
 const formSchema = Yup.object().shape({
   password: Yup.string()
@@ -20,11 +27,18 @@ const formSchema = Yup.object().shape({
     .required("Password is mandatory")
     .oneOf([Yup.ref("password")], "Passwords does not match"),
 });
-const formOptions = { mode: "onTouched", resolver: yupResolver(formSchema) };
 
 interface IToken {
   token: string;
 }
+export type Options = {
+  mode: Mode;
+  resolver: Resolver;
+};
+const formOptions: Options = {
+  mode: "onTouched",
+  resolver: yupResolver(formSchema),
+};
 
 export default function Signin({ token }: IToken) {
   const dispatch = useDispatch();

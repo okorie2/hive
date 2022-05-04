@@ -8,8 +8,8 @@ export default function UseOutsideAlerter(
   const { state, setState } = useContext(ModalContext);
 
   useEffect(() => {
-    const handleClickOutside = (e) => {
-      if (ref?.current && !ref?.current?.contains(e.target)) {
+    const handleClickOutside = (e: Event) => {
+      if (ref?.current && !ref?.current?.contains(e.target as Node)) {
         setState(!state);
         console.log("clicked outside");
       }

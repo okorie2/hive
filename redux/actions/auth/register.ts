@@ -2,8 +2,8 @@ import { REGISTER, REGISTER_ERROR, REGISTER_SUCCESS } from "../actionTypes";
 import useAxios from "../../../hooks/UseAxios";
 import config from "../../../config";
 import axios, { AxiosResponse } from "axios";
-import { AppDispatch } from "redux/store/store";
 import { FieldValues } from "react-hook-form";
+import { AppDispatch } from "../../store/store";
 const Register = () => ({
   type: REGISTER,
 });

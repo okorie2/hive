@@ -4,7 +4,7 @@ import {
   GET_USERS,
   GET_USERS_ERROR,
   GET_USERS_SUCCESS,
-} from "redux/actions/actionTypes";
+} from "../../actions/actionTypes";
 
 const initialState: GetUsersActionState = {
   loading: false,
