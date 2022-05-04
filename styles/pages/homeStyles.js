@@ -6,7 +6,6 @@ export const Nav = styled.div`
   grid-template-columns: 55% auto auto auto auto auto;
   padding: 2% 4%;
   font-weight: 400;
-  /* font-size: 15px; */
   align-items: center;
 
   .active {
