@@ -1,4 +1,4 @@
-import { MainRecc } from "../auth/signIn/signinStyles";
+import { MainRecc } from "./signinStyles";
 import styled from "styled-components";
 import close from "../../public/pngs/close.png";
 export const BackG = styled.div`

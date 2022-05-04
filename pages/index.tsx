@@ -28,7 +28,7 @@ import {
   Spot,
   Hive,
   Footer,
-} from "./homeStyles";
+} from "../styles/pages/homeStyles";
 export default function Home() {
   return (
     <>
@@ -51,8 +51,7 @@ export default function Home() {
         <Navlist>
           <Link href="/auth/signIn/signin">
             <a>
-
-            <button>Log in</button>
+              <button>Log in</button>
             </a>
           </Link>
         </Navlist>
@@ -67,10 +66,9 @@ export default function Home() {
               the people you love and care about.
             </p>
 
-            <Link href="/auth/signUp/signup" >
+            <Link href="/auth/signUp/signup">
               <a>
-
-              <button>Create an account</button>
+                <button>Create an account</button>
               </a>
             </Link>
           </Left>

@@ -4,7 +4,7 @@ import {
   SearchInputContainer,
   SelectPaper,
   WhiteCard,
-} from "./onboardingStyles";
+} from "../../styles/pages/onboardingStyles";
 import Image from "next/image";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../redux/reducers";

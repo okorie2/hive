@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { MainRec } from "../signUp/signUpStyles";
+import { MainRec } from "./signUpStyles";
 
 export const Bg = styled.div`
   background-color: #e5e5e5;

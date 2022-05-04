@@ -6,7 +6,7 @@ import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 
 import FormController from "../../../component/formHandler/formController";
 import { ErrorStyle } from "../../../styles/components/Error";
-import { SignUpBtn, Terms } from "./signUpStyles";
+import { SignUpBtn, Terms } from "../../../styles/pages/signUpStyles";
 import Link from "next/link";
 import { ButtonHighlight } from "../../../styles/components/buttons/buttonHiglight";
 import { ButtonFade } from "../../../styles/components/buttons/buttonFade";

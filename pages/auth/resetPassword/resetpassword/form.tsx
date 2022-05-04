@@ -15,7 +15,7 @@ import { useRouter } from "next/router";
 import FormController from "../../../../component/formHandler/formController";
 import { handleresetPassword } from "../../../../redux/actions/auth/resetPassword";
 import { ErrorStyle } from "../../../../styles/components/Error";
-import { SignInBtn } from "../../signIn/signinStyles";
+import { SignInBtn } from "../../../../styles/pages/signinStyles";
 import { ButtonHighlight } from "../../../../styles/components/buttons/buttonHiglight";
 import { RootState } from "../../../../redux/reducers";
 

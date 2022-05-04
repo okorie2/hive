@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-import { BackG, WhiteCard } from "./onboardingStyles";
+import { BackG, WhiteCard } from "../../styles/pages/onboardingStyles";
 import { useRouter } from "next/router";
 import { ButtonHighlight } from "../../styles/components/buttons/buttonHiglight";
 import TopPane from "../../component/panes/topPane";

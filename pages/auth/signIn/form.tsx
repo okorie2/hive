@@ -6,7 +6,7 @@ import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import { ButtonHighlight } from "../../../styles/components/buttons/buttonHiglight";
 import { InputIcon } from "../../../styles/components/inputs/authInput";
 import Image from "next/image";
-import { SignInBtn } from "./signinStyles";
+import { SignInBtn } from "../../../styles/pages/signinStyles";
 import { ErrorStyle } from "../../../styles/components/Error";
 import { handleSignin } from "../../../redux/actions/auth/signin";
 import FormController from "../../../component/formHandler/formController";

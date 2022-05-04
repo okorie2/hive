@@ -9,8 +9,8 @@ import {
   FacebookButton,
   FormContainer,
   GoogleButton,
-} from "../signUp/signUpStyles";
-import { Bg, MainRecc, Push } from "./signinStyles";
+} from "../../../styles/pages/signUpStyles";
+import { Bg, MainRecc, Push } from "../../../styles/pages/signinStyles";
 
 import { useRouter } from "next/router";
 import { toast } from "react-toastify";
@@ -28,7 +28,6 @@ export default function Signin() {
       toast.info(msg, { autoClose: 4000 });
     }
   }, [token]);
-
 
   return (
     <>
@@ -71,9 +70,9 @@ export default function Signin() {
             <div className="bBom"></div>
           </DRow>
           <FormContainer>
-            <Form/>
+            <Form />
             <div>
-              <Link href="/auth/forgotPassword/forgotpassword" >
+              <Link href="/auth/forgotPassword/forgotpassword">
                 <a>Forgot Password?</a>
               </Link>
             </div>
