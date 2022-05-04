@@ -15,7 +15,7 @@ import {
   GoogleButton,
   LeftRec,
   MainRec,
-} from "./signUpStyles";
+} from "../../../styles/pages/signUpStyles";
 
 export default function Signup() {
   return (
@@ -57,10 +57,10 @@ export default function Signup() {
             <div>
               <GoogleButton>
                 <span>
-                <Image
+                  <Image
                     src="https://img.icons8.com/color/50/000000/google-logo.png"
-                  width={17}
-                  height={17}
+                    width={17}
+                    height={17}
                     id="gIcon"
                     alt="gimage"
                   />

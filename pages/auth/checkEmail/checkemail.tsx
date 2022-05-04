@@ -7,9 +7,9 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { useDispatch, useSelector } from "react-redux";
-import { handleForgotPassword } from "redux/actions/auth/forgotPassword";
 import { toast } from "react-toastify";
-import { RootState } from "redux/reducers";
+import { handleForgotPassword } from "../../../redux/actions/auth/forgotPassword";
+import { RootState } from "../../../redux/reducers";
 
 export default function CheckMail() {
   const dispatch = useDispatch();

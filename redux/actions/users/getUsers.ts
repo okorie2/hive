@@ -1,7 +1,8 @@
 import axios, { AxiosResponse } from "axios";
-import useAxios from "hooks/UseAxios";
-import { AppDispatch } from "redux/store/store";
+
 import config from "../../../config/index";
+import useAxios from "../../../hooks/UseAxios";
+import { AppDispatch } from "../../store/store";
 import { GET_USERS, GET_USERS_ERROR, GET_USERS_SUCCESS } from "../actionTypes";
 
 const getUsers = () => ({

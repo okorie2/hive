@@ -4,7 +4,7 @@ import Image from "next/image";
 import ModalA from "../../component/modals/modalA";
 import LeftPane from "../../component/panes/leftPane";
 import { ModalContext } from "../../context/modalContext";
-import TopPane from "component/panes/topPane";
+import TopPane from "../../component/panes/topPane";
 export default function Chat() {
   const [expanded, setExpanded] = useState(false);
   const [state, setState] = useState(false);

@@ -1,4 +1,4 @@
-import { MainRecc } from "pages/auth/signIn/signinStyles";
+import { MainRecc } from "./signinStyles";
 import styled from "styled-components";
 import close from "../../public/pngs/close.png";
 export const BackG = styled.div`
@@ -65,7 +65,10 @@ export const SelectPaper = styled.div`
   }
 `;
 
-export const SearchInputContainer = styled.div`
+interface ISearchInputContainerProps {
+  grow: number;
+}
+export const SearchInputContainer = styled.div<ISearchInputContainerProps>`
   width: 85%;
   margin: auto;
   display: flex;

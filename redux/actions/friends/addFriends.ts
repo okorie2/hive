@@ -1,8 +1,9 @@
 import axios, { AxiosResponse } from "axios";
-import useAxios from "hooks/UseAxios";
-import { IFriends } from "pages/onboarding/addFriends";
-import { AppDispatch } from "redux/store/store";
+
 import config from "../../../config/index";
+import useAxios from "../../../hooks/UseAxios";
+import { IFriends } from "../../../pages/onboarding/addFriends";
+import { AppDispatch } from "../../store/store";
 import {
   ADD_FRIENDS,
   ADD_FRIENDS_ERROR,

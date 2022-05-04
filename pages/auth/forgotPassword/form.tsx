@@ -5,11 +5,11 @@ import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 // import _ from 'lodash'
 import { ButtonHighlight } from "../../../styles/components/buttons/buttonHiglight";
 import { ErrorStyle } from "../../../styles/components/Error";
-import FormController from "../../../component/formHandler/formController";
 import { RootState } from "../../../redux/reducers";
-import { SignInBtn } from "../signIn/signinStyles";
-import { handleForgotPassword } from "redux/actions/auth/forgotPassword";
+import { SignInBtn } from "../../../styles/pages/signinStyles";
 import { useRouter } from "next/router";
+import { handleForgotPassword } from "../../../redux/actions/auth/forgotPassword";
+import FormController from "../../../component/formHandler/formController";
 
 export default function ForgotPasswordForm() {
   const dispatch = useDispatch();

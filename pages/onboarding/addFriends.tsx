@@ -4,17 +4,18 @@ import {
   SearchInputContainer,
   SelectPaper,
   WhiteCard,
-} from "./onboardingStyles";
-import { ButtonFade } from "styles/components/buttons/buttonFade";
-import TopPane from "component/panes/topPane";
+} from "../../styles/pages/onboardingStyles";
 import Image from "next/image";
 import { useDispatch, useSelector } from "react-redux";
-import { handleGetUsers } from "redux/actions/users/getUsers";
 import { RootState } from "../../redux/reducers";
 import { debounce, isEmpty } from "lodash";
-import { handleaddFriends } from "redux/actions/friends/addFriends";
-import { ButtonHighlight } from "styles/components/buttons/buttonHiglight";
+
 import { useRouter } from "next/router";
+import TopPane from "../../component/panes/topPane";
+import { ButtonHighlight } from "../../styles/components/buttons/buttonHiglight";
+import { ButtonFade } from "../../styles/components/buttons/buttonFade";
+import { handleGetUsers } from "../../redux/actions/users/getUsers";
+import { handleaddFriends } from "../../redux/actions/friends/addFriends";
 
 export interface IFriends {
   users: string[];

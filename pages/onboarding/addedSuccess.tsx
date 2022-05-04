@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
 
-import { BackG, WhiteCard } from "./onboardingStyles";
-import { ButtonHighlight } from "styles/components/buttons/buttonHiglight";
-import TopPane from "component/panes/topPane";
+import { BackG, WhiteCard } from "../../styles/pages/onboardingStyles";
+import TopPane from "../../component/panes/topPane";
+import { ButtonHighlight } from "../../styles/components/buttons/buttonHiglight";
 
 export default function AddSuccess() {
   return (

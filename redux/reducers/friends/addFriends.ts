@@ -4,7 +4,7 @@ import {
   ADD_FRIENDS,
   ADD_FRIENDS_ERROR,
   ADD_FRIENDS_SUCCESS,
-} from "redux/actions/actionTypes";
+} from "../../actions/actionTypes";
 
 const initialState: AddFriendsActionState = {
   loading: false,

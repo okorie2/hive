@@ -1,8 +1,8 @@
 import axios, { AxiosResponse } from "axios";
 import { FieldValues } from "react-hook-form";
-import { AppDispatch } from "redux/store/store";
 import config from "../../../config";
 import useAxios from "../../../hooks/UseAxios";
+import { AppDispatch } from "../../store/store";
 import { SIGNIN, SIGNIN_ERROR, SIGNIN_SUCCESS } from "../actionTypes";
 
 const signIn = () => ({

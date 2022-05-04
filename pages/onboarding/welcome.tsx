@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "next/image";
 
-import { BackG, WhiteCard } from "./onboardingStyles";
-import { ButtonHighlight } from "styles/components/buttons/buttonHiglight";
-import TopPane from "component/panes/topPane";
+import { BackG, WhiteCard } from "../../styles/pages/onboardingStyles";
 import { useRouter } from "next/router";
+import { ButtonHighlight } from "../../styles/components/buttons/buttonHiglight";
+import TopPane from "../../component/panes/topPane";
 
 export default function Onboarding() {
   const router = useRouter();

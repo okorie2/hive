@@ -5,7 +5,11 @@ import Footerr from "../components/footer";
 import Link from "next/link";
 import Image from "next/image";
 
-import { BgAuthReset, HiveTopLeft, Push } from "../signIn/signinStyles";
+import {
+  BgAuthReset,
+  HiveTopLeft,
+  Push,
+} from "../../../styles/pages/signinStyles";
 
 export default function ResetSuccessful() {
   return (

@@ -3,7 +3,10 @@ import React from "react";
 import Footerr from "../../components/footer";
 
 import Image from "next/image";
-import { BgAuthReset, HiveTopLeft } from "../../signIn/signinStyles";
+import {
+  BgAuthReset,
+  HiveTopLeft,
+} from "../../../../styles/pages/signinStyles";
 import Form from "./form";
 import { useRouter } from "next/router";
 
