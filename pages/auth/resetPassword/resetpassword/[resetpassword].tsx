@@ -7,7 +7,7 @@ import {
   BgAuthReset,
   HiveTopLeft,
 } from "../../../../styles/pages/signinStyles";
-import Form from "./form";
+// import Form from "./form";
 import { useRouter } from "next/router";
 
 export default function ResetPassword() {
@@ -29,7 +29,8 @@ export default function ResetPassword() {
           />
           <p className="hiveright">Set new password</p>
           <span>Your new password should be strong an unique</span>
-          <Form token={resetpassword} />
+          {/* <Form token={resetpassword} /> */}
+
           {/* <form>
             <div className="resetpasswordinput">
               <label>Password</label>
