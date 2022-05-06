@@ -4,7 +4,7 @@ import Image from "next/image";
 import FacebookIcon from "@mui/icons-material/Facebook";
 
 import Footerr from "../components/footer";
-import FormWrapper from "./form";
+// import FormWrapper from "./form";
 
 import {
   AuthContainer,
@@ -86,9 +86,7 @@ export default function Signup() {
 
             <div className="bBom"></div>
           </DRow>
-          <FormContainer>
-            <FormWrapper />
-          </FormContainer>
+          <FormContainer>{/* <FormWrapper /> */}</FormContainer>
         </MainRec>
       </AuthContainer>
 

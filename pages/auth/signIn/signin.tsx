@@ -15,7 +15,7 @@ import { Bg, MainRecc, Push } from "../../../styles/pages/signinStyles";
 import { useRouter } from "next/router";
 import { toast } from "react-toastify";
 import Image from "next/image";
-import Form from "./form";
+// import Form from "./form";
 
 export default function Signin() {
   const router = useRouter();
@@ -70,7 +70,7 @@ export default function Signin() {
             <div className="bBom"></div>
           </DRow>
           <FormContainer>
-            <Form />
+            {/* <Form /> */}
             <div>
               <Link href="/auth/forgotPassword/forgotpassword">
                 <a>Forgot Password?</a>
