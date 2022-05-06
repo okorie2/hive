@@ -9,7 +9,7 @@ import { RootState } from "../../../redux/reducers";
 import { SignInBtn } from "../../../styles/pages/signinStyles";
 import { useRouter } from "next/router";
 import { handleForgotPassword } from "../../../redux/actions/auth/forgotPassword";
-import FormController from "../../../component/formHandler/formController";
+// import FormController from "../../../component/formHandler/formController";
 
 export default function ForgotPasswordForm() {
   const dispatch = useDispatch();
@@ -57,7 +57,7 @@ export default function ForgotPasswordForm() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <FormController
+      {/* <FormController
         control="input"
         name="email"
         label="email"
@@ -65,7 +65,7 @@ export default function ForgotPasswordForm() {
         placeholder="ekejohn123@gmail.com"
         border={errors.email && "1px solid red"}
         required={true}
-      />
+      /> */}
       {errors.email && <ErrorStyle>This field is required</ErrorStyle>}
 
       <SignInBtn>
