@@ -9,7 +9,7 @@ import { RootState } from "../../../redux/reducers";
 import { SignInBtn } from "../../../styles/pages/signinStyles";
 import { useRouter } from "next/router";
 import { handleForgotPassword } from "../../../redux/actions/auth/forgotPassword";
-import FormController from "../../../Component/formHandler/formController";
+import FormController from "../../../component/formHandler/formController";
 
 export default function ForgotPasswordForm() {
   const dispatch = useDispatch();

@@ -4,7 +4,7 @@ import { ToastContainer, toast } from "react-toastify";
 
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 
-import FormController from "../../../Component/formHandler/formController";
+import FormController from "../../../component/formHandler/formController";
 import { ErrorStyle } from "../../../styles/components/Error";
 import { SignUpBtn, Terms } from "../../../styles/pages/signUpStyles";
 import Link from "next/link";

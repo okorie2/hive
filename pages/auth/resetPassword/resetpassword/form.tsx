@@ -12,7 +12,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import { useRouter } from "next/router";
-import FormController from "../../../../Component/formHandler/formController";
+import FormController from "../../../../component/formHandler/formController";
 import { handleresetPassword } from "../../../../redux/actions/auth/resetPassword";
 import { ErrorStyle } from "../../../../styles/components/Error";
 import { SignInBtn } from "../../../../styles/pages/signinStyles";
