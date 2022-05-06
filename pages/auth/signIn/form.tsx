@@ -9,7 +9,7 @@ import Image from "next/image";
 import { SignInBtn } from "../../../styles/pages/signinStyles";
 import { ErrorStyle } from "../../../styles/components/Error";
 import { handleSignin } from "../../../redux/actions/auth/signin";
-import FormController from "../../../component/formHandler/formController";
+import FormController from "../../../Component/formHandler/formController";
 import { RootState } from "../../../redux/reducers";
 import { useRouter } from "next/router";
 
