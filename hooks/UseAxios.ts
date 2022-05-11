@@ -20,7 +20,7 @@ import axios, { AxiosRequestConfig, AxiosResponse } from "axios";
 
 let data;
 if (typeof window !== "undefined") {
-  data = JSON.parse(localStorage.getItem("user") || "");
+  data = JSON.parse(localStorage.getItem("user") || "{}");
 }
 const token = data?.data?.access_token;
 
