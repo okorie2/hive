@@ -8,7 +8,12 @@ export const getServerSideProps = async ({ res }) => {
   const BASE_URL = "http://localhost:3000";
 
   const staticPaths = fs
-    .readdirSync("pages")
+    .readdirSync(
+      {
+        development: "pages",
+        production: "./",
+      }[process.env.NODE_ENV]
+    )
     .filter((staticPage) => {
       return !["_app.js", "_document.js", "sitemap.xml.js"].includes(
         staticPage
