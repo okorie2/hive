@@ -1,9 +1,11 @@
 import fs from "fs";
-
+import { authPaths } from "../utils/sitemap/auth";
+import auth from "../utils/sitemap/auth";
 const Sitemap = () => {
   return null;
 };
 
+const auth = authPaths();
 export const getServerSideProps = async ({ res }) => {
   const BASE_URL = "http://localhost:3000";
 
@@ -23,7 +25,7 @@ export const getServerSideProps = async ({ res }) => {
       return `${BASE_URL}/${staticPagePath}`;
     });
   console.log(staticPaths, "staticPaths");
-  const allPaths = [...staticPaths];
+  const allPaths = [...staticPaths, ...auth];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
