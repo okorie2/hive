@@ -5,7 +5,7 @@ const Sitemap = () => {
 
 // const auth = authPaths();
 export const getServerSideProps = async ({ res }) => {
-  const BASE_URL = "http://localhost:3000";
+  const BASE_URL = "https://thehive-ruby.vercel.app/";
 
   const staticPaths = fs
     .readdirSync(
