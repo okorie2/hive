@@ -4,7 +4,7 @@ const Sitemap = () => {
   return null;
 };
 
-const auth = authPaths();
+auth = authPaths();
 export const getServerSideProps = async ({ res }) => {
   // const BASE_URL = "http://localhost:3000";
 
