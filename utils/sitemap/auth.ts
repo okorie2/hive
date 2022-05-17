@@ -17,7 +17,7 @@ export const authPaths = () => {
       );
     })
     .map((staticPagePath) => {
-      return `${BASE_URL}/auth/${staticPagePath}`;
+      return `${BASE_URL}/${staticPagePath}`;
     });
   console.log(paths, "paths");
 
