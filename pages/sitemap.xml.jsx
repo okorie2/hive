@@ -1,29 +1,30 @@
-import fs from "fs";
-
+import { authPaths } from "../utils/sitemap/auth";
+import auth from "../utils/sitemap/auth";
 const Sitemap = () => {
   return null;
 };
 
+auth = authPaths();
 export const getServerSideProps = async ({ res }) => {
-  const BASE_URL = "http://localhost:3000";
+  // const BASE_URL = "http://localhost:3000";
 
-  const staticPaths = fs
-    .readdirSync(
-      {
-        development: "pages",
-        production: "./",
-      }[process.env.NODE_ENV]
-    )
-    .filter((staticPage) => {
-      return !["_app.js", "_document.js", "sitemap.xml.js"].includes(
-        staticPage
-      );
-    })
-    .map((staticPagePath) => {
-      return `${BASE_URL}/${staticPagePath}`;
-    });
-  console.log(staticPaths, "staticPaths");
-  const allPaths = [...staticPaths];
+  // const staticPaths = fs
+  //   .readdirSync(
+  //     {
+  //       development: "pages",
+  //       production: "./",
+  //     }[process.env.NODE_ENV]
+  //   )
+  //   .filter((staticPage) => {
+  //     return !["_app.js", "_document.js", "sitemap.xml.js"].includes(
+  //       staticPage
+  //     );
+  //   })
+  //   .map((staticPagePath) => {
+  //     return `${BASE_URL}/${staticPagePath}`;
+  //   });
+  // console.log(staticPaths, "staticPaths");
+  const allPaths = [...auth];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
