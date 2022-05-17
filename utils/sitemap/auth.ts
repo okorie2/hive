@@ -7,7 +7,7 @@ export const authPaths = () => {
     .readdirSync(
       {
         development: "pages/auth",
-        production: "/pages",
+        production: "./",
         test: "pages/auth",
       }[process.env.NODE_ENV]
     )
