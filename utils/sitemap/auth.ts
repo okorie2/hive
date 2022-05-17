@@ -1,6 +1,6 @@
 import fs from "fs";
 
-const BASE_URL = "http://localhost:3000";
+const BASE_URL = "https://thehive-ruby.vercel.app";
 //fs
 export const authPaths = () => {
   const paths = fs
