@@ -1,9 +1,9 @@
-import { authPaths } from "../utils/sitemap/auth";
+// import { authPaths } from "../utils/sitemap/auth";
 const Sitemap = () => {
   return null;
 };
 
-const auth = authPaths();
+// const auth = authPaths();
 export const getServerSideProps = async ({ res }) => {
   const BASE_URL = "http://localhost:3000";
 
