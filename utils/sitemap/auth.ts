@@ -6,9 +6,9 @@ export const authPaths = () => {
   const paths = fs
     .readdirSync(
       {
-        development: "pages/auth",
+        development: "pages",
         production: "./",
-        test: "pages/auth",
+        test: "pages",
       }[process.env.NODE_ENV]
     )
     .filter((staticPage) => {
