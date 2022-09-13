@@ -6,6 +6,18 @@ background: #E5E5E5;
 height: 100vh;
 width: 100%;
 padding-top: 6%;
+
+.text {
+    margin: auto 0;
+    text-align: center;
+    padding-bottom: 2%;
+  }
+
+.text p {
+    color: #616061;
+    font-family: "Open Sans";
+    font-size: 0.8rem;
+  }
 `;
 
 export const WhiteCard = styled(MainRecc)`
