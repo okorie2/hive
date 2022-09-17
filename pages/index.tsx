@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import {useState, useEffect} from 'react'
+import { useMediaQuery } from "react-responsive";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import FacebookTwoToneIcon from "@mui/icons-material/FacebookTwoTone";
 import TwitterIcon from "@mui/icons-material/Twitter";
@@ -29,7 +31,9 @@ import {
   Hive,
   Footer,
 } from "../styles/pages/homeStyles";
-export default function Home() {
+import MobileView from "./mobileView";
+
+export function HomeStuff() {
   return (
     <>
       <Nav>
@@ -292,5 +296,23 @@ export default function Home() {
         <div className="copy">Hive © 2021 </div>
       </Footer>
     </>
-  );
+  )
 }
+
+
+
+function Home() {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+  const isLaptop = useMediaQuery({ query: "(min-width: 1000px)" });
+
+  return ( 
+     isLaptop ? mounted && <HomeStuff /> : <MobileView />
+  )
+}
+
+
+export default  Home 
