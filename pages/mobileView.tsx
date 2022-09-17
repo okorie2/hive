@@ -1,7 +1,6 @@
 import React from 'react'
 import {
-    BackG,
-      WhiteCard
+    BackG
     } from "../styles/pages/onboardingStyles";
 
 const MobileView = () => {
