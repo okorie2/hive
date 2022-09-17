@@ -4,7 +4,6 @@ import Image from "next/image";
 import FacebookIcon from "@mui/icons-material/Facebook";
 
 import Footerr from "../components/footer";
-import FormWrapper from "./form";
 
 import {
   AuthContainer,
@@ -15,7 +14,8 @@ import {
   GoogleButton,
   LeftRec,
   MainRec,
-} from "./signUpStyles";
+} from "../../../styles/pages/signUpStyles";
+import FormWrapper from "./form";
 
 export default function Signup() {
   return (
@@ -57,10 +57,10 @@ export default function Signup() {
             <div>
               <GoogleButton>
                 <span>
-                <Image
+                  <Image
                     src="https://img.icons8.com/color/50/000000/google-logo.png"
-                  width={17}
-                  height={17}
+                    width={17}
+                    height={17}
                     id="gIcon"
                     alt="gimage"
                   />
@@ -82,7 +82,7 @@ export default function Signup() {
           <DRow>
             <div className="bBom"></div>
 
-            <div>or</div>
+            {/* <div>or</div> */}
 
             <div className="bBom"></div>
           </DRow>

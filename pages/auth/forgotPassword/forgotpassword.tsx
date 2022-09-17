@@ -1,7 +1,11 @@
 import React from "react";
 import Image from "next/image";
 import Footerr from "../components/footer";
-import { BgAuth, ForgotCard, HiveTopLeft } from "../signIn/signinStyles";
+import {
+  BgAuth,
+  ForgotCard,
+  HiveTopLeft,
+} from "../../../styles/pages/signinStyles";
 import Form from "./form";
 export default function ForgotPass() {
   return (
@@ -21,8 +25,8 @@ export default function ForgotPass() {
           </div>
           <p className="hiveright">Forgot your password?</p>
           <span>Enter your email address and a link will be sent to you</span>
-          <Form/>
-          
+          <Form />
+
           {/* <form>
             <label>Email Address</label>
             <input type="text" placeholder="ekejohn123@gmail.com"></input>

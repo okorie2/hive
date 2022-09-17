@@ -1,50 +1,52 @@
 import { Reducer } from "redux";
 import {
-  REGISTER,
-  REGISTER_SUCCESS,
-  REGISTER_ERROR,
   AuthActionState,
+  RESET_PASSWORD,
+  RESET_PASSWORD_ERROR,
+  RESET_PASSWORD_SUCCESS,
 } from "../../actions/actionTypes";
 
 const initialState: AuthActionState = {
   loading: false,
+  data: {
+    status: 0,
+    data: {
+      message: "",
+    },
+  },
   error: {
     status: false,
     data: {
       data: {
-        message: "error",
+        message: "",
       },
     },
   },
-  data: {
-    status: 0,
-    data: {
-      message: "success",
-    },
-  },
 };
-export const register: Reducer<AuthActionState> = (
+export const resetPassword: Reducer<AuthActionState> = (
   state = initialState,
   action
 ) => {
   switch (action.type) {
-    case REGISTER:
+    case RESET_PASSWORD:
       return {
         ...state,
         loading: true,
       };
-    case REGISTER_SUCCESS:
+
+    case RESET_PASSWORD_SUCCESS:
       return {
         ...state,
         loading: false,
         data: action.payload,
       };
-    case REGISTER_ERROR:
+    case RESET_PASSWORD_ERROR:
       return {
         ...state,
         loading: false,
         error: { ...state.error, status: true, data: action.payload },
       };
+
     default:
       return state;
   }

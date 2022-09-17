@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { MainRec } from "../signUp/signUpStyles";
+import { MainRec } from "./signUpStyles";
 
 export const Bg = styled.div`
   background-color: #e5e5e5;
@@ -69,7 +69,7 @@ export const BgAuthReset = styled.div`
       color: #616061;
     }
 
-    input {
+    /* input {
       margin-top: 4px;
       width: 100%;
       padding: 3%;
@@ -79,7 +79,7 @@ export const BgAuthReset = styled.div`
       border-radius: 5px;
       margin-bottom: 5%;
       border: 1px solid rgba(0, 0, 0, 0.12);
-    }
+    } */
 
     button {
       border: none;
@@ -110,12 +110,12 @@ export const BgAuthReset = styled.div`
       margin-bottom: 12%;
     }
 
-    .resetpasswordinput {
+    /* .resetpasswordinput {
       margin-bottom: 5%;
       input {
         margin-bottom: 0%;
       }
-    }
+    } */
   }
 
   .forgotCard {
@@ -167,7 +167,7 @@ export const BgAuthReset = styled.div`
       color: #616061;
     }
 
-    input {
+    /* input {
       margin-top: 4px;
       width: 100%;
       padding: 3%;
@@ -177,7 +177,7 @@ export const BgAuthReset = styled.div`
       border-radius: 5px;
       margin-bottom: 5%;
       border: 1px solid rgba(0, 0, 0, 0.12);
-    }
+    } */
 
     button {
       border: none;
@@ -208,12 +208,12 @@ export const BgAuthReset = styled.div`
       margin-bottom: 12%;
     }
 
-    .resetpasswordinput {
+    /* .resetpasswordinput {
       margin-bottom: 5%;
       input {
         margin-bottom: 0%;
       }
-    }
+    } */
   }
 `;
 

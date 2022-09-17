@@ -1,13 +1,16 @@
-import React, { useContext, useRef} from "react";
+import React, { useContext, useRef } from "react";
 import { ModalContext } from "../../context/modalContext";
 import UseOutsideAlerter from "../../hooks/UseOutsideAlerter";
 
 import styles from "./modala.module.css";
-
-export default function ModalA({ onClick, expanded }) {
+interface IModalProps {
+  onClick: React.MouseEventHandler<HTMLDivElement>;
+  expanded: boolean;
+}
+export default function ModalA({ onClick, expanded }: IModalProps) {
   const modalRef = useRef<HTMLDivElement>(null);
   UseOutsideAlerter(modalRef);
-  const { state} = useContext(ModalContext);
+  const { state } = useContext(ModalContext);
   // console.log(state, "modala state");
   return (
     <>

@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { ToastContainer, toast } from "react-toastify";
 
-import { useForm } from "react-hook-form";
+import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 
 import FormController from "../../../component/formHandler/formController";
-import {  ErrorStyle } from "../../../styles/components/Error";
-import { SignUpBtn, Terms } from "./signUpStyles";
+import { ErrorStyle } from "../../../styles/components/Error";
+import { SignUpBtn, Terms } from "../../../styles/pages/signUpStyles";
 import Link from "next/link";
 import { ButtonHighlight } from "../../../styles/components/buttons/buttonHiglight";
 import { ButtonFade } from "../../../styles/components/buttons/buttonFade";
@@ -23,7 +23,7 @@ export default function FormWrapper() {
   } = useForm();
 
   const dispatch = useDispatch();
-  const onSubmit = (data) => {
+  const onSubmit: SubmitHandler<FieldValues> = (data) => {
     dispatch(handleRegister(data));
     console.log(data);
   };
@@ -34,13 +34,15 @@ export default function FormWrapper() {
     setVisibility(!visibility);
   };
 
-  const { data, loading } = useSelector(({ register}:RootState) => register);
+  const { data, loading, error } = useSelector(
+    ({ register }: RootState) => register
+  );
 
   const alert = () => {
     if (data?.status) {
-      toast.success(data && data?.response?.data?.message, { autoClose: 4000 });
-    } else {
-      toast.warn(data && data?.response?.data?.message, { autoClose: 4000 });
+      toast.success(data && data?.data?.message, { autoClose: 4000 });
+    } else if (error.status) {
+      toast.warn(error && error?.data?.data?.message, { autoClose: 4000 });
     }
   };
 
@@ -48,7 +50,7 @@ export default function FormWrapper() {
     if (!loading) {
       alert();
     }
-  }, [data]);
+  }, [data, error.status]);
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
@@ -56,8 +58,9 @@ export default function FormWrapper() {
 
       <FormController
         control="input"
-        defaultValue="test"
+        placeholder="username"
         label="username"
+        name="username"
         border={errors.username && "1px solid red"}
         register={register}
         required={true}
@@ -67,8 +70,9 @@ export default function FormWrapper() {
 
       <FormController
         control="input"
-        defaultValue="test"
+        placeholder="email"
         label="email"
+        name="email"
         register={register}
         border={errors.email && "1px solid red"}
         required={true}
@@ -77,8 +81,9 @@ export default function FormWrapper() {
 
       <FormController
         control="input"
-        defaultValue="test"
-        label="first_name"
+        placeholder="first name"
+        label="first Name"
+        name="first_name"
         border={errors.first_name && "1px solid red"}
         register={register}
         required
@@ -87,8 +92,9 @@ export default function FormWrapper() {
 
       <FormController
         control="input"
-        defaultValue="test"
-        label="last_name"
+        placeholder="last name"
+        label="last Name"
+        name="last_name"
         register={register}
         border={errors.last_name && "1px solid red"}
         required
@@ -97,8 +103,9 @@ export default function FormWrapper() {
 
       <FormController
         control="input"
-        defaultValue="test"
+        placeholder="password"
         label="password"
+        name="password"
         type={visibility ? "text" : "password"}
         border={errors.password && "1px solid red"}
         register={register}

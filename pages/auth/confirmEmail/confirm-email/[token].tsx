@@ -11,7 +11,7 @@ export default function ConfirmEmail() {
 
   const router = useRouter();
   const { isReady } = useRouter();
-  const { token } = router.query;
+  const token = router.query.token as string;
 
   useEffect(() => {
     if (isReady) {
@@ -19,8 +19,10 @@ export default function ConfirmEmail() {
     }
   }, [isReady]); //isready checks if hydration is done, then calls token which is gotten from params
 
+  console.log(data, "data");
+
   useEffect(() => {
-    if (!_.isEmpty(data)) {
+    if (!_.isEmpty(data?.data?.message)) {
       router.push(
         {
           pathname: "/auth/signIn/signin",
@@ -31,7 +33,6 @@ export default function ConfirmEmail() {
         },
         "/auth/signIn/signin"
       );
-      console.log(data?.data?.message, "data");
     }
   }, [data]); // checks if data object has data before redirecting
 

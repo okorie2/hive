@@ -1,14 +1,32 @@
+import { Reducer } from "redux";
 import {
+  AuthActionState,
   CONFIRM_MAIL,
   CONFIRM_MAIL_ERROR,
   CONFIRM_MAIL_SUCCESS,
 } from "../../actions/actionTypes";
 
-const initialState = {
+const initialState: AuthActionState = {
   loading: false,
-  data: {},
+  data: {
+    status: 0,
+    data: {
+      message: "",
+    },
+  },
+  error: {
+    status: false,
+    data: {
+      data: {
+        message: "",
+      },
+    },
+  },
 };
-export const confirmMail = (state = initialState, action) => {
+export const confirmMail: Reducer<AuthActionState> = (
+  state = initialState,
+  action
+) => {
   switch (action.type) {
     case CONFIRM_MAIL:
       return {
